@@ -275,6 +275,11 @@ public class PacketHandlerServiceImpl extends BaseService implements PacketHandl
 				BIR bir = birBuilder.buildBIR(biometricsDto);
 				biometricRecord.getSegments().add(bir);
 			}
+			try {
+			LOGGER.info(fileName,getJsonString(biometricRecord));
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
 			packetWriter.setBiometric(registrationId, fileName, biometricRecord, source.toUpperCase(),
 					registrationCategory.toUpperCase());
 		}
@@ -477,6 +482,8 @@ public class PacketHandlerServiceImpl extends BaseService implements PacketHandl
 
 		metaInfoMap.put("biometrics", getJsonString(capturedMetaInfo));
 		metaInfoMap.put("exceptionBiometrics", getJsonString(exceptionMetaInfo));
+		LOGGER.info("biometrics",metaInfoMap.get("biometrics"));
+		LOGGER.info("exceptionBiometrics",metaInfoMap.get("exceptionBiometrics"));;
 	}
 
 	private void setAudits(RegistrationDTO registrationDTO) {

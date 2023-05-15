@@ -1,13 +1,13 @@
-package io.mosip.registration.util.common;
+package io.github.tf-govstack.registration.util.common;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.stream.Stream;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dto.mastersync.DocumentCategoryDto;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dto.mastersync.DocumentCategoryDto;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

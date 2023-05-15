@@ -3,8 +3,8 @@ package registrationtest.testcases;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.sun.javafx.application.LauncherImpl;
-import io.mosip.registration.controller.ClientApplication;
-import io.mosip.registration.preloader.ClientPreLoader;
+import io.github.tf-govstack.registration.controller.ClientApplication;
+import io.github.tf-govstack.registration.preloader.ClientPreLoader;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.slf4j.Logger;

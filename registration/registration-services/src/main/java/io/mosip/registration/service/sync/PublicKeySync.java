@@ -1,7 +1,7 @@
-package io.mosip.registration.service.sync;
+package io.github.tf-govstack.registration.service.sync;
 
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 
 /**
  * It downloads the Mosip public key from server and store the same into local database for further usage. 

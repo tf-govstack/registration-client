@@ -1,4 +1,4 @@
-[![Maven Package upon a push](https://github.com/mosip/registration-client/actions/workflows/push_trigger.yml/badge.svg?branch=release-1.2.0.1)](https://github.com/mosip/registration-client/actions/workflows/push_trigger.yml)
+[![Maven Package upon a push](https://github.com/tf-govstack/registration-client/actions/workflows/push_trigger.yml/badge.svg?branch=release-1.2.0.1)](https://github.com/tf-govstack/registration-client/actions/workflows/push_trigger.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?branch=release-1.2.0.1&project=mosip_registration&metric=alert_status)](https://sonarcloud.io/dashboard?branch=release-1.2.0.1&id=mosip_registration)
 
 ### Overview

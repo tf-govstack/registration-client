@@ -1,4 +1,4 @@
-package io.mosip.registration.update;
+package io.github.tf-govstack.registration.update;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

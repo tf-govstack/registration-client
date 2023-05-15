@@ -1,4 +1,4 @@
-package io.mosip.registration.jobs.impl;
+package io.github.tf-govstack.registration.jobs.impl;
 
 import java.sql.Timestamp;
 import java.util.UUID;
@@ -6,19 +6,19 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.SyncJobControlDAO;
-import io.mosip.registration.dao.SyncTransactionDAO;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.jobs.SyncManager;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.SyncJobControlDAO;
+import io.github.tf-govstack.registration.dao.SyncTransactionDAO;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.jobs.SyncManager;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 /**
  * This class includes the functionalities of what transaction table needed.,
@@ -56,7 +56,7 @@ public class SyncManagerImpl extends BaseService implements SyncManager {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.jobs.SyncManager#createSyncControlTransaction(io.mosip.
+	 * io.github.tf-govstack.registration.jobs.SyncManager#createSyncControlTransaction(io.github.tf-govstack.
 	 * registration.entity.SyncTransaction)
 	 */
 	@Override
@@ -98,7 +98,7 @@ public class SyncManagerImpl extends BaseService implements SyncManager {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.jobs.SyncManager#createSyncTransaction(java.lang.
+	 * @see io.github.tf-govstack.registration.jobs.SyncManager#createSyncTransaction(java.lang.
 	 * String, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
@@ -157,7 +157,7 @@ public class SyncManagerImpl extends BaseService implements SyncManager {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.jobs.SyncManager#updateClientSettingLastSyncTime(io.mosip.
+	 * io.github.tf-govstack.registration.jobs.SyncManager#updateClientSettingLastSyncTime(io.github.tf-govstack.
 	 * registration.entity.SyncTransaction,  java.sql.Timestamp)
 	 */
 	@Override

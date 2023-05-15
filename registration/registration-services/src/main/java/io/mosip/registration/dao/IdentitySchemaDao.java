@@ -1,14 +1,14 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.io.IOException;
 import java.util.List;
 
-import io.mosip.registration.dto.schema.ProcessSpecDto;
-import io.mosip.registration.dto.schema.SettingsSchema;
-import io.mosip.registration.dto.schema.SchemaDto;
-import io.mosip.registration.entity.IdentitySchema;
-import io.mosip.registration.entity.ProcessSpec;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
+import io.github.tf-govstack.registration.dto.schema.SettingsSchema;
+import io.github.tf-govstack.registration.dto.schema.SchemaDto;
+import io.github.tf-govstack.registration.entity.IdentitySchema;
+import io.github.tf-govstack.registration.entity.ProcessSpec;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 
 public interface IdentitySchemaDao {
 	

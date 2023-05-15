@@ -1,4 +1,4 @@
-package io.mosip.registration.test.packetStatusSync;
+package io.github.tf-govstack.registration.test.packetStatusSync;
 
 import static org.mockito.Mockito.when;
 
@@ -12,10 +12,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.mosip.registration.dao.impl.RegPacketStatusDAOImpl;
-import io.mosip.registration.entity.Registration;
+import io.github.tf-govstack.registration.dao.impl.RegPacketStatusDAOImpl;
+import io.github.tf-govstack.registration.entity.Registration;
 //github.com/mosip/registration-client
-import io.mosip.registration.repositories.RegistrationRepository;
+import io.github.tf-govstack.registration.repositories.RegistrationRepository;
 
 public class RegPacketStatusDaoImplTest {
 

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane fx:id="genericScreen" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1530.0" prefWidth="800.0" styleClass="parentPane" vgap="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.mosip.registration.controller.GenericController">
+<GridPane fx:id="genericScreen" hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1530.0" prefWidth="800.0" styleClass="parentPane" vgap="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.tf-govstack.registration.controller.GenericController">
    <rowConstraints>
       <RowConstraints percentHeight="93.0" />
       <RowConstraints percentHeight="7.0" />

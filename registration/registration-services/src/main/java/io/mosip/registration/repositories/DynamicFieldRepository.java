@@ -1,7 +1,7 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.DynamicField;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.DynamicField;
 
 public interface DynamicFieldRepository extends BaseRepository<DynamicField, String> {
 

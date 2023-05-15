@@ -1,10 +1,10 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import io.mosip.registration.entity.Template;
+import io.github.tf-govstack.registration.entity.Template;
 
 /**
  * This class is used to fetch the list of templates from {@link Template} table by passing 

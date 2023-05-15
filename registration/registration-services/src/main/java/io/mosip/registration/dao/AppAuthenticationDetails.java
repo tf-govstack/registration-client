@@ -1,6 +1,6 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
-import io.mosip.registration.entity.AppAuthenticationMethod;
+import io.github.tf-govstack.registration.entity.AppAuthenticationMethod;
 
 /**
  * This class is used to fetch only selected (process names and auth method code) columns

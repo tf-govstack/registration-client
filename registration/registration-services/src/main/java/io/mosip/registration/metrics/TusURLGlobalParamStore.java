@@ -1,10 +1,10 @@
-package io.mosip.registration.metrics;
+package io.github.tf-govstack.registration.metrics;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.entity.GlobalParam;
-import io.mosip.registration.entity.id.GlobalParamId;
-import io.mosip.registration.repositories.GlobalParamRepository;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.github.tf-govstack.registration.entity.id.GlobalParamId;
+import io.github.tf-govstack.registration.repositories.GlobalParamRepository;
 import org.springframework.context.ApplicationContext;
 
 import java.net.MalformedURLException;

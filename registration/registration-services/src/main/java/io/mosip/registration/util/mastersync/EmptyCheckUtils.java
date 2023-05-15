@@ -1,4 +1,4 @@
-package io.mosip.registration.util.mastersync;
+package io.github.tf-govstack.registration.util.mastersync;
 
 import java.util.Collection;
 import java.util.Map;

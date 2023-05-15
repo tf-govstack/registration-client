@@ -1,4 +1,4 @@
-package io.mosip.registration.api.docscanner;
+package io.github.tf-govstack.registration.api.docscanner;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelWriter;

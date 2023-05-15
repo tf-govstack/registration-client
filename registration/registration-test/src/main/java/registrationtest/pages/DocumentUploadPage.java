@@ -8,7 +8,7 @@ import java.util.Set;
 
 import org.testfx.api.FxRobot;
 
-import io.mosip.registration.dto.mastersync.DocumentCategoryDto;
+import io.github.tf-govstack.registration.dto.mastersync.DocumentCategoryDto;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;

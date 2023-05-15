@@ -1,18 +1,18 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.dao.ValidDocumentDAO;
-import io.mosip.registration.entity.ApplicantValidDocument;
-import io.mosip.registration.repositories.ApplicantValidDocumentRepository;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.dao.ValidDocumentDAO;
+import io.github.tf-govstack.registration.entity.ApplicantValidDocument;
+import io.github.tf-govstack.registration.repositories.ApplicantValidDocumentRepository;
 
 /**
  * implementation class of RegistrationValidDocumentDAO.
@@ -31,7 +31,7 @@ public class ValidDocumentDAOImpl implements ValidDocumentDAO {
 	private static final Logger LOGGER = AppConfig.getLogger(ValidDocumentDAOImpl.class);
 
 	/* (non-Javadoc)
-	 * @see io.mosip.registration.dao.ValidDocumentDAO#getValidDocuments(java.lang.String, java.lang.String, java.lang.String)
+	 * @see io.github.tf-govstack.registration.dao.ValidDocumentDAO#getValidDocuments(java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public List<ApplicantValidDocument> getValidDocuments(String applicantType, String docCategoryCode) {

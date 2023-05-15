@@ -1,10 +1,10 @@
-package io.mosip.registration.dto.biometric;
+package io.github.tf-govstack.registration.dto.biometric;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import io.mosip.registration.builder.Builder;
-import io.mosip.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.builder.Builder;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
 import lombok.Data;
 
 /**

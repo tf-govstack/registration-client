@@ -1,10 +1,10 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
 import java.sql.Timestamp;
 import java.util.List;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.SyncTransaction;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
 
 /**
  * To save the sync transaction details

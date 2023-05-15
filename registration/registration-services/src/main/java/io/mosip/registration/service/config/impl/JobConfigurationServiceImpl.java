@@ -1,4 +1,4 @@
-package io.mosip.registration.service.config.impl;
+package io.github.tf-govstack.registration.service.config.impl;
 
 import java.sql.Timestamp;
 import java.time.Duration;
@@ -41,27 +41,27 @@ import com.cronutils.model.definition.CronDefinitionBuilder;
 import com.cronutils.model.time.ExecutionTime;
 import com.cronutils.parser.CronParser;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.SyncJobConfigDAO;
-import io.mosip.registration.dao.SyncJobControlDAO;
-import io.mosip.registration.dao.SyncTransactionDAO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.SyncDataProcessDTO;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.jobs.BaseJob;
-import io.mosip.registration.jobs.JobProcessListener;
-import io.mosip.registration.jobs.JobTriggerListener;
-import io.mosip.registration.repositories.SyncJobDefRepository;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.config.JobConfigurationService;
-import io.mosip.registration.service.config.LocalConfigService;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
+import io.github.tf-govstack.registration.dao.SyncJobControlDAO;
+import io.github.tf-govstack.registration.dao.SyncTransactionDAO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.SyncDataProcessDTO;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.jobs.BaseJob;
+import io.github.tf-govstack.registration.jobs.JobProcessListener;
+import io.github.tf-govstack.registration.jobs.JobTriggerListener;
+import io.github.tf-govstack.registration.repositories.SyncJobDefRepository;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.config.JobConfigurationService;
+import io.github.tf-govstack.registration.service.config.LocalConfigService;
 
 /**
  * implementation class of {@link JobConfigurationService}
@@ -169,7 +169,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.JobConfigurationService#initiateJobs()
+	 * @see io.github.tf-govstack.registration.service.JobConfigurationService#initiateJobs()
 	 */
 	//@PostConstruct -- should be explicitly invoked, currently invoked from pre-loader
 	// because, when jobs are triggered before proper sync, it starts failing in sync precondition checks
@@ -233,7 +233,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.JobConfigurationService#startJobs(org.
+	 * @see io.github.tf-govstack.registration.service.JobConfigurationService#startJobs(org.
 	 * springframework.context.ApplicationContext)
 	 */
 	public ResponseDTO startScheduler() {
@@ -349,7 +349,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.service.config.JobConfigurationService#stopScheduler()
+	 * io.github.tf-govstack.registration.service.config.JobConfigurationService#stopScheduler()
 	 */
 	public ResponseDTO stopScheduler() {
 		LOGGER.info(LoggerConstants.BATCH_JOBS_CONFIG_LOGGER_TITLE, RegistrationConstants.APPLICATION_NAME,
@@ -398,7 +398,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.JobConfigurationService#
+	 * @see io.github.tf-govstack.registration.service.JobConfigurationService#
 	 * getCurrentRunningJobDetails()
 	 */
 	public ResponseDTO getCurrentRunningJobDetails() {
@@ -452,7 +452,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.service.config.JobConfigurationService#executeJob(java.
+	 * io.github.tf-govstack.registration.service.config.JobConfigurationService#executeJob(java.
 	 * lang.String, java.lang.String)
 	 */
 
@@ -508,7 +508,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.config.JobConfigurationService#
+	 * @see io.github.tf-govstack.registration.service.config.JobConfigurationService#
 	 * getLastCompletedSyncJobs()
 	 */
 	@Override
@@ -552,7 +552,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.config.JobConfigurationService#
+	 * @see io.github.tf-govstack.registration.service.config.JobConfigurationService#
 	 * getSyncJobsTransaction()
 	 */
 	@Override
@@ -751,7 +751,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.service.config.JobConfigurationService#executeAllJobs()
+	 * io.github.tf-govstack.registration.service.config.JobConfigurationService#executeAllJobs()
 	 */
 	@Override
 	public ResponseDTO executeAllJobs() {
@@ -806,7 +806,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.config.JobConfigurationService#isRestart()
+	 * @see io.github.tf-govstack.registration.service.config.JobConfigurationService#isRestart()
 	 */
 	@Override
 	public ResponseDTO isRestart() {
@@ -846,7 +846,7 @@ public class JobConfigurationServiceImpl extends BaseService implements JobConfi
 
 		ResponseDTO responseDTO = new ResponseDTO();
 
-		String syncDataFreq = io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SYNC_DATA_FREQ);
+		String syncDataFreq = io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SYNC_DATA_FREQ);
 		if (syncDataFreq != null) {
 			ExecutionTime executionTime = getExecutionTime(syncDataFreq);
 			Instant last = getLast(executionTime);

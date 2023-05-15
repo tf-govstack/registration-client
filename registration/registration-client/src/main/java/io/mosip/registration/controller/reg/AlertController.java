@@ -1,8 +1,8 @@
-package io.mosip.registration.controller.reg;
+package io.github.tf-govstack.registration.controller.reg;
 
-import static io.mosip.registration.constants.LoggerConstants.LOG_ALERT_GENERATION;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_ALERT_GENERATION;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -10,13 +10,13 @@ import java.util.ResourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.constants.RegistrationUIConstants;
-import io.mosip.registration.controller.BaseController;
-import io.mosip.registration.controller.device.ScanPopUpViewController;
-import io.mosip.registration.controller.eodapproval.RegistrationApprovalController;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
+import io.github.tf-govstack.registration.controller.BaseController;
+import io.github.tf-govstack.registration.controller.device.ScanPopUpViewController;
+import io.github.tf-govstack.registration.controller.eodapproval.RegistrationApprovalController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;

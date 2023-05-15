@@ -1,6 +1,6 @@
-package io.mosip.registration.exception;
+package io.github.tf-govstack.registration.exception;
 
-import io.mosip.kernel.core.exception.BaseCheckedException;
+import io.github.tf-govstack.kernel.core.exception.BaseCheckedException;
 
 /**
  * The class to handle all the checked exception in REG

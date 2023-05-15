@@ -1,4 +1,4 @@
-package io.mosip.registration.test.dao.impl;
+package io.github.tf-govstack.registration.test.dao.impl;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,16 +24,16 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.registration.dao.impl.IdentitySchemaDaoImpl;
-import io.mosip.registration.dto.schema.ProcessSpecDto;
-import io.mosip.registration.dto.schema.SchemaDto;
-import io.mosip.registration.entity.IdentitySchema;
-import io.mosip.registration.entity.ProcessSpec;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.repositories.IdentitySchemaRepository;
-import io.mosip.registration.repositories.ProcessSpecRepository;
-import io.mosip.registration.util.mastersync.MapperUtils;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.registration.dao.impl.IdentitySchemaDaoImpl;
+import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
+import io.github.tf-govstack.registration.dto.schema.SchemaDto;
+import io.github.tf-govstack.registration.entity.IdentitySchema;
+import io.github.tf-govstack.registration.entity.ProcessSpec;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.repositories.IdentitySchemaRepository;
+import io.github.tf-govstack.registration.repositories.ProcessSpecRepository;
+import io.github.tf-govstack.registration.util.mastersync.MapperUtils;
 
 /**
  * @author anusha

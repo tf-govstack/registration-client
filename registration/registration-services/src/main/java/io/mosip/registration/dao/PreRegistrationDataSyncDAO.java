@@ -1,10 +1,10 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
-import io.mosip.registration.entity.PreRegistrationList;
+import io.github.tf-govstack.registration.entity.PreRegistrationList;
 
 /**
  * This class is used to fetch the specific pre registration by passing pre registration id as parameter,

@@ -1,7 +1,7 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 import java.util.Set;
@@ -10,12 +10,12 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.dao.ScreenAuthorizationDAO;
-import io.mosip.registration.dao.ScreenAuthorizationDetails;
-import io.mosip.registration.dto.AuthorizationDTO;
-import io.mosip.registration.repositories.ScreenAuthorizationRepository;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.dao.ScreenAuthorizationDAO;
+import io.github.tf-govstack.registration.dao.ScreenAuthorizationDetails;
+import io.github.tf-govstack.registration.dto.AuthorizationDTO;
+import io.github.tf-govstack.registration.repositories.ScreenAuthorizationRepository;
 
 /**
  * The implementation class of {@link ScreenAuthorizationDAO}.

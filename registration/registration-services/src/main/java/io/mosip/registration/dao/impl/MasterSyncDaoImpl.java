@@ -1,7 +1,7 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 
@@ -10,33 +10,33 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.MasterSyncDao;
-import io.mosip.registration.entity.BiometricAttribute;
-import io.mosip.registration.entity.DocumentCategory;
-import io.mosip.registration.entity.DocumentType;
-import io.mosip.registration.entity.Language;
-import io.mosip.registration.entity.Location;
-import io.mosip.registration.entity.LocationHierarchy;
-import io.mosip.registration.entity.ReasonCategory;
-import io.mosip.registration.entity.ReasonList;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.repositories.BiometricAttributeRepository;
-import io.mosip.registration.repositories.BlocklistedWordsRepository;
-import io.mosip.registration.repositories.DocumentCategoryRepository;
-import io.mosip.registration.repositories.DocumentTypeRepository;
-import io.mosip.registration.repositories.LanguageRepository;
-import io.mosip.registration.repositories.LocationHierarchyRepository;
-import io.mosip.registration.repositories.LocationRepository;
-import io.mosip.registration.repositories.ReasonCategoryRepository;
-import io.mosip.registration.repositories.ReasonListRepository;
-import io.mosip.registration.repositories.SyncJobControlRepository;
-import io.mosip.registration.repositories.SyncJobDefRepository;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.MasterSyncDao;
+import io.github.tf-govstack.registration.entity.BiometricAttribute;
+import io.github.tf-govstack.registration.entity.DocumentCategory;
+import io.github.tf-govstack.registration.entity.DocumentType;
+import io.github.tf-govstack.registration.entity.Language;
+import io.github.tf-govstack.registration.entity.Location;
+import io.github.tf-govstack.registration.entity.LocationHierarchy;
+import io.github.tf-govstack.registration.entity.ReasonCategory;
+import io.github.tf-govstack.registration.entity.ReasonList;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.repositories.BiometricAttributeRepository;
+import io.github.tf-govstack.registration.repositories.BlocklistedWordsRepository;
+import io.github.tf-govstack.registration.repositories.DocumentCategoryRepository;
+import io.github.tf-govstack.registration.repositories.DocumentTypeRepository;
+import io.github.tf-govstack.registration.repositories.LanguageRepository;
+import io.github.tf-govstack.registration.repositories.LocationHierarchyRepository;
+import io.github.tf-govstack.registration.repositories.LocationRepository;
+import io.github.tf-govstack.registration.repositories.ReasonCategoryRepository;
+import io.github.tf-govstack.registration.repositories.ReasonListRepository;
+import io.github.tf-govstack.registration.repositories.SyncJobControlRepository;
+import io.github.tf-govstack.registration.repositories.SyncJobDefRepository;
 
 /**
  * The implementation class of {@link MasterSyncDao}
@@ -100,7 +100,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.MasterSyncDao#getMasterSyncStatus()
+	 * @see io.github.tf-govstack.registration.dao.MasterSyncDao#getMasterSyncStatus()
 	 */
 	@Override
 	public SyncControl syncJobDetails(String synccontrol) {
@@ -131,7 +131,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.dao.MasterSyncDao#findLocationByLangCode(java.lang.
+	 * io.github.tf-govstack.registration.dao.MasterSyncDao#findLocationByLangCode(java.lang.
 	 * String, java.lang.String)
 	 */
 	@Override
@@ -143,7 +143,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.dao.MasterSyncDao#findLocationByParentLocCode(java.lang
+	 * io.github.tf-govstack.registration.dao.MasterSyncDao#findLocationByParentLocCode(java.lang
 	 * .String)
 	 */
 	@Override
@@ -154,7 +154,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.MasterSyncDao#getAllReasonCatogery()
+	 * @see io.github.tf-govstack.registration.dao.MasterSyncDao#getAllReasonCatogery()
 	 */
 	@Override
 	public List<ReasonCategory> getAllReasonCatogery(String langCode) {
@@ -164,7 +164,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.MasterSyncDao#getReasonList(java.util.List)
+	 * @see io.github.tf-govstack.registration.dao.MasterSyncDao#getReasonList(java.util.List)
 	 */
 	@Override
 	public List<ReasonList> getReasonList(String langCode, List<String> reasonCat) {
@@ -176,7 +176,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.dao.MasterSyncDao#getBlockListedWords(java.lang.String)
+	 * io.github.tf-govstack.registration.dao.MasterSyncDao#getBlockListedWords(java.lang.String)
 	 */
 	@Override
 	public List<String> getBlockListedWords() {
@@ -186,7 +186,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.MasterSyncDao#getDocumentCategories(java.lang.
+	 * @see io.github.tf-govstack.registration.dao.MasterSyncDao#getDocumentCategories(java.lang.
 	 * String)
 	 */
 	@Override
@@ -197,7 +197,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.MasterSyncDao#getDocumentCategories(java.lang.
+	 * @see io.github.tf-govstack.registration.dao.MasterSyncDao#getDocumentCategories(java.lang.
 	 * String)
 	 */
 	@Override
@@ -213,7 +213,7 @@ public class MasterSyncDaoImpl implements MasterSyncDao {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.MasterSyncDao#getBiometricType(java.lang.
+	 * @see io.github.tf-govstack.registration.dao.MasterSyncDao#getBiometricType(java.lang.
 	 * String, java.lang.String)
 	 */
 	@Override

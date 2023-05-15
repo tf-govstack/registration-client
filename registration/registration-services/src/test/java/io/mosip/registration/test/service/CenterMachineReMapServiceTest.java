@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service;
+package io.github.tf-govstack.registration.test.service;
 
 import static org.junit.Assert.assertFalse;
 
@@ -29,28 +29,28 @@ import org.springframework.core.io.Resource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.init.ScriptUtils;
 
-import io.mosip.kernel.core.exception.IOException;
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.GlobalParamDAO;
-import io.mosip.registration.dao.PreRegistrationDataSyncDAO;
-import io.mosip.registration.dao.RegistrationDAO;
-import io.mosip.registration.dao.SyncJobConfigDAO;
-import io.mosip.registration.entity.GlobalParam;
-import io.mosip.registration.entity.PreRegistrationList;
-import io.mosip.registration.entity.Registration;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.exception.RemapException;
-import io.mosip.registration.service.config.GlobalParamService;
-import io.mosip.registration.service.packet.PacketUploadService;
-import io.mosip.registration.service.packet.RegPacketStatusService;
-import io.mosip.registration.service.remap.impl.CenterMachineReMapServiceImpl;
-import io.mosip.registration.service.sync.PacketSynchService;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.kernel.core.exception.IOException;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.GlobalParamDAO;
+import io.github.tf-govstack.registration.dao.PreRegistrationDataSyncDAO;
+import io.github.tf-govstack.registration.dao.RegistrationDAO;
+import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
+import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.github.tf-govstack.registration.entity.PreRegistrationList;
+import io.github.tf-govstack.registration.entity.Registration;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.exception.RemapException;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.registration.service.packet.PacketUploadService;
+import io.github.tf-govstack.registration.service.packet.RegPacketStatusService;
+import io.github.tf-govstack.registration.service.remap.impl.CenterMachineReMapServiceImpl;
+import io.github.tf-govstack.registration.service.sync.PacketSynchService;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

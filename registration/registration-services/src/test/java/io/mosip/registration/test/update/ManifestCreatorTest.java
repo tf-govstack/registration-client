@@ -1,11 +1,11 @@
-package io.mosip.registration.test.update;
+package io.github.tf-govstack.registration.test.update;
 
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.test.service.PreRegZipHandlingServiceTest;
-import io.mosip.registration.update.ClientIntegrityValidator;
-import io.mosip.registration.update.ClientSetupValidator;
-import io.mosip.registration.update.ManifestCreator;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.test.service.PreRegZipHandlingServiceTest;
+import io.github.tf-govstack.registration.update.ClientIntegrityValidator;
+import io.github.tf-govstack.registration.update.ClientSetupValidator;
+import io.github.tf-govstack.registration.update.ManifestCreator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

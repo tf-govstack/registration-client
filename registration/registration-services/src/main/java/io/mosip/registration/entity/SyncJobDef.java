@@ -1,4 +1,4 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import java.sql.Timestamp;
 
@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import io.mosip.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
 /**
  * The Entity class for sync job def
  * 

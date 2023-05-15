@@ -1,12 +1,12 @@
-package io.mosip.registration.controller.reg;
+package io.github.tf-govstack.registration.controller.reg;
 
 import org.springframework.stereotype.Controller;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.controller.BaseController;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.controller.BaseController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.layout.GridPane;

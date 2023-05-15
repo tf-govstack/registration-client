@@ -1,4 +1,4 @@
-package io.mosip.registration.constants;
+package io.github.tf-govstack.registration.constants;
 
 /**
  * The {@link Enum} for the types of Audit Events

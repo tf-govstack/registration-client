@@ -1,4 +1,4 @@
-package io.mosip.registration.validator;
+package io.github.tf-govstack.registration.validator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -29,33 +29,33 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.mosip.commons.packet.dto.packet.BiometricsException;
-import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.kernel.core.util.HMACUtils2;
-import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
-import io.mosip.kernel.signature.constant.SignatureConstant;
-import io.mosip.kernel.signature.dto.JWTSignatureVerifyResponseDto;
-import io.mosip.kernel.signature.service.SignatureService;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dto.RegistrationDTO;
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.dto.packetmanager.DocumentDto;
-import io.mosip.registration.dto.schema.ConditionalBioAttributes;
-import io.mosip.registration.dto.schema.RequiredOnExpr;
-import io.mosip.registration.dto.schema.UiFieldDTO;
-import io.mosip.registration.entity.FileSignature;
-import io.mosip.registration.enums.FlowType;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.repositories.FileSignatureRepository;
-import io.mosip.registration.service.IdentitySchemaService;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
-import io.mosip.registration.util.mastersync.MapperUtils;
+import io.github.tf-govstack.commons.packet.dto.packet.BiometricsException;
+import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
+import io.github.tf-govstack.kernel.signature.constant.SignatureConstant;
+import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyResponseDto;
+import io.github.tf-govstack.kernel.signature.service.SignatureService;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dto.RegistrationDTO;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
+import io.github.tf-govstack.registration.dto.schema.ConditionalBioAttributes;
+import io.github.tf-govstack.registration.dto.schema.RequiredOnExpr;
+import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
+import io.github.tf-govstack.registration.entity.FileSignature;
+import io.github.tf-govstack.registration.enums.FlowType;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.repositories.FileSignatureRepository;
+import io.github.tf-govstack.registration.service.IdentitySchemaService;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.registration.util.mastersync.MapperUtils;
 
 /**
  * 
@@ -88,7 +88,7 @@ public class RequiredFieldValidatorTest {
 	private RequiredFieldValidator requiredFieldValidator;
 	
 	@Mock
-	io.mosip.registration.context.ApplicationContext context;	
+	io.github.tf-govstack.registration.context.ApplicationContext context;	
 
 //	private static final String SCRIPT_NAME = {'INFANT':'0-5','MINOR':'6-17','ADULT':'18-200'}";
 

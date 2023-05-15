@@ -1,8 +1,8 @@
-package io.mosip.registration.controller.reg;
+package io.github.tf-govstack.registration.controller.reg;
 
-import static io.mosip.registration.constants.LoggerConstants.LOG_REG_UIN_UPDATE;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_UIN_UPDATE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -14,19 +14,19 @@ import java.util.ResourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.idvalidator.exception.InvalidIDException;
-import io.mosip.kernel.core.idvalidator.spi.UinValidator;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.StringUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.constants.RegistrationUIConstants;
-import io.mosip.registration.controller.BaseController;
-import io.mosip.registration.controller.FXUtils;
-import io.mosip.registration.controller.GenericController;
-import io.mosip.registration.dto.schema.ProcessSpecDto;
-import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.idvalidator.exception.InvalidIDException;
+import io.github.tf-govstack.kernel.core.idvalidator.spi.UinValidator;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.StringUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
+import io.github.tf-govstack.registration.controller.BaseController;
+import io.github.tf-govstack.registration.controller.FXUtils;
+import io.github.tf-govstack.registration.controller.GenericController;
+import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
+import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

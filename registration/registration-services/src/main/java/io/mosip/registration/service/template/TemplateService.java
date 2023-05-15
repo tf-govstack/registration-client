@@ -1,6 +1,6 @@
-package io.mosip.registration.service.template;
+package io.github.tf-govstack.registration.service.template;
 
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 
 /**
  * The {@code TemplateService} represents the Template that needs to be

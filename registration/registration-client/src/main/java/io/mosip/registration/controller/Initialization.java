@@ -1,7 +1,7 @@
-package io.mosip.registration.controller;
+package io.github.tf-govstack.registration.controller;
 
 import com.sun.javafx.application.LauncherImpl;
-import io.mosip.registration.preloader.ClientPreLoader;
+import io.github.tf-govstack.registration.preloader.ClientPreLoader;
 
 import java.nio.file.Path;
 

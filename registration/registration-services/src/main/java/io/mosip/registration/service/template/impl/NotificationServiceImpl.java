@@ -1,11 +1,11 @@
-package io.mosip.registration.service.template.impl;
+package io.github.tf-govstack.registration.service.template.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
-import static io.mosip.registration.constants.RegistrationConstants.EMAIL_SERVICE;
-import static io.mosip.registration.constants.RegistrationConstants.EMAIL_SUBJECT;
-import static io.mosip.registration.constants.RegistrationConstants.NOTIFICATION_SERVICE;
-import static io.mosip.registration.constants.RegistrationConstants.SMS_SERVICE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.EMAIL_SERVICE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.EMAIL_SUBJECT;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.NOTIFICATION_SERVICE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.SMS_SERVICE;
 
 import java.net.SocketTimeoutException;
 import java.time.LocalDateTime;
@@ -22,25 +22,25 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.ResourceAccessException;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.kernel.core.util.StringUtils;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.AuditReferenceIdTypes;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dto.ErrorResponseDTO;
-import io.mosip.registration.dto.NotificationDTO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.SuccessResponseDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegistrationExceptionConstants;
-import io.mosip.registration.service.template.NotificationService;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.StringUtils;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
+import io.github.tf-govstack.registration.dto.NotificationDTO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
+import io.github.tf-govstack.registration.service.template.NotificationService;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 /**
  * SMS and Email notification service
@@ -72,7 +72,7 @@ public class NotificationServiceImpl implements NotificationService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.service.NotificationService#sendSMS(java.lang.String,
+	 * io.github.tf-govstack.registration.service.NotificationService#sendSMS(java.lang.String,
 	 * java.lang.String, java.lang.String)
 	 */
 	@Override
@@ -101,7 +101,7 @@ public class NotificationServiceImpl implements NotificationService {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.service.NotificationService#sendEmail(java.lang.String,
+	 * io.github.tf-govstack.registration.service.NotificationService#sendEmail(java.lang.String,
 	 * java.lang.String, java.lang.String)
 	 */
 	@Override

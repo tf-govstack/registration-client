@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service;
+package io.github.tf-govstack.registration.test.service;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.mosip.kernel.core.util.FileUtils;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -20,10 +20,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.mosip.kernel.core.virusscanner.exception.VirusScannerException;
-import io.mosip.kernel.core.virusscanner.spi.VirusScanner;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.service.packet.impl.RegistrationPacketVirusScanServiceImpl;
+import io.github.tf-govstack.kernel.core.virusscanner.exception.VirusScannerException;
+import io.github.tf-govstack.kernel.core.virusscanner.spi.VirusScanner;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.service.packet.impl.RegistrationPacketVirusScanServiceImpl;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;

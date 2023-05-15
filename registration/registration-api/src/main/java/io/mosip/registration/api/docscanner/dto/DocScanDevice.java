@@ -1,6 +1,6 @@
-package io.mosip.registration.api.docscanner.dto;
+package io.github.tf-govstack.registration.api.docscanner.dto;
 
-import io.mosip.registration.api.docscanner.DeviceType;
+import io.github.tf-govstack.registration.api.docscanner.DeviceType;
 import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

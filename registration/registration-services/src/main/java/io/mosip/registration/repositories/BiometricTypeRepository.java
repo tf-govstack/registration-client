@@ -1,7 +1,7 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.BiometricType;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.BiometricType;
 
 /**
  * Interface for {@link BiometricType} 

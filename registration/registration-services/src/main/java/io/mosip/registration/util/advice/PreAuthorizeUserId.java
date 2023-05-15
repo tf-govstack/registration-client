@@ -1,4 +1,4 @@
-package io.mosip.registration.util.advice;
+package io.github.tf-govstack.registration.util.advice;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

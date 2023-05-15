@@ -1,25 +1,25 @@
-package io.mosip.registration.audit;
+package io.github.tf-govstack.registration.audit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.mosip.kernel.auditmanager.builder.AuditRequestBuilder;
-import io.mosip.kernel.auditmanager.request.AuditRequestDto;
-import io.mosip.kernel.core.auditmanager.spi.AuditHandler;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.AuditReferenceIdTypes;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.AuditDAO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.kernel.auditmanager.builder.AuditRequestBuilder;
+import io.github.tf-govstack.kernel.auditmanager.request.AuditRequestDto;
+import io.github.tf-govstack.kernel.core.auditmanager.spi.AuditHandler;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.AuditDAO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 /**
  * Class to Audit the events of Registration Client.
@@ -46,8 +46,8 @@ public class AuditManagerSerivceImpl extends BaseService implements AuditManager
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.audit.AuditFactory#audit(io.mosip.registration.
-	 * constants.AuditEvent, io.mosip.registration.constants.Components,
+	 * @see io.github.tf-govstack.registration.audit.AuditFactory#audit(io.github.tf-govstack.registration.
+	 * constants.AuditEvent, io.github.tf-govstack.registration.constants.Components,
 	 * java.lang.String, java.lang.String)
 	 */
 	@Override
@@ -85,7 +85,7 @@ public class AuditManagerSerivceImpl extends BaseService implements AuditManager
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.audit.AuditService#deleteAuditLogs()
+	 * @see io.github.tf-govstack.registration.service.audit.AuditService#deleteAuditLogs()
 	 */
 	@Override
 	public synchronized ResponseDTO deleteAuditLogs() {

@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service;
+package io.github.tf-govstack.registration.test.service;
 
 import java.util.ArrayList;
 
@@ -11,8 +11,8 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.mosip.registration.dao.DocumentCategoryDAO;
-import io.mosip.registration.service.doc.category.impl.DocumentCategoryServiceImpl;
+import io.github.tf-govstack.registration.dao.DocumentCategoryDAO;
+import io.github.tf-govstack.registration.service.doc.category.impl.DocumentCategoryServiceImpl;
 
 public class DocumentCategoryServiceTest {
 

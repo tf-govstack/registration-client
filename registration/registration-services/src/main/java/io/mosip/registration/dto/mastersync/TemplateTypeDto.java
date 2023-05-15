@@ -1,4 +1,4 @@
-package io.mosip.registration.dto.mastersync;
+package io.github.tf-govstack.registration.dto.mastersync;
 
 /**
  * @author Sreekar Chukka

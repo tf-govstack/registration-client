@@ -1,10 +1,10 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
 import java.util.List;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.UserBiometric;
-import io.mosip.registration.entity.id.UserBiometricId;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.UserBiometric;
+import io.github.tf-govstack.registration.entity.id.UserBiometricId;
 
 /**
  * Interface for {@link UserBiometric}

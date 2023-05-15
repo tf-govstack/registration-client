@@ -1,20 +1,20 @@
-package io.mosip.registration.util.mastersync;
+package io.github.tf-govstack.registration.util.mastersync;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
 import org.json.JSONObject;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.dataaccess.exception.DataAccessLayerException;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.entity.RegistrationCommonFields;
+import io.github.tf-govstack.kernel.core.dataaccess.exception.DataAccessLayerException;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.entity.RegistrationCommonFields;
 
 /**
  * MetaDataUtils class provide methods to copy values from DTO to entity along

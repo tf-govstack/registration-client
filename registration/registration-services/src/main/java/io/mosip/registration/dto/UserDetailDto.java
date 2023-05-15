@@ -1,10 +1,10 @@
-package io.mosip.registration.dto;
+package io.github.tf-govstack.registration.dto;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import io.mosip.registration.dto.mastersync.MasterSyncBaseDto;
+import io.github.tf-govstack.registration.dto.mastersync.MasterSyncBaseDto;
 import lombok.Data;
 
 /**

@@ -1,10 +1,10 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.ProcessList;
-import io.mosip.registration.entity.id.IdAndLanguageCodeID;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.ProcessList;
+import io.github.tf-govstack.registration.entity.id.IdAndLanguageCodeID;
 
 /**
  * ProcessListRepository.

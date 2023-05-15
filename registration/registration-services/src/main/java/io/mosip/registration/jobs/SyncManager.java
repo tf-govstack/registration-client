@@ -1,9 +1,9 @@
-package io.mosip.registration.jobs;
+package io.github.tf-govstack.registration.jobs;
 
 import java.sql.Timestamp;
 
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
 
 /**
  * This class includes the functionalities of what transaction table needed.,

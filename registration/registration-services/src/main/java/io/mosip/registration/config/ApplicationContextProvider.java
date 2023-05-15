@@ -1,4 +1,4 @@
-package io.mosip.registration.config;
+package io.github.tf-govstack.registration.config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;

@@ -1,4 +1,4 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 
 import javax.persistence.Column;

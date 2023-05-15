@@ -1,4 +1,4 @@
-package io.mosip.registration.controller.vo;
+package io.github.tf-govstack.registration.controller.vo;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;

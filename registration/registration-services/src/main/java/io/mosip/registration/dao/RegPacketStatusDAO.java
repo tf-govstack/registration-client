@@ -1,8 +1,8 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 
-import io.mosip.registration.entity.Registration;
+import io.github.tf-govstack.registration.entity.Registration;
 
 /**
  * This DAO class is used to fetch/update/delete the registrations in the 

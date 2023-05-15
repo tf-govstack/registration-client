@@ -1,4 +1,4 @@
-package io.mosip.registration.dto.packetmanager.metadata;
+package io.github.tf-govstack.registration.dto.packetmanager.metadata;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package io.mosip.registration.test.dao.impl;
+package io.github.tf-govstack.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -21,13 +21,13 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.GlobalParamName;
-import io.mosip.registration.dao.impl.GlobalParamDAOImpl;
-import io.mosip.registration.entity.GlobalParam;
-import io.mosip.registration.entity.id.GlobalParamId;
-import io.mosip.registration.repositories.GlobalParamRepository;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.GlobalParamName;
+import io.github.tf-govstack.registration.dao.impl.GlobalParamDAOImpl;
+import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.github.tf-govstack.registration.entity.id.GlobalParamId;
+import io.github.tf-govstack.registration.repositories.GlobalParamRepository;
 
 public class GlobalParamDAOTest {
 

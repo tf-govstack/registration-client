@@ -1,8 +1,8 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.LoggerConstants.LOG_REG_SCHEMA_SYNC;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_SCHEMA_SYNC;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -12,28 +12,28 @@ import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
 
-import io.mosip.registration.dto.schema.ProcessSpecDto;
-import io.mosip.registration.entity.ProcessSpec;
-import io.mosip.registration.repositories.ProcessSpecRepository;
+import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
+import io.github.tf-govstack.registration.entity.ProcessSpec;
+import io.github.tf-govstack.registration.repositories.ProcessSpecRepository;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.IdentitySchemaDao;
-import io.mosip.registration.dto.schema.SettingsSchema;
-import io.mosip.registration.dto.schema.SchemaDto;
-import io.mosip.registration.entity.IdentitySchema;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.repositories.IdentitySchemaRepository;
-import io.mosip.registration.util.mastersync.MapperUtils;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.IdentitySchemaDao;
+import io.github.tf-govstack.registration.dto.schema.SettingsSchema;
+import io.github.tf-govstack.registration.dto.schema.SchemaDto;
+import io.github.tf-govstack.registration.entity.IdentitySchema;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.repositories.IdentitySchemaRepository;
+import io.github.tf-govstack.registration.util.mastersync.MapperUtils;
 
 @Repository
 public class IdentitySchemaDaoImpl implements IdentitySchemaDao {

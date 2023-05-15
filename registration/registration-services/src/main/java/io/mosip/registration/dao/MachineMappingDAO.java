@@ -1,10 +1,10 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 
-import io.mosip.registration.entity.MachineMaster;
-import io.mosip.registration.entity.UserMachineMapping;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.entity.MachineMaster;
+import io.github.tf-govstack.registration.entity.UserMachineMapping;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 
 /**
  * This class is used to update the mapping of users and devices to the

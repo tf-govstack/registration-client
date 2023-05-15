@@ -1,4 +1,4 @@
-package io.mosip.registration.test.mapper;
+package io.github.tf-govstack.registration.test.mapper;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,20 +6,20 @@ import java.time.OffsetDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-import io.mosip.registration.entity.*;
-import io.mosip.registration.entity.id.UserMachineMappingID;
+import io.github.tf-govstack.registration.entity.*;
+import io.github.tf-govstack.registration.entity.id.UserMachineMappingID;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import io.mosip.registration.dto.RegistrationDTO;
-import io.mosip.registration.dto.UserDTO;
-/*import io.mosip.registration.dto.demographic.DemographicDTO;
-import io.mosip.registration.dto.demographic.DemographicInfoDTO;*/
-import io.mosip.registration.entity.id.UserBiometricId;
-import io.mosip.registration.entity.id.UserRoleId;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.mapper.CustomObjectMapper;
-import io.mosip.registration.test.util.datastub.DataProvider;
+import io.github.tf-govstack.registration.dto.RegistrationDTO;
+import io.github.tf-govstack.registration.dto.UserDTO;
+/*import io.github.tf-govstack.registration.dto.demographic.DemographicDTO;
+import io.github.tf-govstack.registration.dto.demographic.DemographicInfoDTO;*/
+import io.github.tf-govstack.registration.entity.id.UserBiometricId;
+import io.github.tf-govstack.registration.entity.id.UserRoleId;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.mapper.CustomObjectMapper;
+import io.github.tf-govstack.registration.test.util.datastub.DataProvider;
 import ma.glasnost.orika.MapperFacade;
 
 public class CustomObjectMapperTest {

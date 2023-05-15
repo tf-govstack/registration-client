@@ -1,6 +1,6 @@
-package io.mosip.registration.api.geoposition;
+package io.github.tf-govstack.registration.api.geoposition;
 
-import io.mosip.registration.api.geoposition.dto.GeoPosition;
+import io.github.tf-govstack.registration.api.geoposition.dto.GeoPosition;
 
 public interface GeoPositionService {
 

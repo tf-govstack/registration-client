@@ -1,8 +1,8 @@
-package io.mosip.registration.mdm.sbi.spec_1_0.service.impl;
+package io.github.tf-govstack.registration.mdm.sbi.spec_1_0.service.impl;
 
-import static io.mosip.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_INTEGERATOR;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_INTEGERATOR;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +16,7 @@ import java.util.List;
 
 import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;
-import io.mosip.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
 import org.apache.http.Consts;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
@@ -35,35 +35,35 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.exception.DeviceException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegistrationExceptionConstants;
-import io.mosip.registration.mdm.constants.MosipBioDeviceConstants;
-import io.mosip.registration.mdm.dto.Biometric;
-import io.mosip.registration.mdm.dto.DeviceInfo;
-import io.mosip.registration.mdm.dto.MDMRequestDto;
-import io.mosip.registration.mdm.dto.MdmBioDevice;
-import io.mosip.registration.mdm.integrator.MosipDeviceSpecificationProvider;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.request.SbiDeviceDiscoveryRequest;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.request.SbiRCaptureRequestBioDTO;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.request.SbiRCaptureRequestDTO;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.request.StreamSbiRequestDTO;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.MdmDeviceInfoResponse;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfo;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfoWrapper;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.SbiDeviceDiscoveryMDSResponse;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.SbiDigitalId;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseBiometricsDTO;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseDTO;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseDataDTO;
-import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
-import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.exception.DeviceException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
+import io.github.tf-govstack.registration.mdm.constants.MosipBioDeviceConstants;
+import io.github.tf-govstack.registration.mdm.dto.Biometric;
+import io.github.tf-govstack.registration.mdm.dto.DeviceInfo;
+import io.github.tf-govstack.registration.mdm.dto.MDMRequestDto;
+import io.github.tf-govstack.registration.mdm.dto.MdmBioDevice;
+import io.github.tf-govstack.registration.mdm.integrator.MosipDeviceSpecificationProvider;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.request.SbiDeviceDiscoveryRequest;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.request.SbiRCaptureRequestBioDTO;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.request.SbiRCaptureRequestDTO;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.request.StreamSbiRequestDTO;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.MdmDeviceInfoResponse;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfo;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfoWrapper;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.SbiDeviceDiscoveryMDSResponse;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.SbiDigitalId;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseBiometricsDTO;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseDTO;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseDataDTO;
+import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
+import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
 
 @Service
 public class MosipDeviceSpecification_SBI_1_0_ProviderImpl implements MosipDeviceSpecificationProvider {
@@ -285,7 +285,7 @@ public class MosipDeviceSpecification_SBI_1_0_ProviderImpl implements MosipDevic
 
 		if (exceptions != null) {
 			for (int index = 0; index < exceptions.length; index++) {
-				exceptions[index] = io.mosip.registration.mdm.dto.Biometric
+				exceptions[index] = io.github.tf-govstack.registration.mdm.dto.Biometric
 						.getmdmRequestAttributeName(exceptions[index], SPEC_VERSION);
 			}
 

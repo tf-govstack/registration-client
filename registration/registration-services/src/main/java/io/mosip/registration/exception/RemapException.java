@@ -1,4 +1,4 @@
-package io.mosip.registration.exception;
+package io.github.tf-govstack.registration.exception;
 
 
 public class RemapException extends RegBaseCheckedException {

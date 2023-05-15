@@ -10,7 +10,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
-import io.mosip.registration.dao.RegistrationDAO;
+import io.github.tf-govstack.registration.dao.RegistrationDAO;
 
 public class RID {
     private static final org.slf4j.Logger logger= org.slf4j.LoggerFactory.getLogger(RID.class);

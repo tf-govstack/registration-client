@@ -1,20 +1,20 @@
-package io.mosip.registration.mdm.integrator;
+package io.github.tf-govstack.registration.mdm.integrator;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.util.List;
 
-import io.mosip.kernel.logger.logback.util.MetricTag;
+import io.github.tf-govstack.kernel.logger.logback.util.MetricTag;
 import org.apache.http.ParseException;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.mdm.dto.MDMRequestDto;
-import io.mosip.registration.mdm.dto.MdmBioDevice;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.mdm.dto.MDMRequestDto;
+import io.github.tf-govstack.registration.mdm.dto.MdmBioDevice;
 
 /**
  * This class will work as a mediator for request and response between the

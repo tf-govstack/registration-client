@@ -1,4 +1,4 @@
-package io.mosip.registration.entity.id;
+package io.github.tf-govstack.registration.entity.id;
 
 import lombok.Data;
 

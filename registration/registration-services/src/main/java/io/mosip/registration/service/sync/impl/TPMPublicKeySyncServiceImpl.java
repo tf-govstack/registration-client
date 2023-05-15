@@ -1,4 +1,4 @@
-package io.mosip.registration.service.sync.impl;
+package io.github.tf-govstack.registration.service.sync.impl;
 
 import java.net.InetAddress;
 import java.net.SocketTimeoutException;
@@ -7,31 +7,31 @@ import java.util.List;
 import java.util.Map;
 
 import io.micrometer.core.annotation.Timed;
-import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.mosip.kernel.core.http.RequestWrapper;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.tpm.PublicKeyUploadRequestDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.exception.RegistrationExceptionConstants;
-import io.mosip.registration.service.sync.TPMPublicKeySyncService;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.kernel.core.http.RequestWrapper;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.tpm.PublicKeyUploadRequestDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
+import io.github.tf-govstack.registration.service.sync.TPMPublicKeySyncService;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 /**
  * Service implementation class to sync the TPM Public Key with the server.
@@ -55,7 +55,7 @@ public class TPMPublicKeySyncServiceImpl  extends BaseService implements TPMPubl
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.service.sync.TPMPublicKeySyncService#syncTPMPublicKey()
+	 * io.github.tf-govstack.registration.service.sync.TPMPublicKeySyncService#syncTPMPublicKey()
 	 */
 	@Timed
 	@Override

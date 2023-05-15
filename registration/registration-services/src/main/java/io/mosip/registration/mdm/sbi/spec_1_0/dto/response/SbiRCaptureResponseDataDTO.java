@@ -1,8 +1,8 @@
-package io.mosip.registration.mdm.sbi.spec_1_0.dto.response;
+package io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response;
 
 import java.util.Base64;
 
-import io.mosip.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
 import lombok.Data;
 
 @Data

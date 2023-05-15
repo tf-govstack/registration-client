@@ -3,7 +3,7 @@ package registrationtest.utility;
 
 import java.util.Optional;
 
-import io.mosip.registration.dto.mastersync.GenericDto;
+import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
 import javafx.application.Platform;
 import javafx.scene.control.ComboBox;
 

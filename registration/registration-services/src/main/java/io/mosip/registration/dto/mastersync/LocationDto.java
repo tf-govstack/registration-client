@@ -1,4 +1,4 @@
-package io.mosip.registration.dto.mastersync;
+package io.github.tf-govstack.registration.dto.mastersync;
 /**
  * This class will contains the location code and value for the field
  * @author Sreekar Chukka

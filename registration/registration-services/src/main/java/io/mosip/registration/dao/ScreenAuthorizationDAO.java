@@ -1,8 +1,8 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 
-import io.mosip.registration.dto.AuthorizationDTO;
+import io.github.tf-govstack.registration.dto.AuthorizationDTO;
 
 /**
  * This DAO class will fetch the screen ids of each screens that needs to be 

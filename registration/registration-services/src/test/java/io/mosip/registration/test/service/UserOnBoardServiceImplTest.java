@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service;
+package io.github.tf-govstack.registration.test.service;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -37,42 +37,42 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.HttpClientErrorException;
 
-import io.mosip.kernel.biometrics.constant.BiometricType;
-import io.mosip.kernel.biometrics.constant.ProcessedLevelType;
-import io.mosip.kernel.biometrics.entities.BDBInfo;
-import io.mosip.kernel.biometrics.entities.BIR;
-import io.mosip.kernel.biosdk.provider.factory.BioAPIFactory;
-import io.mosip.kernel.biosdk.provider.spi.iBioProviderApi;
-import io.mosip.kernel.core.bioapi.exception.BiometricException;
-import io.mosip.kernel.core.crypto.spi.CryptoCoreSpec;
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.kernel.core.util.HMACUtils2;
-import io.mosip.kernel.cryptomanager.dto.CryptomanagerResponseDto;
-import io.mosip.kernel.cryptomanager.service.CryptomanagerService;
-import io.mosip.kernel.keygenerator.bouncycastle.util.KeyGeneratorUtils;
-import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.mosip.kernel.keymanagerservice.dto.UploadCertificateResponseDto;
-import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
-import io.mosip.kernel.keymanagerservice.util.KeymanagerUtil;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.context.SessionContext.UserContext;
-import io.mosip.registration.dao.RegistrationCenterDAO;
-import io.mosip.registration.dao.UserOnboardDAO;
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.entity.MachineMaster;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.repositories.MachineMasterRepository;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.operator.UserDetailService;
-import io.mosip.registration.service.operator.impl.UserOnboardServiceImpl;
-import io.mosip.registration.service.remap.CenterMachineReMapService;
-import io.mosip.registration.util.common.BIRBuilder;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.kernel.biometrics.constant.BiometricType;
+import io.github.tf-govstack.kernel.biometrics.constant.ProcessedLevelType;
+import io.github.tf-govstack.kernel.biometrics.entities.BDBInfo;
+import io.github.tf-govstack.kernel.biometrics.entities.BIR;
+import io.github.tf-govstack.kernel.biosdk.provider.factory.BioAPIFactory;
+import io.github.tf-govstack.kernel.biosdk.provider.spi.iBioProviderApi;
+import io.github.tf-govstack.kernel.core.bioapi.exception.BiometricException;
+import io.github.tf-govstack.kernel.core.crypto.spi.CryptoCoreSpec;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.kernel.cryptomanager.dto.CryptomanagerResponseDto;
+import io.github.tf-govstack.kernel.cryptomanager.service.CryptomanagerService;
+import io.github.tf-govstack.kernel.keygenerator.bouncycastle.util.KeyGeneratorUtils;
+import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.github.tf-govstack.kernel.keymanagerservice.dto.UploadCertificateResponseDto;
+import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
+import io.github.tf-govstack.kernel.keymanagerservice.util.KeymanagerUtil;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.context.SessionContext.UserContext;
+import io.github.tf-govstack.registration.dao.RegistrationCenterDAO;
+import io.github.tf-govstack.registration.dao.UserOnboardDAO;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.entity.MachineMaster;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.operator.UserDetailService;
+import io.github.tf-govstack.registration.service.operator.impl.UserOnboardServiceImpl;
+import io.github.tf-govstack.registration.service.remap.CenterMachineReMapService;
+import io.github.tf-govstack.registration.util.common.BIRBuilder;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 
 /**
@@ -108,7 +108,7 @@ public class UserOnBoardServiceImplTest {
     private CryptoCoreSpec<byte[], byte[], SecretKey, PublicKey, PrivateKey, String> cryptoCore;
 
 	@Mock
-	io.mosip.registration.context.ApplicationContext context;
+	io.github.tf-govstack.registration.context.ApplicationContext context;
 	
 	@Mock
 	private KeymanagerService keymanagerService;

@@ -1,4 +1,4 @@
-package io.mosip.registration.jobs;
+package io.github.tf-govstack.registration.jobs;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -12,17 +12,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.SuccessResponseDTO;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.service.config.impl.JobConfigurationServiceImpl;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.service.config.impl.JobConfigurationServiceImpl;
 
 /**
  * The class BaseJob was a quartzJobBean which gives the information of job and

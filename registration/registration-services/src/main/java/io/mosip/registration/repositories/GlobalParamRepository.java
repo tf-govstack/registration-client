@@ -1,11 +1,11 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
 import java.util.List;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.dao.GlobalParamName;
-import io.mosip.registration.entity.GlobalParam;
-import io.mosip.registration.entity.id.GlobalParamId;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.dao.GlobalParamName;
+import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.github.tf-govstack.registration.entity.id.GlobalParamId;
 
 /**
  * The repository interface for {@link GlobalParam} entity

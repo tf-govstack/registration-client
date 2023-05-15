@@ -1,4 +1,4 @@
-package io.mosip.registration.util.common;
+package io.github.tf-govstack.registration.util.common;
 
 import javafx.scene.Cursor;
 import javafx.scene.Group;

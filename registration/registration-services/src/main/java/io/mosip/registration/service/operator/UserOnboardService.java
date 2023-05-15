@@ -1,12 +1,12 @@
-package io.mosip.registration.service.operator;
+package io.github.tf-govstack.registration.service.operator;
 
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
 
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 
 /**
  * The {@code UserOnboardService} represents to validate the user bio-metirc details against the IDA.

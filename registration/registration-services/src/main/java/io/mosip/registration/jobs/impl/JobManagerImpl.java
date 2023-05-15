@@ -1,4 +1,4 @@
-package io.mosip.registration.jobs.impl;
+package io.github.tf-govstack.registration.jobs.impl;
 
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -9,12 +9,12 @@ import org.quartz.JobExecutionContext;
 import org.quartz.Trigger;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.jobs.JobManager;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.jobs.JobManager;
 
 /**
  * This job is the implementation of {@link JobManager}

@@ -1,10 +1,10 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import java.io.Serializable;
 
 import javax.persistence.*;
 
-import io.mosip.registration.entity.id.CodeAndLanguageCodeID;
+import io.github.tf-govstack.registration.entity.id.CodeAndLanguageCodeID;
 
 /**
  * This Entity Class contains list of machine types[Desktop,Laptop...] with respect to language code.

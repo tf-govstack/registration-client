@@ -1,13 +1,13 @@
-package io.mosip.registration.service.sync;
+package io.github.tf-govstack.registration.service.sync;
 
 import java.net.URISyntaxException;
 import java.util.List;
 
-import io.mosip.kernel.core.util.exception.JsonProcessingException;
-import io.mosip.registration.dto.PacketStatusDTO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.kernel.core.util.exception.JsonProcessingException;
+import io.github.tf-govstack.registration.dto.PacketStatusDTO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 import lombok.NonNull;
 
 /**

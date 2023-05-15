@@ -1,9 +1,9 @@
-package io.mosip.registration.service.packet;
+package io.github.tf-govstack.registration.service.packet;
 
 import java.util.List;
 import java.util.Map;
 
-import io.mosip.registration.dto.PacketStatusDTO;
+import io.github.tf-govstack.registration.dto.PacketStatusDTO;
 
 /**
  * Interface for approval of Re-Registration Packets. This class fetches the

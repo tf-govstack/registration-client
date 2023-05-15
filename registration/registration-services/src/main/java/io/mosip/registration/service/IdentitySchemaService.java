@@ -1,13 +1,13 @@
-package io.mosip.registration.service;
+package io.github.tf-govstack.registration.service;
 
 
 import java.util.List;
 
-import io.mosip.registration.dto.schema.ProcessSpecDto;
-import io.mosip.registration.dto.schema.SettingsSchema;
-import io.mosip.registration.dto.schema.UiFieldDTO;
-import io.mosip.registration.dto.schema.SchemaDto;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
+import io.github.tf-govstack.registration.dto.schema.SettingsSchema;
+import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
+import io.github.tf-govstack.registration.dto.schema.SchemaDto;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 
 public interface IdentitySchemaService {
 	

@@ -1,4 +1,4 @@
-package io.mosip.registration.test.jobs;
+package io.github.tf-govstack.registration.test.jobs;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,11 +12,11 @@ import org.mockito.junit.MockitoRule;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.jobs.JobManager;
-import io.mosip.registration.jobs.JobProcessListener;
-import io.mosip.registration.jobs.SyncManager;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.jobs.JobManager;
+import io.github.tf-govstack.registration.jobs.JobProcessListener;
+import io.github.tf-govstack.registration.jobs.SyncManager;
 
 public class JobProcessorListenerTest {
 

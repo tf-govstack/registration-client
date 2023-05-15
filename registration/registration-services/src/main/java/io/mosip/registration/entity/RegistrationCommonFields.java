@@ -1,11 +1,11 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
-import io.mosip.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
 
 /**
  * The Entity Class for RegistrationCommonFields.

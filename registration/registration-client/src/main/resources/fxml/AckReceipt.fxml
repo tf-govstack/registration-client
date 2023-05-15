@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane id="anchor-pane-acknowledgement" fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.mosip.registration.controller.reg.AckReceiptController">
+<GridPane id="anchor-pane-acknowledgement" fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.tf-govstack.registration.controller.reg.AckReceiptController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
   </columnConstraints>

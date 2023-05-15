@@ -1,18 +1,18 @@
-package io.mosip.registration.jobs.impl;
+package io.github.tf-govstack.registration.jobs.impl;
 
-import io.mosip.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.jobs.BaseJob;
-import io.mosip.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.jobs.BaseJob;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
 
 import java.sql.Timestamp;
 

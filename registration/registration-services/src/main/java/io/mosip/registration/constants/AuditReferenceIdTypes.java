@@ -1,4 +1,4 @@
-package io.mosip.registration.constants;
+package io.github.tf-govstack.registration.constants;
 
 /**
  * Enum for References Id Types to be used in Audit

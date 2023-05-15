@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service;
+package io.github.tf-govstack.registration.test.service;
 
 import java.lang.reflect.Field;
 import java.sql.Timestamp;
@@ -26,18 +26,18 @@ import org.springframework.test.util.ReflectionTestUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.mosip.kernel.partnercertservice.dto.CACertificateResponseDto;
-import io.mosip.kernel.partnercertservice.service.spi.PartnerCertificateManagerService;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.MasterSyncDao;
-import io.mosip.registration.dto.CaCertificateDto;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.jobs.SyncManager;
-import io.mosip.registration.service.sync.impl.CertificateSyncServiceImpl;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.kernel.partnercertservice.dto.CACertificateResponseDto;
+import io.github.tf-govstack.kernel.partnercertservice.service.spi.PartnerCertificateManagerService;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.MasterSyncDao;
+import io.github.tf-govstack.registration.dto.CaCertificateDto;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.jobs.SyncManager;
+import io.github.tf-govstack.registration.service.sync.impl.CertificateSyncServiceImpl;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

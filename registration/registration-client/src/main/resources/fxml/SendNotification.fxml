@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="287.0" prefWidth="532.0" styleClass="sendNotificationPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.mosip.registration.controller.reg.SendNotificationController">
+<AnchorPane prefHeight="287.0" prefWidth="532.0" styleClass="sendNotificationPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.tf-govstack.registration.controller.reg.SendNotificationController">
    <children>
       <Label layoutX="24.0" layoutY="28.0" prefHeight="27.0" prefWidth="263.0" text="%email/smsAck" />
       <TextField id="emailId" fx:id="email" layoutX="124.0" layoutY="91.0" prefHeight="39.0" prefWidth="270.0" promptText="%enterEmail" styleClass="ackTextField" />

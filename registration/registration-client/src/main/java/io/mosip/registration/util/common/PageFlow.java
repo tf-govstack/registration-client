@@ -1,4 +1,4 @@
-package io.mosip.registration.util.common;
+package io.github.tf-govstack.registration.util.common;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -8,13 +8,13 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.controller.reg.Validations;
-import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.controller.reg.Validations;
+import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
 
 /**
  * This class will give the Page Flow

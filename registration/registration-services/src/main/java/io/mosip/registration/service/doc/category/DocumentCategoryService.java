@@ -1,8 +1,8 @@
-package io.mosip.registration.service.doc.category;
+package io.github.tf-govstack.registration.service.doc.category;
 
 import java.util.List;
 
-import io.mosip.registration.entity.DocumentCategory;
+import io.github.tf-govstack.registration.entity.DocumentCategory;
 
 /**
  * Service class for Document Category

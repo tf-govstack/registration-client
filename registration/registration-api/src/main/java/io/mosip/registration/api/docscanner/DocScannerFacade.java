@@ -1,7 +1,7 @@
-package io.mosip.registration.api.docscanner;
+package io.github.tf-govstack.registration.api.docscanner;
 
 import io.micrometer.core.annotation.Timed;
-import io.mosip.registration.api.docscanner.dto.DocScanDevice;
+import io.github.tf-govstack.registration.api.docscanner.dto.DocScanDevice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

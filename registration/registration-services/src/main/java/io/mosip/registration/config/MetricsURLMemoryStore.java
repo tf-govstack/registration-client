@@ -1,6 +1,6 @@
-package io.mosip.registration.config;
+package io.github.tf-govstack.registration.config;
 
-import io.mosip.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
 
 import java.io.*;
 import java.net.URL;

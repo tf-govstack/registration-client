@@ -1,4 +1,4 @@
-package io.mosip.registration.config;
+package io.github.tf-govstack.registration.config;
 
 import javax.sql.DataSource;
 
@@ -19,15 +19,15 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.mosip.commons.packet.facade.PacketWriter;
-import io.mosip.kernel.auditmanager.config.AuditConfig;
-import io.mosip.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.commons.packet.facade.PacketWriter;
+import io.github.tf-govstack.kernel.auditmanager.config.AuditConfig;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
 
-import io.mosip.kernel.core.templatemanager.spi.TemplateManagerBuilder;
-import io.mosip.kernel.dataaccess.hibernate.repository.impl.HibernateRepositoryImpl;
-import io.mosip.kernel.logger.logback.appender.RollingFileAppender;
-import io.mosip.kernel.logger.logback.factory.Logfactory;
-import io.mosip.kernel.templatemanager.velocity.builder.TemplateManagerBuilderImpl;
+import io.github.tf-govstack.kernel.core.templatemanager.spi.TemplateManagerBuilder;
+import io.github.tf-govstack.kernel.dataaccess.hibernate.repository.impl.HibernateRepositoryImpl;
+import io.github.tf-govstack.kernel.logger.logback.appender.RollingFileAppender;
+import io.github.tf-govstack.kernel.logger.logback.factory.Logfactory;
+import io.github.tf-govstack.kernel.templatemanager.velocity.builder.TemplateManagerBuilderImpl;
 
 /**
  * Spring Configuration class for Registration-Service Module
@@ -39,21 +39,21 @@ import io.mosip.kernel.templatemanager.velocity.builder.TemplateManagerBuilderIm
 @Configuration
 @EnableAspectJAutoProxy
 @Import({ DaoConfig.class, AuditConfig.class, TemplateManagerBuilderImpl.class })
-@EnableJpaRepositories(basePackages = "io.mosip.registration", repositoryBaseClass = HibernateRepositoryImpl.class)
+@EnableJpaRepositories(basePackages = "io.github.tf-govstack.registration", repositoryBaseClass = HibernateRepositoryImpl.class)
 @ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = {
 		".*IdObjectCompositeValidator",
 		".*IdObjectMasterDataValidator",
 		".*PacketDecryptorImpl",
 		".*IdSchemaUtils",
 		".*OnlinePacketCryptoServiceImpl"}),
-		basePackages = { "io.mosip.registration",
-		"io.mosip.kernel.idvalidator", "io.mosip.kernel.ridgenerator", "io.mosip.kernel.qrcode",
-		"io.mosip.kernel.crypto", "io.mosip.kernel.jsonvalidator", "io.mosip.kernel.idgenerator",
-		"io.mosip.kernel.virusscanner", "io.mosip.kernel.transliteration", "io.mosip.kernel.applicanttype",
-		"io.mosip.kernel.core.pdfgenerator.spi", "io.mosip.kernel.pdfgenerator.itext.impl",
-		"io.mosip.kernel.idobjectvalidator.impl", "io.mosip.kernel.biosdk.provider.impl",
-		"io.mosip.kernel.biosdk.provider.factory", "io.mosip.commons.packet",
-		"io.mosip.registration.api.config" })
+		basePackages = { "io.github.tf-govstack.registration",
+		"io.github.tf-govstack.kernel.idvalidator", "io.github.tf-govstack.kernel.ridgenerator", "io.github.tf-govstack.kernel.qrcode",
+		"io.github.tf-govstack.kernel.crypto", "io.github.tf-govstack.kernel.jsonvalidator", "io.github.tf-govstack.kernel.idgenerator",
+		"io.github.tf-govstack.kernel.virusscanner", "io.github.tf-govstack.kernel.transliteration", "io.github.tf-govstack.kernel.applicanttype",
+		"io.github.tf-govstack.kernel.core.pdfgenerator.spi", "io.github.tf-govstack.kernel.pdfgenerator.itext.impl",
+		"io.github.tf-govstack.kernel.idobjectvalidator.impl", "io.github.tf-govstack.kernel.biosdk.provider.impl",
+		"io.github.tf-govstack.kernel.biosdk.provider.factory", "io.github.tf-govstack.commons.packet",
+		"io.github.tf-govstack.registration.api.config" })
 @PropertySource(value = { "classpath:spring.properties", "classpath:props/mosip-application.properties" })
 @ImportAutoConfiguration(RefreshAutoConfiguration.class)
 @EnableConfigurationProperties

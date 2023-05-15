@@ -1,11 +1,11 @@
-package io.mosip.registration.audit;
+package io.github.tf-govstack.registration.audit;
 
 import org.springframework.data.auditing.AuditingHandler;
 
-import io.mosip.kernel.auditmanager.builder.AuditRequestBuilder;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.dto.ResponseDTO;
+import io.github.tf-govstack.kernel.auditmanager.builder.AuditRequestBuilder;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
 
 /**
  * The wrapper interface to log the audits

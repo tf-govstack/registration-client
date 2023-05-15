@@ -1,9 +1,9 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 
-import io.mosip.registration.dto.mastersync.DynamicFieldValueDto;
-import io.mosip.registration.entity.DynamicField;
+import io.github.tf-govstack.registration.dto.mastersync.DynamicFieldValueDto;
+import io.github.tf-govstack.registration.entity.DynamicField;
 
 public interface DynamicFieldDAO {
 

@@ -1,8 +1,8 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.LocationHierarchy;
-import io.mosip.registration.entity.id.LocationHierarchyId;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.LocationHierarchy;
+import io.github.tf-govstack.registration.entity.id.LocationHierarchyId;
 
 import java.util.List;
 

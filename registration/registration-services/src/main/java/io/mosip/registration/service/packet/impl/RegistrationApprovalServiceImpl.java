@@ -1,7 +1,7 @@
-package io.mosip.registration.service.packet.impl;
+package io.github.tf-govstack.registration.service.packet.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,25 +9,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.StringUtils;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.AuditReferenceIdTypes;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.RegistrationDAO;
-import io.mosip.registration.dto.RegistrationApprovalDTO;
-import io.mosip.registration.entity.Registration;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.packet.RegistrationApprovalService;
-import io.mosip.registration.util.advice.AuthenticationAdvice;
-import io.mosip.registration.util.advice.PreAuthorizeUserId;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.StringUtils;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.RegistrationDAO;
+import io.github.tf-govstack.registration.dto.RegistrationApprovalDTO;
+import io.github.tf-govstack.registration.entity.Registration;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.packet.RegistrationApprovalService;
+import io.github.tf-govstack.registration.util.advice.AuthenticationAdvice;
+import io.github.tf-govstack.registration.util.advice.PreAuthorizeUserId;
 
 /**
  * Implementation class of {@link RegistrationApprovalService} interface
@@ -58,7 +58,7 @@ public class RegistrationApprovalServiceImpl extends BaseService implements Regi
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.RegistrationApprovalService#
+	 * @see io.github.tf-govstack.registration.service.RegistrationApprovalService#
 	 * getEnrollmentByStatus(java.lang.String)
 	 */
 	@Override
@@ -96,7 +96,7 @@ public class RegistrationApprovalServiceImpl extends BaseService implements Regi
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.service.RegistrationApprovalService#packetUpdateStatus(
+	 * io.github.tf-govstack.registration.service.RegistrationApprovalService#packetUpdateStatus(
 	 * java.lang.String, java.lang.String, java.lang.String, java.lang.String,
 	 * java.lang.String)
 	 */

@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service;
+package io.github.tf-govstack.registration.test.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -31,32 +31,32 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import io.mosip.registration.api.geoposition.GeoPositionFacade;
-import io.mosip.registration.api.geoposition.dto.GeoPosition;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.context.SessionContext.UserContext;
-import io.mosip.registration.dao.GlobalParamDAO;
-import io.mosip.registration.dao.RegistrationCenterDAO;
-import io.mosip.registration.dao.SyncJobConfigDAO;
-import io.mosip.registration.dao.SyncJobControlDAO;
-import io.mosip.registration.dao.SyncJobControlDAO.SyncJobInfo;
-import io.mosip.registration.dto.ErrorResponseDTO;
-import io.mosip.registration.dto.RegistrationCenterDetailDTO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.entity.GlobalParam;
-import io.mosip.registration.entity.Registration;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.entity.id.GlobalParamId;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.service.config.GlobalParamService;
-import io.mosip.registration.service.sync.impl.SyncStatusValidatorServiceImpl;
+import io.github.tf-govstack.registration.api.geoposition.GeoPositionFacade;
+import io.github.tf-govstack.registration.api.geoposition.dto.GeoPosition;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.context.SessionContext.UserContext;
+import io.github.tf-govstack.registration.dao.GlobalParamDAO;
+import io.github.tf-govstack.registration.dao.RegistrationCenterDAO;
+import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
+import io.github.tf-govstack.registration.dao.SyncJobControlDAO;
+import io.github.tf-govstack.registration.dao.SyncJobControlDAO.SyncJobInfo;
+import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
+import io.github.tf-govstack.registration.dto.RegistrationCenterDetailDTO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.github.tf-govstack.registration.entity.Registration;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.entity.id.GlobalParamId;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.registration.service.sync.impl.SyncStatusValidatorServiceImpl;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})
@@ -78,7 +78,7 @@ public class SyncStatusValidatorServiceTest {
 	@Mock
 	private GlobalParamService globalParamService;
 	@Mock
-	io.mosip.registration.context.ApplicationContext context;
+	io.github.tf-govstack.registration.context.ApplicationContext context;
 	@Mock
 	private AuditManagerService auditFactory;	
 	@Mock

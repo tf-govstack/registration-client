@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>io.mosip.registration</groupId>
+		<groupId>io.github.tf-govstack.registration</groupId>
 		<artifactId>registration-client-parent</artifactId>
 		<version>1.2.0.1-B1</version>
 	</parent>
@@ -20,7 +20,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>io.mosip.registration</groupId>
+			<groupId>io.github.tf-govstack.registration</groupId>
 			<artifactId>registration-services</artifactId>
 			<version>1.2.0.1-B2-SNAPSHOT</version>
 		</dependency>
@@ -81,7 +81,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>io.mosip.registration.controller.Initialization</mainClass>
+							<mainClass>io.github.tf-govstack.registration.controller.Initialization</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -110,7 +110,7 @@
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.3</version>
 				<configuration>
-					<mainClass>io.mosip.registration.controller.Initialization</mainClass>
+					<mainClass>io.github.tf-govstack.registration.controller.Initialization</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

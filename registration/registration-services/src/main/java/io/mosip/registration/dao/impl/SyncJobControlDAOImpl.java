@@ -1,7 +1,7 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,21 +9,21 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.AuditReferenceIdTypes;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.RegistrationClientStatusCode;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.SyncJobControlDAO;
-import io.mosip.registration.entity.Registration;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.repositories.RegistrationRepository;
-import io.mosip.registration.repositories.SyncJobControlRepository;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.SyncJobControlDAO;
+import io.github.tf-govstack.registration.entity.Registration;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.repositories.RegistrationRepository;
+import io.github.tf-govstack.registration.repositories.SyncJobControlRepository;
 
 /**
  * The implementation class for {@link SyncJobControlDAO}.
@@ -65,7 +65,7 @@ public class SyncJobControlDAOImpl implements SyncJobControlDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.SyncJobDAO#validateSyncStatus()
+	 * @see io.github.tf-govstack.registration.dao.SyncJobDAO#validateSyncStatus()
 	 */
 	public SyncJobInfo getSyncStatus() {
 
@@ -96,7 +96,7 @@ public class SyncJobControlDAOImpl implements SyncJobControlDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.dao.SyncJobDAO#update(io.mosip.registration.entity.
+	 * io.github.tf-govstack.registration.dao.SyncJobDAO#update(io.github.tf-govstack.registration.entity.
 	 * SyncControl)
 	 */
 	@Override
@@ -109,7 +109,7 @@ public class SyncJobControlDAOImpl implements SyncJobControlDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.SyncJobDAO#save(io.mosip.registration.entity.
+	 * @see io.github.tf-govstack.registration.dao.SyncJobDAO#save(io.github.tf-govstack.registration.entity.
 	 * SyncControl)
 	 */
 	@Override
@@ -122,7 +122,7 @@ public class SyncJobControlDAOImpl implements SyncJobControlDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.SyncJobDAO#findBySyncJobId(java.lang.String)
+	 * @see io.github.tf-govstack.registration.dao.SyncJobDAO#findBySyncJobId(java.lang.String)
 	 */
 	@Override
 	public SyncControl findBySyncJobId(String syncJobId) {
@@ -134,7 +134,7 @@ public class SyncJobControlDAOImpl implements SyncJobControlDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.SyncJobDAO#findAll()
+	 * @see io.github.tf-govstack.registration.dao.SyncJobDAO#findAll()
 	 */
 	@Override
 	public List<SyncControl> findAll() {
@@ -146,7 +146,7 @@ public class SyncJobControlDAOImpl implements SyncJobControlDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.SyncJobDAO#getRegistrationDetails()
+	 * @see io.github.tf-govstack.registration.dao.SyncJobDAO#getRegistrationDetails()
 	 */
 	public List<Registration> getRegistrationDetails() {
 

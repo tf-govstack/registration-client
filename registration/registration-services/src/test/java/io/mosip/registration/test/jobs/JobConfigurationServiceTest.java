@@ -1,4 +1,4 @@
-package io.mosip.registration.test.jobs;
+package io.github.tf-govstack.registration.test.jobs;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -36,27 +36,27 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.SchedulingException;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.GlobalParamDAO;
-import io.mosip.registration.dao.SyncJobConfigDAO;
-import io.mosip.registration.dao.SyncJobControlDAO;
-import io.mosip.registration.dao.SyncTransactionDAO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.SuccessResponseDTO;
-import io.mosip.registration.entity.GlobalParam;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.jobs.BaseJob;
-import io.mosip.registration.jobs.impl.PacketSyncStatusJob;
-import io.mosip.registration.repositories.SyncJobDefRepository;
-import io.mosip.registration.service.config.GlobalParamService;
-import io.mosip.registration.service.config.LocalConfigService;
-import io.mosip.registration.service.config.impl.JobConfigurationServiceImpl;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.GlobalParamDAO;
+import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
+import io.github.tf-govstack.registration.dao.SyncJobControlDAO;
+import io.github.tf-govstack.registration.dao.SyncTransactionDAO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
+import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.jobs.BaseJob;
+import io.github.tf-govstack.registration.jobs.impl.PacketSyncStatusJob;
+import io.github.tf-govstack.registration.repositories.SyncJobDefRepository;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.registration.service.config.LocalConfigService;
+import io.github.tf-govstack.registration.service.config.impl.JobConfigurationServiceImpl;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})
-@PrepareForTest({ io.mosip.registration.jobs.BaseJob.class })
+@PrepareForTest({ io.github.tf-govstack.registration.jobs.BaseJob.class })
 public class JobConfigurationServiceTest {
 
 	@Mock
@@ -93,7 +93,7 @@ public class JobConfigurationServiceTest {
 	JobDetail jobDetail;
 
 	@Mock
-	io.mosip.registration.context.ApplicationContext context;
+	io.github.tf-govstack.registration.context.ApplicationContext context;
 
 	@Mock
 	GlobalParamDAO globalParamDAO;
@@ -152,16 +152,16 @@ public class JobConfigurationServiceTest {
 		
 		applicationMap.put(RegistrationConstants.IS_REGISTRATION_JOBS_SCHEDULER_ENABLED, "Y");
 
-		// PowerMockito.mockStatic(io.mosip.registration.context.ApplicationContext.class);
-		// when(io.mosip.registration.context.ApplicationContext.map()).thenReturn(applicationMap);
-		// PowerMockito.mockStatic(io.mosip.registration.context.ApplicationContext.class);
-		// when(io.mosip.registration.context.ApplicationContext.getInstance()).thenReturn(context);
+		// PowerMockito.mockStatic(io.github.tf-govstack.registration.context.ApplicationContext.class);
+		// when(io.github.tf-govstack.registration.context.ApplicationContext.map()).thenReturn(applicationMap);
+		// PowerMockito.mockStatic(io.github.tf-govstack.registration.context.ApplicationContext.class);
+		// when(io.github.tf-govstack.registration.context.ApplicationContext.getInstance()).thenReturn(context);
 		// Map<String, Object> map = new HashMap<>();
 		// map.put(RegistrationConstants.SYNC_TRANSACTION_NO_OF_DAYS_LIMIT, "5");
 
 		// Mockito.when(globalParamService.getGlobalParams()).thenReturn(map);
 
-		io.mosip.registration.context.ApplicationContext.setApplicationMap(applicationMap);
+		io.github.tf-govstack.registration.context.ApplicationContext.setApplicationMap(applicationMap);
 	}
 
 	@Test

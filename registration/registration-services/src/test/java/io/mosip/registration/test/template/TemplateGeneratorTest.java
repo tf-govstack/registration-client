@@ -1,4 +1,4 @@
-package io.mosip.registration.test.template;
+package io.github.tf-govstack.registration.test.template;
 
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.when;
@@ -35,32 +35,32 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.mosip.kernel.core.qrcodegenerator.spi.QrCodeGenerator;
-import io.mosip.kernel.qrcode.generator.zxing.constant.QrVersion;
-import io.mosip.kernel.templatemanager.velocity.builder.TemplateManagerBuilderImpl;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.context.SessionContext.UserContext;
-import io.mosip.registration.dto.RegistrationCenterDetailDTO;
-import io.mosip.registration.dto.RegistrationDTO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.biometric.FingerprintDetailsDTO;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.entity.UserDetail;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.service.IdentitySchemaService;
-import io.mosip.registration.service.config.JobConfigurationService;
-import io.mosip.registration.service.operator.UserDetailService;
-import io.mosip.registration.service.operator.UserMachineMappingService;
-import io.mosip.registration.service.packet.PacketHandlerService;
-import io.mosip.registration.service.packet.RegistrationApprovalService;
-import io.mosip.registration.service.sync.MasterSyncService;
-import io.mosip.registration.service.sync.PacketSynchService;
-import io.mosip.registration.test.util.datastub.DataProvider;
-import io.mosip.registration.update.SoftwareUpdateHandler;
-import io.mosip.registration.util.acktemplate.TemplateGenerator;
+import io.github.tf-govstack.kernel.core.qrcodegenerator.spi.QrCodeGenerator;
+import io.github.tf-govstack.kernel.qrcode.generator.zxing.constant.QrVersion;
+import io.github.tf-govstack.kernel.templatemanager.velocity.builder.TemplateManagerBuilderImpl;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.context.SessionContext.UserContext;
+import io.github.tf-govstack.registration.dto.RegistrationCenterDetailDTO;
+import io.github.tf-govstack.registration.dto.RegistrationDTO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.biometric.FingerprintDetailsDTO;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.entity.UserDetail;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.service.IdentitySchemaService;
+import io.github.tf-govstack.registration.service.config.JobConfigurationService;
+import io.github.tf-govstack.registration.service.operator.UserDetailService;
+import io.github.tf-govstack.registration.service.operator.UserMachineMappingService;
+import io.github.tf-govstack.registration.service.packet.PacketHandlerService;
+import io.github.tf-govstack.registration.service.packet.RegistrationApprovalService;
+import io.github.tf-govstack.registration.service.sync.MasterSyncService;
+import io.github.tf-govstack.registration.service.sync.PacketSynchService;
+import io.github.tf-govstack.registration.test.util.datastub.DataProvider;
+import io.github.tf-govstack.registration.update.SoftwareUpdateHandler;
+import io.github.tf-govstack.registration.util.acktemplate.TemplateGenerator;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

@@ -1,11 +1,11 @@
-package io.mosip.registration.service.config;
+package io.github.tf-govstack.registration.service.config;
 
 import java.util.List;
 import java.util.Map;
 
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
 
 /**
  * This interface manages all the jobs with respect to registration client application. 

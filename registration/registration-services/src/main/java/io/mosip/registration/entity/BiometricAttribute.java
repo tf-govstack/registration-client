@@ -1,4 +1,4 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import java.io.Serializable;
 
@@ -13,7 +13,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import io.mosip.registration.entity.id.CodeAndLanguageCodeID;
+import io.github.tf-govstack.registration.entity.id.CodeAndLanguageCodeID;
 
 /**
  * This entity class contains the list of biometric attribute description[left slap, right iris..] for 

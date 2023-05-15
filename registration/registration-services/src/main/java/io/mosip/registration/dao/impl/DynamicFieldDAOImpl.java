@@ -1,7 +1,7 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,15 +11,15 @@ import org.springframework.stereotype.Repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.DynamicFieldDAO;
-import io.mosip.registration.dto.mastersync.DynamicFieldValueDto;
-import io.mosip.registration.entity.DynamicField;
-import io.mosip.registration.repositories.DynamicFieldRepository;
-import io.mosip.registration.util.mastersync.MapperUtils;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.DynamicFieldDAO;
+import io.github.tf-govstack.registration.dto.mastersync.DynamicFieldValueDto;
+import io.github.tf-govstack.registration.entity.DynamicField;
+import io.github.tf-govstack.registration.repositories.DynamicFieldRepository;
+import io.github.tf-govstack.registration.util.mastersync.MapperUtils;
 
 @Repository
 public class DynamicFieldDAOImpl implements DynamicFieldDAO {

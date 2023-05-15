@@ -1,4 +1,4 @@
-package io.mosip.registration.test.util.common;
+package io.github.tf-govstack.registration.test.util.common;
 
 import java.io.IOException;
 
@@ -13,12 +13,12 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.mosip.kernel.biometrics.constant.ProcessedLevelType;
-import io.mosip.kernel.biometrics.entities.BIR;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.util.common.BIRBuilder;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.kernel.biometrics.constant.ProcessedLevelType;
+import io.github.tf-govstack.kernel.biometrics.entities.BIR;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.util.common.BIRBuilder;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({ "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*" })

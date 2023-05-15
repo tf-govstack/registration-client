@@ -1,4 +1,4 @@
-package io.mosip.registration.dto.response;
+package io.github.tf-govstack.registration.dto.response;
 
 import java.util.List;
 

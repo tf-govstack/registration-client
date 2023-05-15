@@ -1,4 +1,4 @@
-package io.mosip.registration.test.update;
+package io.github.tf-govstack.registration.test.update;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -27,14 +27,14 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.kernel.core.util.HMACUtils2;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.service.config.GlobalParamService;
-import io.mosip.registration.update.ClientSetupValidator;
-import io.mosip.registration.update.SoftwareUpdateUtil;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.registration.update.ClientSetupValidator;
+import io.github.tf-govstack.registration.update.SoftwareUpdateUtil;
 
 /**
  * 

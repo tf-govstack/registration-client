@@ -1,11 +1,11 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import io.mosip.registration.entity.id.AppRolePriorityId;
+import io.github.tf-govstack.registration.entity.id.AppRolePriorityId;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,15 +1,15 @@
-package io.mosip.registration.mapper;
+package io.github.tf-govstack.registration.mapper;
 
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 
-import io.mosip.registration.dto.MachineMasterDTO;
-import io.mosip.registration.dto.RegCenterUserDTO;
-import io.mosip.registration.dto.UserBiometricDTO;
-import io.mosip.registration.dto.UserDTO;
-import io.mosip.registration.dto.UserMachineMappingDTO;
-import io.mosip.registration.dto.UserRoleDTO;
-import io.mosip.registration.entity.*;
+import io.github.tf-govstack.registration.dto.MachineMasterDTO;
+import io.github.tf-govstack.registration.dto.RegCenterUserDTO;
+import io.github.tf-govstack.registration.dto.UserBiometricDTO;
+import io.github.tf-govstack.registration.dto.UserDTO;
+import io.github.tf-govstack.registration.dto.UserMachineMappingDTO;
+import io.github.tf-govstack.registration.dto.UserRoleDTO;
+import io.github.tf-govstack.registration.entity.*;
 import ma.glasnost.orika.CustomMapper;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;

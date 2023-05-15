@@ -1,4 +1,4 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import io.mosip.kernel.auditmanager.entity.Audit;
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.kernel.auditmanager.entity.Audit;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
 
 /**
  * Repository interface for {@link Audit} table

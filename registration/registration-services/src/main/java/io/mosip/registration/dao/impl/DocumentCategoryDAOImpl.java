@@ -1,19 +1,19 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.dao.DocumentCategoryDAO;
-import io.mosip.registration.dto.packetmanager.DocumentDto;
-import io.mosip.registration.entity.DocumentCategory;
-import io.mosip.registration.repositories.DocumentCategoryRepository;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.dao.DocumentCategoryDAO;
+import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
+import io.github.tf-govstack.registration.entity.DocumentCategory;
+import io.github.tf-govstack.registration.repositories.DocumentCategoryRepository;
 
 /**
  * implementation class of RegistrationDocumentCategoryDAOImpl

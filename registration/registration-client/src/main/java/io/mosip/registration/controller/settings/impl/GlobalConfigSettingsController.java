@@ -1,4 +1,4 @@
-package io.mosip.registration.controller.settings.impl;
+package io.github.tf-govstack.registration.controller.settings.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,19 +9,19 @@ import java.util.Map.Entry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.constants.RegistrationUIConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.controller.BaseController;
-import io.mosip.registration.controller.RestartController;
-import io.mosip.registration.controller.settings.SettingsInterface;
-import io.mosip.registration.controller.vo.GlobalParamVO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.service.config.GlobalParamService;
-import io.mosip.registration.service.config.LocalConfigService;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.controller.BaseController;
+import io.github.tf-govstack.registration.controller.RestartController;
+import io.github.tf-govstack.registration.controller.settings.SettingsInterface;
+import io.github.tf-govstack.registration.controller.vo.GlobalParamVO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.registration.service.config.LocalConfigService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;

@@ -1,11 +1,11 @@
-package io.mosip.registration.entity.id;
+package io.github.tf-govstack.registration.entity.id;
 
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-import io.mosip.registration.entity.ScreenAuthorization;
+import io.github.tf-govstack.registration.entity.ScreenAuthorization;
 import lombok.Data;
 
 /**

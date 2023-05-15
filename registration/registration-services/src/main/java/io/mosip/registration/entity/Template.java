@@ -1,4 +1,4 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import java.sql.Date;
 
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
-import io.mosip.registration.entity.id.TemplateId;
+import io.github.tf-govstack.registration.entity.id.TemplateId;
 import lombok.Getter;
 import lombok.Setter;
 

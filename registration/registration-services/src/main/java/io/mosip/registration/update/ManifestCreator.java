@@ -1,7 +1,7 @@
-package io.mosip.registration.update;
+package io.github.tf-govstack.registration.update;
 
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

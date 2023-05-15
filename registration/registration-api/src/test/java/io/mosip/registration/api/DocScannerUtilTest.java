@@ -1,6 +1,6 @@
-package io.mosip.registration.api;
+package io.github.tf-govstack.registration.api;
 
-import io.mosip.registration.api.docscanner.DocScannerUtil;
+import io.github.tf-govstack.registration.api.docscanner.DocScannerUtil;
 import javafx.scene.image.Image;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.junit.Assert;

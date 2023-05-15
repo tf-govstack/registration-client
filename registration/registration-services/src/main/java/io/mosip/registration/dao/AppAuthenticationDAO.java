@@ -1,9 +1,9 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 import java.util.Set;
 
-import io.mosip.registration.entity.AppAuthenticationMethod;
+import io.github.tf-govstack.registration.entity.AppAuthenticationMethod;
 
 /**
  * This class is used to fetch the authentication related information from 

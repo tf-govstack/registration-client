@@ -1,9 +1,9 @@
-package io.mosip.registration.controller.eodapproval;
+package io.github.tf-govstack.registration.controller.eodapproval;
 
-import static io.mosip.registration.constants.LoggerConstants.LOG_REG_PENDING_APPROVAL;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
-import static io.mosip.registration.constants.RegistrationConstants.REG_UI_LOGIN_LOADER_EXCEPTION;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_PENDING_APPROVAL;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.REG_UI_LOGIN_LOADER_EXCEPTION;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -26,22 +26,22 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.ProcessNames;
-import io.mosip.registration.constants.RegistrationClientStatusCode;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.constants.RegistrationUIConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.controller.BaseController;
-import io.mosip.registration.controller.vo.RegistrationApprovalVO;
-import io.mosip.registration.dto.RegistrationApprovalDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.exception.RegistrationExceptionConstants;
-import io.mosip.registration.service.packet.PacketHandlerService;
-import io.mosip.registration.service.packet.RegistrationApprovalService;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.ProcessNames;
+import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.controller.BaseController;
+import io.github.tf-govstack.registration.controller.vo.RegistrationApprovalVO;
+import io.github.tf-govstack.registration.dto.RegistrationApprovalDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
+import io.github.tf-govstack.registration.service.packet.PacketHandlerService;
+import io.github.tf-govstack.registration.service.packet.RegistrationApprovalService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -344,7 +344,7 @@ public class RegistrationApprovalController extends BaseController implements In
 				String acknowledgementContent = packetHandlerService.getAcknowledgmentReceipt(table.getSelectionModel().getSelectedItem().getPacketId(),
 						table.getSelectionModel().getSelectedItem().getAcknowledgementFormPath());
 				webView.getEngine().loadContent(acknowledgementContent);
-			} catch (RegBaseCheckedException | io.mosip.kernel.core.exception.IOException ex) {
+			} catch (RegBaseCheckedException | io.github.tf-govstack.kernel.core.exception.IOException ex) {
 				LOGGER.error("REGSITRATION_ACKNOWLEDGEMNT_PAGE_LOADING_FAILED", ex);
 			}
 
@@ -623,7 +623,7 @@ public class RegistrationApprovalController extends BaseController implements In
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.controller.BaseController#getFingerPrintStatus()
+	 * @see io.github.tf-govstack.registration.controller.BaseController#getFingerPrintStatus()
 	 */
 	@Override
 	public void updateAuthenticationStatus() {

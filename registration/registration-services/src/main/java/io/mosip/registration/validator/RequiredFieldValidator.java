@@ -1,4 +1,4 @@
-package io.mosip.registration.validator;
+package io.github.tf-govstack.registration.validator;
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
@@ -6,24 +6,24 @@ import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.mosip.kernel.core.exception.IOException;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.kernel.core.util.HMACUtils2;
-import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
-import io.mosip.kernel.signature.dto.JWTSignatureVerifyRequestDto;
-import io.mosip.kernel.signature.dto.JWTSignatureVerifyResponseDto;
-import io.mosip.kernel.signature.service.SignatureService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.schema.ConditionalBioAttributes;
-import io.mosip.registration.entity.FileSignature;
-import io.mosip.registration.repositories.FileSignatureRepository;
+import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.github.tf-govstack.kernel.core.exception.IOException;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
+import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyRequestDto;
+import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyResponseDto;
+import io.github.tf-govstack.kernel.signature.service.SignatureService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.schema.ConditionalBioAttributes;
+import io.github.tf-govstack.registration.entity.FileSignature;
+import io.github.tf-govstack.registration.repositories.FileSignatureRepository;
 import org.json.JSONObject;
 import org.mvel2.MVEL;
 import org.mvel2.integration.VariableResolverFactory;
@@ -31,10 +31,10 @@ import org.mvel2.integration.impl.MapVariableResolverFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.mosip.registration.dto.RegistrationDTO;
-import io.mosip.registration.dto.schema.RequiredOnExpr;
-import io.mosip.registration.dto.schema.UiFieldDTO;
-import io.mosip.registration.service.IdentitySchemaService;
+import io.github.tf-govstack.registration.dto.RegistrationDTO;
+import io.github.tf-govstack.registration.dto.schema.RequiredOnExpr;
+import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
+import io.github.tf-govstack.registration.service.IdentitySchemaService;
 
 @Component
 public class RequiredFieldValidator {

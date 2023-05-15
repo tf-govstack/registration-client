@@ -1,7 +1,7 @@
-package io.mosip.registration.metrics;
+package io.github.tf-govstack.registration.metrics;
 
-import io.mosip.registration.entity.GlobalParam;
-import io.mosip.registration.repositories.GlobalParamRepository;
+import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.github.tf-govstack.registration.repositories.GlobalParamRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,6 +1,6 @@
-package io.mosip.registration.controller;
+package io.github.tf-govstack.registration.controller;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.HashSet;
 import java.util.Locale;
@@ -10,11 +10,11 @@ import java.util.Set;
 
 import com.neovisionaries.i18n.LanguageAlpha3Code;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.constants.VirtualKeyboardKeys;
-import io.mosip.registration.controller.reg.RegistrationController;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.VirtualKeyboardKeys;
+import io.github.tf-govstack.registration.controller.reg.RegistrationController;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.StringBinding;

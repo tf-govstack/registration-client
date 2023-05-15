@@ -1,4 +1,4 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
@@ -9,7 +9,7 @@ import javax.persistence.IdClass;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import io.mosip.registration.entity.id.CodeAndLanguageCodeID;
+import io.github.tf-govstack.registration.entity.id.CodeAndLanguageCodeID;
 
 /**
  * This Entity Class contains list of document types that are allowed for uploading documents 

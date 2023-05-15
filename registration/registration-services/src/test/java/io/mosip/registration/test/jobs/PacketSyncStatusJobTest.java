@@ -1,4 +1,4 @@
-package io.mosip.registration.test.jobs;
+package io.github.tf-govstack.registration.test.jobs;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -23,20 +23,20 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.context.ApplicationContext;
 
-import io.mosip.registration.dao.SyncJobConfigDAO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.SuccessResponseDTO;
-import io.mosip.registration.entity.SyncJobDef;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.jobs.BaseJob;
-import io.mosip.registration.jobs.JobManager;
-import io.mosip.registration.jobs.SyncManager;
-import io.mosip.registration.jobs.impl.PacketSyncStatusJob;
-import io.mosip.registration.service.config.impl.JobConfigurationServiceImpl;
-import io.mosip.registration.service.packet.RegPacketStatusService;
-import io.mosip.registration.service.packet.impl.RegPacketStatusServiceImpl;
-import io.mosip.registration.service.sync.PreRegistrationDataSyncService;
+import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.jobs.BaseJob;
+import io.github.tf-govstack.registration.jobs.JobManager;
+import io.github.tf-govstack.registration.jobs.SyncManager;
+import io.github.tf-govstack.registration.jobs.impl.PacketSyncStatusJob;
+import io.github.tf-govstack.registration.service.config.impl.JobConfigurationServiceImpl;
+import io.github.tf-govstack.registration.service.packet.RegPacketStatusService;
+import io.github.tf-govstack.registration.service.packet.impl.RegPacketStatusServiceImpl;
+import io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService;
 
 /**
  * 

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="RegistrationHeader" prefHeight="32.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.mosip.registration.controller.reg.RegistrationHeaderController">
+<AnchorPane fx:id="RegistrationHeader" prefHeight="32.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.tf-govstack.registration.controller.reg.RegistrationHeaderController">
    <children>
       <AnchorPane layoutY="-3.0" prefHeight="39.0" prefWidth="1290.0">
          <children>

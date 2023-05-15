@@ -1,4 +1,4 @@
-package io.mosip.registration.test.dao.impl;
+package io.github.tf-govstack.registration.test.dao.impl;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.when;
@@ -25,11 +25,11 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.mosip.kernel.auditmanager.entity.Audit;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.dao.impl.AuditDAOImpl;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.repositories.RegAuditRepository;
+import io.github.tf-govstack.kernel.auditmanager.entity.Audit;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.dao.impl.AuditDAOImpl;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.repositories.RegAuditRepository;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

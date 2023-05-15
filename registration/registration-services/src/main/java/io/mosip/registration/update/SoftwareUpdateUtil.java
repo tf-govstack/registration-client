@@ -1,10 +1,10 @@
-package io.mosip.registration.update;
+package io.github.tf-govstack.registration.update;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.HMACUtils2;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;

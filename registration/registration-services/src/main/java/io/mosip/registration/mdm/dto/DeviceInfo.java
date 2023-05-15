@@ -1,4 +1,4 @@
-package io.mosip.registration.mdm.dto;
+package io.github.tf-govstack.registration.mdm.dto;
 
 import lombok.Data;
 

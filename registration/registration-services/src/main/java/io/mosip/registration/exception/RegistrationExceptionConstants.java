@@ -1,10 +1,10 @@
-package io.mosip.registration.exception;
+package io.github.tf-govstack.registration.exception;
 
-import io.mosip.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
 
-import static io.mosip.registration.constants.RegistrationConstants.PACKET_CREATION_EXP_CODE;
-import static io.mosip.registration.constants.RegistrationConstants.PACKET_UPLOAD_EXP_CODE;
-import static io.mosip.registration.constants.RegistrationConstants.REG_ACK_EXP_CODE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.PACKET_CREATION_EXP_CODE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.PACKET_UPLOAD_EXP_CODE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.REG_ACK_EXP_CODE;
 
 /**
  * Exception enum for Registration Services Sub-Module

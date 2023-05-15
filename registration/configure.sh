@@ -95,7 +95,7 @@ cp "${work_dir}"/registration-client/target/registration-client-${client_version
 jarsigner -keystore "${work_dir}"/build_files/keystore.p12 -storepass ${keystore_secret} -tsa ${signer_timestamp_url_env} -digestalg SHA-256 "${work_dir}"/registration-client/target/lib/registration-client-${client_version_env}.jar CodeSigning
 jarsigner -keystore "${work_dir}"/build_files/keystore.p12 -storepass ${keystore_secret} -tsa ${signer_timestamp_url_env} -digestalg SHA-256 "${work_dir}"/registration-client/target/lib/registration-services-${client_version_env}.jar CodeSigning
 
-/usr/local/openjdk-11/bin/java -cp "${work_dir}"/registration-client/target/registration-client-${client_version_env}.jar:"${work_dir}"/registration-client/target/lib/* io.mosip.registration.update.ManifestCreator "${client_version_env}" "${work_dir}/registration-client/target/lib" "${work_dir}/registration-client/target"
+/usr/local/openjdk-11/bin/java -cp "${work_dir}"/registration-client/target/registration-client-${client_version_env}.jar:"${work_dir}"/registration-client/target/lib/* io.github.tf-govstack.registration.update.ManifestCreator "${client_version_env}" "${work_dir}/registration-client/target/lib" "${work_dir}/registration-client/target"
 
 cd "${work_dir}"/registration-client/target/
 
@@ -109,10 +109,10 @@ echo "FOR /F \"tokens=* delims=\" %%x in (.UNKNOWN_JARS) DO DEL /Q lib\%%x" >> r
 echo ")" >> run.bat
 echo "if exist .TEMP (" >> run.bat
 echo "echo Starting Registration Client after Upgrade" >> run.bat
-echo "xcopy /f/k/y/v/q .TEMP lib && rmdir /s /q .TEMP && start jre\bin\javaw -Xmx2048m -Xms2048m -Dfile.encoding=UTF-8 -cp lib/*;/* io.mosip.registration.controller.Initialization > startup.log 2>&1" >> run.bat
+echo "xcopy /f/k/y/v/q .TEMP lib && rmdir /s /q .TEMP && start jre\bin\javaw -Xmx2048m -Xms2048m -Dfile.encoding=UTF-8 -cp lib/*;/* io.github.tf-govstack.registration.controller.Initialization > startup.log 2>&1" >> run.bat
 echo ") else (" >> run.bat
 echo "echo Starting Registration Client" >> run.bat
-echo "start jre\bin\javaw -Xmx2048m -Xms2048m -Dfile.encoding=UTF-8 -cp lib/*;/* io.mosip.registration.controller.Initialization > startup.log 2>&1" >> run.bat
+echo "start jre\bin\javaw -Xmx2048m -Xms2048m -Dfile.encoding=UTF-8 -cp lib/*;/* io.github.tf-govstack.registration.controller.Initialization > startup.log 2>&1" >> run.bat
 echo ")" >> run.bat
 
 /usr/bin/zip -r reg-client.zip jre

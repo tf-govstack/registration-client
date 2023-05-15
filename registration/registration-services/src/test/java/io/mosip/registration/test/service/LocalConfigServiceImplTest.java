@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service;
+package io.github.tf-govstack.registration.test.service;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,10 +15,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.impl.LocalConfigDAOImpl;
-import io.mosip.registration.entity.PermittedLocalConfig;
-import io.mosip.registration.service.config.impl.LocalConfigServiceImpl;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.impl.LocalConfigDAOImpl;
+import io.github.tf-govstack.registration.entity.PermittedLocalConfig;
+import io.github.tf-govstack.registration.service.config.impl.LocalConfigServiceImpl;
 
 public class LocalConfigServiceImplTest {
 	

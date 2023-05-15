@@ -1,17 +1,17 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 
-import io.mosip.registration.entity.BiometricAttribute;
-import io.mosip.registration.entity.DocumentCategory;
-import io.mosip.registration.entity.DocumentType;
-import io.mosip.registration.entity.Language;
-import io.mosip.registration.entity.Location;
-import io.mosip.registration.entity.LocationHierarchy;
-import io.mosip.registration.entity.ReasonCategory;
-import io.mosip.registration.entity.ReasonList;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncJobDef;
+import io.github.tf-govstack.registration.entity.BiometricAttribute;
+import io.github.tf-govstack.registration.entity.DocumentCategory;
+import io.github.tf-govstack.registration.entity.DocumentType;
+import io.github.tf-govstack.registration.entity.Language;
+import io.github.tf-govstack.registration.entity.Location;
+import io.github.tf-govstack.registration.entity.LocationHierarchy;
+import io.github.tf-govstack.registration.entity.ReasonCategory;
+import io.github.tf-govstack.registration.entity.ReasonList;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncJobDef;
 
 /**
  * This class is used to store the master data details like Location,

@@ -1,4 +1,4 @@
-package io.mosip.registration.test.dao.impl;
+package io.github.tf-govstack.registration.test.dao.impl;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,14 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dao.MachineMappingDAO;
-import io.mosip.registration.dao.MasterSyncDao;
-import io.mosip.registration.dto.response.SyncDataResponseDto;
-import io.mosip.registration.entity.UserDetail;
-import io.mosip.registration.repositories.MachineMasterRepository;
-import io.mosip.registration.repositories.UserDetailRepository;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dao.MachineMappingDAO;
+import io.github.tf-govstack.registration.dao.MasterSyncDao;
+import io.github.tf-govstack.registration.dto.response.SyncDataResponseDto;
+import io.github.tf-govstack.registration.entity.UserDetail;
+import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
+import io.github.tf-govstack.registration.repositories.UserDetailRepository;
 
 
 /**

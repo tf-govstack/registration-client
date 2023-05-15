@@ -1,4 +1,4 @@
-package io.mosip.registration.test.login;
+package io.github.tf-govstack.registration.test.login;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -27,18 +27,18 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpHeaders;
 
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dto.LoginUserDTO;
-import io.mosip.registration.dto.OtpGeneratorRequestDTO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.update.SoftwareUpdateHandler;
-import io.mosip.registration.util.restclient.RequestHTTPDTO;
-import io.mosip.registration.util.restclient.RestClientUtil;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dto.LoginUserDTO;
+import io.github.tf-govstack.registration.dto.OtpGeneratorRequestDTO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.update.SoftwareUpdateHandler;
+import io.github.tf-govstack.registration.util.restclient.RequestHTTPDTO;
+import io.github.tf-govstack.registration.util.restclient.RestClientUtil;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})
@@ -103,7 +103,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -127,7 +127,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_generator.service.httpmethod")).thenReturn("POST");
 		when(environment.getProperty("otp_generator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_generator.service.requestType"))
-				.thenReturn("io.mosip.registration.dto.OtpGeneratorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpGeneratorResponseDTO");
 		when(environment.getProperty("otp_generator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_generator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_generator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -149,7 +149,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("true");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -170,7 +170,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("true");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -193,7 +193,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_generator.service.httpmethod")).thenReturn("POST");
 		when(environment.getProperty("otp_generator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_generator.service.requestType"))
-				.thenReturn("io.mosip.registration.dto.OtpGeneratorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpGeneratorResponseDTO");
 		when(environment.getProperty("otp_generator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_generator.service.authrequired")).thenReturn("true");
 		when(environment.getProperty("otp_generator.service.authheader")).thenReturn("Authorization:oauth");
@@ -231,7 +231,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -254,7 +254,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -278,7 +278,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -301,7 +301,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -324,7 +324,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");
@@ -347,7 +347,7 @@ public class ServiceDelegateUtilTest {
 		when(environment.getProperty("otp_validator.service.httpmethod")).thenReturn("GET");
 		when(environment.getProperty("otp_validator.service.url")).thenReturn("http://localhost:8080/otpmanager/otps");
 		when(environment.getProperty("otp_validator.service.responseType"))
-				.thenReturn("io.mosip.registration.dto.OtpValidatorResponseDTO");
+				.thenReturn("io.github.tf-govstack.registration.dto.OtpValidatorResponseDTO");
 		when(environment.getProperty("otp_validator.service.headers")).thenReturn("Content-Type:APPLICATION/JSON");
 		when(environment.getProperty("otp_validator.service.authrequired")).thenReturn("false");
 		when(environment.getProperty("otp_validator.service.authheader")).thenReturn("Authorization:BASIC");

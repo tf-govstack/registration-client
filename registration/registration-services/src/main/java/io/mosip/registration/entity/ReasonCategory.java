@@ -1,4 +1,4 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -13,7 +13,7 @@ import javax.persistence.IdClass;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import io.mosip.registration.entity.id.CodeAndLanguageCodeID;
+import io.github.tf-govstack.registration.entity.id.CodeAndLanguageCodeID;
 
 /**
  * This Entity Class contains list of reason categories[Client Rejection, Manual Adjudication...] 

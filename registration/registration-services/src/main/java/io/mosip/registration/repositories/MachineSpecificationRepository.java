@@ -1,8 +1,8 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.RegMachineSpec;
-import io.mosip.registration.entity.id.RegMachineSpecId;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.RegMachineSpec;
+import io.github.tf-govstack.registration.entity.id.RegMachineSpecId;
 
 /**
  * Repository to perform CRUD operations on MachineSpecification.

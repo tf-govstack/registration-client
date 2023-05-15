@@ -1,8 +1,8 @@
-package io.mosip.registration.dto.demographic;
+package io.github.tf-govstack.registration.dto.demographic;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import io.mosip.registration.dto.BaseDTO;
+import io.github.tf-govstack.registration.dto.BaseDTO;
 
 import lombok.Getter;
 import lombok.Setter;

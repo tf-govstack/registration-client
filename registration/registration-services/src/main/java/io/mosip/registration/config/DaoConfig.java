@@ -1,4 +1,4 @@
-package io.mosip.registration.config;
+package io.github.tf-govstack.registration.config;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,7 +18,7 @@ import java.util.*;
 
 import javax.sql.DataSource;
 
-import io.mosip.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.ApplicationContext;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,17 +37,17 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import io.mosip.kernel.clientcrypto.constant.ClientCryptoManagerConstant;
-import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.dataaccess.hibernate.config.HibernateDaoConfig;
-import io.mosip.kernel.dataaccess.hibernate.constant.HibernatePersistenceConstant;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.github.tf-govstack.kernel.clientcrypto.constant.ClientCryptoManagerConstant;
+import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.dataaccess.hibernate.config.HibernateDaoConfig;
+import io.github.tf-govstack.kernel.dataaccess.hibernate.constant.HibernatePersistenceConstant;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
 import lombok.SneakyThrows;
 
-import static io.mosip.registration.constants.RegistrationConstants.*;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.*;
 
 /**
  *
@@ -56,8 +56,8 @@ import static io.mosip.registration.constants.RegistrationConstants.*;
  * @author Omsai Eswar M
  *
  */
-@ComponentScan(basePackages = { "io.mosip.kernel.core", "io.mosip.kernel.clientcrypto.service.impl",
-		"io.mosip.kernel.partnercertservice.service", "io.mosip.kernel.partnercertservice.helper" })
+@ComponentScan(basePackages = { "io.github.tf-govstack.kernel.core", "io.github.tf-govstack.kernel.clientcrypto.service.impl",
+		"io.github.tf-govstack.kernel.partnercertservice.service", "io.github.tf-govstack.kernel.partnercertservice.helper" })
 public class DaoConfig extends HibernateDaoConfig {
 
 	private static final Logger LOGGER = AppConfig.getLogger(DaoConfig.class);
@@ -101,7 +101,7 @@ public class DaoConfig extends HibernateDaoConfig {
 		try (InputStream configKeys = DaoConfig.class.getClassLoader().getResourceAsStream("spring.properties");
 			 InputStream buildKeys = DaoConfig.class.getClassLoader().getResourceAsStream("props/mosip-application.properties")) {
 
-			applicationContext = io.mosip.registration.context.ApplicationContext.getInstance();
+			applicationContext = io.github.tf-govstack.registration.context.ApplicationContext.getInstance();
 
 			keys = new Properties();
 			keys.load(configKeys);
@@ -123,7 +123,7 @@ public class DaoConfig extends HibernateDaoConfig {
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * io.mosip.kernel.dataaccess.hibernate.config.HibernateDaoConfig#dataSource()
+	 * io.github.tf-govstack.kernel.dataaccess.hibernate.config.HibernateDaoConfig#dataSource()
 	 */
 	@SneakyThrows
 	@Override
@@ -208,7 +208,7 @@ public class DaoConfig extends HibernateDaoConfig {
 	@VisibleForTesting
 	private void setupDataSource() throws Exception {
 		LOGGER.info(LOGGER_CLASS_NAME, APPLICATION_NAME, APPLICATION_ID, "****** SETTING UP DATASOURCE *******");
-		System.setProperty("derby.stream.error.method", "io.mosip.registration.config.DerbySlf4jBridge.bridge");
+		System.setProperty("derby.stream.error.method", "io.github.tf-govstack.registration.config.DerbySlf4jBridge.bridge");
 		backwardCompatibleFix();
 		createDatabase();
 		reEncryptExistingDB();

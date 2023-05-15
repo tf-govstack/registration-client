@@ -1,9 +1,9 @@
-package io.mosip.registration.test.util;
+package io.github.tf-govstack.registration.test.util;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 public class RegistrationSystemPropertiesCheckerTest {
 

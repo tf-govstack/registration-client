@@ -1,9 +1,9 @@
-package io.mosip.registration.mdm.spec_0_9_5.dto.response;
+package io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.response;
 
 import java.util.Base64;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.mosip.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
 import lombok.Data;
 
 @Data

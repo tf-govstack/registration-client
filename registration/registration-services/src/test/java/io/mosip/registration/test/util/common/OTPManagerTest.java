@@ -1,4 +1,4 @@
-package io.mosip.registration.test.util.common;
+package io.github.tf-govstack.registration.test.util.common;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -14,10 +14,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.util.restclient.AuthTokenUtilService;
+import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.util.restclient.AuthTokenUtilService;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -35,16 +35,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.ResourceAccessException;
 
-import io.mosip.registration.constants.LoginMode;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.AuthTokenDTO;
-import io.mosip.registration.dto.OtpGeneratorRequestDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.service.security.impl.AuthenticationServiceImpl;
-import io.mosip.registration.util.common.OTPManager;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.registration.constants.LoginMode;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.AuthTokenDTO;
+import io.github.tf-govstack.registration.dto.OtpGeneratorRequestDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.service.security.impl.AuthenticationServiceImpl;
+import io.github.tf-govstack.registration.util.common.OTPManager;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

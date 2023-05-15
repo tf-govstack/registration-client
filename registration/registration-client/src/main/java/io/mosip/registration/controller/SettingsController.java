@@ -1,9 +1,9 @@
-package io.mosip.registration.controller;
+package io.github.tf-govstack.registration.controller;
 
-import static io.mosip.registration.constants.LoggerConstants.LOG_REG_SCAN_CONTROLLER;
-import static io.mosip.registration.constants.LoggerConstants.LOG_SELECT_LANGUAGE;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_SCAN_CONTROLLER;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_SELECT_LANGUAGE;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,18 +11,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.constants.RegistrationUIConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.controller.reg.HeaderController;
-import io.mosip.registration.controller.settings.impl.DeviceSettingsController;
-import io.mosip.registration.controller.settings.impl.GlobalConfigSettingsController;
-import io.mosip.registration.controller.settings.impl.ScheduledJobsSettingsController;
-import io.mosip.registration.dto.schema.SettingsSchema;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.controller.reg.HeaderController;
+import io.github.tf-govstack.registration.controller.settings.impl.DeviceSettingsController;
+import io.github.tf-govstack.registration.controller.settings.impl.GlobalConfigSettingsController;
+import io.github.tf-govstack.registration.controller.settings.impl.ScheduledJobsSettingsController;
+import io.github.tf-govstack.registration.dto.schema.SettingsSchema;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;

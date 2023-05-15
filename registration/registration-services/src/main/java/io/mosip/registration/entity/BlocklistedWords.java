@@ -1,4 +1,4 @@
-package io.mosip.registration.entity;
+package io.github.tf-govstack.registration.entity;
 
 import java.io.Serializable;
 
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
-import io.mosip.registration.entity.id.WordAndLanguageCodeID;
+import io.github.tf-govstack.registration.entity.id.WordAndLanguageCodeID;
 
 /**
  * This Entity Class contains the list of words which were not allowed during Registration process 

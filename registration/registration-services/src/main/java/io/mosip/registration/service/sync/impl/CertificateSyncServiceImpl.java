@@ -1,4 +1,4 @@
-package io.mosip.registration.service.sync.impl;
+package io.github.tf-govstack.registration.service.sync.impl;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -17,23 +17,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import io.micrometer.core.annotation.Timed;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.kernel.partnercertservice.dto.CACertificateRequestDto;
-import io.mosip.kernel.partnercertservice.dto.CACertificateResponseDto;
-import io.mosip.kernel.partnercertservice.service.spi.PartnerCertificateManagerService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.MasterSyncDao;
-import io.mosip.registration.dto.CaCertificateDto;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.entity.SyncControl;
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.jobs.SyncManager;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.sync.CertificateSyncService;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.partnercertservice.dto.CACertificateRequestDto;
+import io.github.tf-govstack.kernel.partnercertservice.dto.CACertificateResponseDto;
+import io.github.tf-govstack.kernel.partnercertservice.service.spi.PartnerCertificateManagerService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.MasterSyncDao;
+import io.github.tf-govstack.registration.dto.CaCertificateDto;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.entity.SyncControl;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.jobs.SyncManager;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.sync.CertificateSyncService;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 
 @Service

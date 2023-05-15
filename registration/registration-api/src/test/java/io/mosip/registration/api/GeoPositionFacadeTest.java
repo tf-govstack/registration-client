@@ -1,8 +1,8 @@
-package io.mosip.registration.api;
+package io.github.tf-govstack.registration.api;
 
-import io.mosip.registration.api.geoposition.GeoPositionFacade;
-import io.mosip.registration.api.geoposition.GeoPositionService;
-import io.mosip.registration.api.geoposition.dto.GeoPosition;
+import io.github.tf-govstack.registration.api.geoposition.GeoPositionFacade;
+import io.github.tf-govstack.registration.api.geoposition.GeoPositionService;
+import io.github.tf-govstack.registration.api.geoposition.dto.GeoPosition;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.test.util.ReflectionTestUtils;

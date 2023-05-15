@@ -1,7 +1,7 @@
-package io.mosip.registration.api.impl.gps;
+package io.github.tf-govstack.registration.api.impl.gps;
 
-import io.mosip.registration.api.geoposition.GeoPositionService;
-import io.mosip.registration.api.geoposition.dto.GeoPosition;
+import io.github.tf-govstack.registration.api.geoposition.GeoPositionService;
+import io.github.tf-govstack.registration.api.geoposition.dto.GeoPosition;
 import org.springframework.stereotype.Component;
 
 @Component

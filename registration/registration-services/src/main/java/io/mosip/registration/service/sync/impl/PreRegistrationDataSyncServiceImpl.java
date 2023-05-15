@@ -1,4 +1,4 @@
-package io.mosip.registration.service.sync.impl;
+package io.github.tf-govstack.registration.service.sync.impl;
 
 import java.io.File;
 import java.sql.Timestamp;
@@ -24,7 +24,7 @@ import javax.annotation.PreDestroy;
 
 import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;
-import io.mosip.registration.dto.*;
+import io.github.tf-govstack.registration.dto.*;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,22 +32,22 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.kernel.core.util.StringUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.PreRegistrationDataSyncDAO;
-import io.mosip.registration.entity.PreRegistrationList;
-import io.mosip.registration.entity.SyncTransaction;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.jobs.SyncManager;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.external.PreRegZipHandlingService;
-import io.mosip.registration.service.sync.PreRegistrationDataSyncService;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.kernel.core.util.StringUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.PreRegistrationDataSyncDAO;
+import io.github.tf-govstack.registration.entity.PreRegistrationList;
+import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.jobs.SyncManager;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.external.PreRegZipHandlingService;
+import io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService;
 import lombok.NonNull;
 
 /**
@@ -100,7 +100,7 @@ public class PreRegistrationDataSyncServiceImpl extends BaseService implements P
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.sync.PreRegistrationDataSyncService#
+	 * @see io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService#
 	 * getPreRegistrationIds(java.lang.String)
 	 */
 	@Counted
@@ -182,7 +182,7 @@ public class PreRegistrationDataSyncServiceImpl extends BaseService implements P
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.sync.PreRegistrationDataSyncService#
+	 * @see io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService#
 	 * getPreRegistration(java.lang.String)
 	 */
 	@Override
@@ -420,7 +420,7 @@ public class PreRegistrationDataSyncServiceImpl extends BaseService implements P
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.sync.PreRegistrationDataSyncService#
+	 * @see io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService#
 	 * fetchAndDeleteRecords()
 	 */
 	public synchronized ResponseDTO fetchAndDeleteRecords() {
@@ -457,8 +457,8 @@ public class PreRegistrationDataSyncServiceImpl extends BaseService implements P
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.sync.PreRegistrationDataSyncService#
-	 * deletePreRegRecords(io.mosip.registration.dto.ResponseDTO, java.util.List)
+	 * @see io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService#
+	 * deletePreRegRecords(io.github.tf-govstack.registration.dto.ResponseDTO, java.util.List)
 	 */
 	public void deletePreRegRecords(ResponseDTO responseDTO, final List<PreRegistrationList> preRegList) {
 		LOGGER.info("REGISTRATION - PRE_REGISTRATION_DATA_DELETION_STARTED - PRE_REGISTRATION_DATA_SYNC_SERVICE_IMPL",
@@ -537,7 +537,7 @@ public class PreRegistrationDataSyncServiceImpl extends BaseService implements P
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.sync.PreRegistrationDataSyncService#
+	 * @see io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService#
 	 * getPreRegistrationRecordForDeletion(java.lang.String)
 	 */
 	public PreRegistrationList getPreRegistrationRecordForDeletion(String preRegistrationId) {
@@ -554,7 +554,7 @@ public class PreRegistrationDataSyncServiceImpl extends BaseService implements P
 	}
 
 	/* (non-Javadoc)
-	 * @see io.mosip.registration.service.sync.PreRegistrationDataSyncService#lastPreRegPacketDownloadedTime()
+	 * @see io.github.tf-govstack.registration.service.sync.PreRegistrationDataSyncService#lastPreRegPacketDownloadedTime()
 	 */
 	@Override
 	public Timestamp getLastPreRegPacketDownloadedTime() {

@@ -1,8 +1,8 @@
-package io.mosip.registration.service.doc.category;
+package io.github.tf-govstack.registration.service.doc.category;
 
 import java.util.List;
 
-import io.mosip.registration.dto.mastersync.DocumentCategoryDto;
+import io.github.tf-govstack.registration.dto.mastersync.DocumentCategoryDto;
 
 /**
  * Service class {@code ValidDocumentService} is to access the Valid Documents

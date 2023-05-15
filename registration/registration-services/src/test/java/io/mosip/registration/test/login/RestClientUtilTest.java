@@ -1,4 +1,4 @@
-package io.mosip.registration.test.login;
+package io.github.tf-govstack.registration.test.login;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -31,16 +31,16 @@ import org.springframework.web.client.RequestCallback;
 import org.springframework.web.client.ResponseExtractor;
 import org.springframework.web.client.RestTemplate;
 
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.OtpGeneratorRequestDTO;
-import io.mosip.registration.dto.OtpGeneratorResponseDTO;
-import io.mosip.registration.entity.FileSignature;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.repositories.FileSignatureRepository;
-import io.mosip.registration.util.restclient.RequestHTTPDTO;
-import io.mosip.registration.util.restclient.RestClientUtil;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.OtpGeneratorRequestDTO;
+import io.github.tf-govstack.registration.dto.OtpGeneratorResponseDTO;
+import io.github.tf-govstack.registration.entity.FileSignature;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.repositories.FileSignatureRepository;
+import io.github.tf-govstack.registration.util.restclient.RequestHTTPDTO;
+import io.github.tf-govstack.registration.util.restclient.RestClientUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

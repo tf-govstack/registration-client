@@ -1,8 +1,8 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.LoggerConstants.LOG_REG_USER_ONBOARD;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_USER_ONBOARD;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -16,31 +16,31 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.commons.packet.constants.Biometric;
-import io.mosip.commons.packet.util.PacketManagerHelper;
-import io.mosip.kernel.biometrics.entities.BIR;
-import io.mosip.kernel.biometrics.entities.BiometricRecord;
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.BiometricAttributes;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.UserOnboardDAO;
-import io.mosip.registration.dto.biometric.BiometricDTO;
-import io.mosip.registration.dto.biometric.FingerprintDetailsDTO;
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.entity.UserBiometric;
-import io.mosip.registration.entity.UserDetail;
-import io.mosip.registration.entity.UserMachineMapping;
-import io.mosip.registration.entity.id.UserBiometricId;
-import io.mosip.registration.entity.id.UserMachineMappingID;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.repositories.UserBiometricRepository;
-import io.mosip.registration.repositories.UserDetailRepository;
-import io.mosip.registration.repositories.UserMachineMappingRepository;
+import io.github.tf-govstack.commons.packet.constants.Biometric;
+import io.github.tf-govstack.commons.packet.util.PacketManagerHelper;
+import io.github.tf-govstack.kernel.biometrics.entities.BIR;
+import io.github.tf-govstack.kernel.biometrics.entities.BiometricRecord;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.BiometricAttributes;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.UserOnboardDAO;
+import io.github.tf-govstack.registration.dto.biometric.BiometricDTO;
+import io.github.tf-govstack.registration.dto.biometric.FingerprintDetailsDTO;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.entity.UserBiometric;
+import io.github.tf-govstack.registration.entity.UserDetail;
+import io.github.tf-govstack.registration.entity.UserMachineMapping;
+import io.github.tf-govstack.registration.entity.id.UserBiometricId;
+import io.github.tf-govstack.registration.entity.id.UserMachineMappingID;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.repositories.UserBiometricRepository;
+import io.github.tf-govstack.registration.repositories.UserDetailRepository;
+import io.github.tf-govstack.registration.repositories.UserMachineMappingRepository;
 
 /**
  * The implementation class of {@link UserOnboardDAO}
@@ -77,7 +77,7 @@ public class UserOnboardDAOImpl implements UserOnboardDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.dao.UserOnBoardDao#insert(io.mosip.registration.dto.
+	 * io.github.tf-govstack.registration.dao.UserOnBoardDao#insert(io.github.tf-govstack.registration.dto.
 	 * biometric.BiometricDTO)
 	 */
 	@Override

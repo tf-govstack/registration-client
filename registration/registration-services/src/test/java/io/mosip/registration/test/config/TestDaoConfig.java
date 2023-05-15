@@ -1,4 +1,4 @@
-package io.mosip.registration.test.config;
+package io.github.tf-govstack.registration.test.config;
 
 import java.io.InputStream;
 import java.sql.ResultSet;
@@ -10,11 +10,11 @@ import java.util.WeakHashMap;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-import io.mosip.kernel.biosdk.provider.factory.BioAPIFactory;
-import io.mosip.kernel.signature.service.SignatureService;
-import io.mosip.kernel.signature.service.impl.SignatureServiceImpl;
-import io.mosip.registration.config.DaoConfig;
-import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
+import io.github.tf-govstack.kernel.biosdk.provider.factory.BioAPIFactory;
+import io.github.tf-govstack.kernel.signature.service.SignatureService;
+import io.github.tf-govstack.kernel.signature.service.impl.SignatureServiceImpl;
+import io.github.tf-govstack.registration.config.DaoConfig;
+import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
@@ -34,8 +34,8 @@ import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
-import io.mosip.kernel.dataaccess.hibernate.config.HibernateDaoConfig;
-import io.mosip.registration.context.ApplicationContext;
+import io.github.tf-govstack.kernel.dataaccess.hibernate.config.HibernateDaoConfig;
+import io.github.tf-govstack.registration.context.ApplicationContext;
 import org.springframework.transaction.PlatformTransactionManager;
 
 
@@ -46,14 +46,14 @@ import org.springframework.transaction.PlatformTransactionManager;
 		".*PacketDecryptorImpl",
 		".*IdSchemaUtils", ".*OnlinePacketCryptoServiceImpl"}),
 		basePackages = {
-		"io.mosip.registration",
-		"io.mosip.kernel.idvalidator", "io.mosip.kernel.ridgenerator", "io.mosip.kernel.qrcode",
-		"io.mosip.kernel.crypto", "io.mosip.kernel.jsonvalidator", "io.mosip.kernel.idgenerator",
-		"io.mosip.kernel.virusscanner", "io.mosip.kernel.transliteration", "io.mosip.kernel.applicanttype",
-		"io.mosip.kernel.core.pdfgenerator.spi", "io.mosip.kernel.pdfgenerator.itext.impl",
-		"io.mosip.kernel.idobjectvalidator.impl", "io.mosip.kernel.biosdk.provider.impl",
-		"io.mosip.kernel.biosdk.provider.factory", "io.mosip.commons.packet",
-		"io.mosip.registration.api.config"})
+		"io.github.tf-govstack.registration",
+		"io.github.tf-govstack.kernel.idvalidator", "io.github.tf-govstack.kernel.ridgenerator", "io.github.tf-govstack.kernel.qrcode",
+		"io.github.tf-govstack.kernel.crypto", "io.github.tf-govstack.kernel.jsonvalidator", "io.github.tf-govstack.kernel.idgenerator",
+		"io.github.tf-govstack.kernel.virusscanner", "io.github.tf-govstack.kernel.transliteration", "io.github.tf-govstack.kernel.applicanttype",
+		"io.github.tf-govstack.kernel.core.pdfgenerator.spi", "io.github.tf-govstack.kernel.pdfgenerator.itext.impl",
+		"io.github.tf-govstack.kernel.idobjectvalidator.impl", "io.github.tf-govstack.kernel.biosdk.provider.impl",
+		"io.github.tf-govstack.kernel.biosdk.provider.factory", "io.github.tf-govstack.commons.packet",
+		"io.github.tf-govstack.registration.api.config"})
 @PropertySource(value = { "classpath:spring-test.properties", "classpath:props/mosip-application.properties" })
 public class TestDaoConfig extends DaoConfig {
 
@@ -81,7 +81,7 @@ public class TestDaoConfig extends DaoConfig {
 		try (InputStream configKeys = DaoConfig.class.getClassLoader().getResourceAsStream("spring-test.properties");
 			 InputStream buildKeys = DaoConfig.class.getClassLoader().getResourceAsStream("props/mosip-application.properties")) {
 
-			applicationContext = io.mosip.registration.context.ApplicationContext.getInstance();
+			applicationContext = io.github.tf-govstack.registration.context.ApplicationContext.getInstance();
 
 			keys = new Properties();
 			keys.load(configKeys);
@@ -130,7 +130,7 @@ public class TestDaoConfig extends DaoConfig {
 
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setDataSource(dataSource());
-		em.setPackagesToScan("io.mosip.registration", "io.mosip.kernel");
+		em.setPackagesToScan("io.github.tf-govstack.registration", "io.github.tf-govstack.kernel");
 		em.setJpaVendorAdapter(vendorAdapter);
 		em.setJpaProperties(additionalProperties());
 
@@ -146,7 +146,7 @@ public class TestDaoConfig extends DaoConfig {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see io.mosip.kernel.core.dao.config.BaseDaoConfig#transactionManager(javax.
+	 * @see io.github.tf-govstack.kernel.core.dao.config.BaseDaoConfig#transactionManager(javax.
 	 * persistence.EntityManagerFactory)
 	 */
 	@Override

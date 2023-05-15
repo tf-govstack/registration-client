@@ -1,34 +1,34 @@
-package io.mosip.registration.service.sync.impl;
+package io.github.tf-govstack.registration.service.sync.impl;
 
-import static io.mosip.registration.constants.LoggerConstants.REGISTRATION_PUBLIC_KEY_SYNC;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.REGISTRATION_PUBLIC_KEY_SYNC;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.net.SocketTimeoutException;
 import java.util.*;
 
 import io.micrometer.core.annotation.Timed;
-import io.mosip.kernel.cryptomanager.util.CryptomanagerUtils;
-import io.mosip.kernel.keymanagerservice.dto.UploadCertificateRequestDto;
-import io.mosip.kernel.keymanagerservice.util.KeymanagerUtil;
+import io.github.tf-govstack.kernel.cryptomanager.util.CryptomanagerUtils;
+import io.github.tf-govstack.kernel.keymanagerservice.dto.UploadCertificateRequestDto;
+import io.github.tf-govstack.kernel.keymanagerservice.util.KeymanagerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.StringUtils;
-import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegistrationExceptionConstants;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.sync.PublicKeySync;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.StringUtils;
+import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.sync.PublicKeySync;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
 
 /**
  * The Interface for Public Key service implementation.

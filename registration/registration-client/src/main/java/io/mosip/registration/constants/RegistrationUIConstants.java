@@ -1,10 +1,10 @@
-package io.mosip.registration.constants;
+package io.github.tf-govstack.registration.constants;
 
 import java.util.ResourceBundle;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.context.ApplicationContext;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.context.ApplicationContext;
 
 public class RegistrationUIConstants {
 

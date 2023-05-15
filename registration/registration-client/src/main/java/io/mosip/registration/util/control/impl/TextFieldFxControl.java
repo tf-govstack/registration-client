@@ -1,35 +1,35 @@
 /**
  * 
  */
-package io.mosip.registration.util.control.impl;
+package io.github.tf-govstack.registration.util.control.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import io.mosip.registration.controller.*;
+import io.github.tf-govstack.registration.controller.*;
 import org.springframework.context.ApplicationContext;
 
-import io.mosip.commons.packet.dto.packet.SimpleDto;
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.transliteration.spi.Transliteration;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.AuditReferenceIdTypes;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.constants.RegistrationUIConstants;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.controller.reg.Validations;
-import io.mosip.registration.dto.BlocklistedConsentDto;
-import io.mosip.registration.dto.RegistrationDTO;
-import io.mosip.registration.dto.mastersync.GenericDto;
-import io.mosip.registration.dto.schema.UiFieldDTO;
-import io.mosip.registration.util.common.DemographicChangeActionHandler;
-import io.mosip.registration.util.control.FxControl;
+import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.transliteration.spi.Transliteration;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.controller.reg.Validations;
+import io.github.tf-govstack.registration.dto.BlocklistedConsentDto;
+import io.github.tf-govstack.registration.dto.RegistrationDTO;
+import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
+import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
+import io.github.tf-govstack.registration.util.common.DemographicChangeActionHandler;
+import io.github.tf-govstack.registration.util.control.FxControl;
 import javafx.collections.ObservableList;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
@@ -187,16 +187,16 @@ public class TextFieldFxControl extends FxControl {
 					hyperLinkHBox.setId(uiFieldDTO.getId() + langCode + "HyperlinkHBox");
 					hyperLinkHBox.getChildren()
 							.add(getHyperlink(uiFieldDTO.getId() + langCode + "Accept", langCode,
-									io.mosip.registration.context.ApplicationContext
+									io.github.tf-govstack.registration.context.ApplicationContext
 											.getBundle(langCode, RegistrationConstants.LABELS).getString("accept_word"),
 									RegistrationConstants.DemoGraphicFieldMessageLabel, true));
 					hyperLinkHBox.getChildren().add(getLabel(uiFieldDTO.getId() + langCode + "HyperlinkLabel",
-							io.mosip.registration.context.ApplicationContext
+							io.github.tf-govstack.registration.context.ApplicationContext
 									.getBundle(langCode, RegistrationConstants.LABELS).getString("slash"),
 							RegistrationConstants.DemoGraphicFieldMessageLabel, true, simpleTypeVBox.getPrefWidth()));
 					hyperLinkHBox.getChildren()
 							.add(getHyperlink(uiFieldDTO.getId() + langCode + "Reject", langCode,
-									io.mosip.registration.context.ApplicationContext
+									io.github.tf-govstack.registration.context.ApplicationContext
 											.getBundle(langCode, RegistrationConstants.LABELS).getString("reject_word"),
 									RegistrationConstants.DemoGraphicFieldMessageLabel, true));
 
@@ -216,17 +216,17 @@ public class TextFieldFxControl extends FxControl {
 				hyperLinkHBox.setId(uiFieldDTO.getId() + langCode + "HyperlinkHBox");
 				hyperLinkHBox.getChildren()
 						.add(getHyperlink(uiFieldDTO.getId() + langCode + "Accept", langCode,
-								io.mosip.registration.context.ApplicationContext
+								io.github.tf-govstack.registration.context.ApplicationContext
 										.getBundle(langCode, RegistrationConstants.LABELS).getString("accept_word"),
 								RegistrationConstants.DemoGraphicFieldMessageLabel, true));
 				hyperLinkHBox.getChildren()
 						.add(getLabel(uiFieldDTO.getId() + "HyperlinkLabel",
-								io.mosip.registration.context.ApplicationContext
+								io.github.tf-govstack.registration.context.ApplicationContext
 										.getBundle(langCode, RegistrationConstants.LABELS).getString("slash"),
 								RegistrationConstants.DemoGraphicFieldMessageLabel, true, simpleTypeVBox.getPrefWidth()));
 				hyperLinkHBox.getChildren()
 						.add(getHyperlink(uiFieldDTO.getId() + langCode + "Reject", langCode,
-								io.mosip.registration.context.ApplicationContext.getBundle(langCode, RegistrationConstants.LABELS).getString("reject_word"),
+								io.github.tf-govstack.registration.context.ApplicationContext.getBundle(langCode, RegistrationConstants.LABELS).getString("reject_word"),
 								RegistrationConstants.DemoGraphicFieldMessageLabel, true));
 
 				vBox.getChildren().add(hyperLinkHBox);
@@ -331,7 +331,7 @@ public class TextFieldFxControl extends FxControl {
 		/** Text Field */
 		TextField textField = new TextField();
 		textField.setId(id);
-		textField.setPromptText(io.mosip.registration.context.ApplicationContext
+		textField.setPromptText(io.github.tf-govstack.registration.context.ApplicationContext
 				.getBundle(langCode, RegistrationConstants.LABELS).getString("language"));
 		textField.getStyleClass().add(RegistrationConstants.DEMOGRAPHIC_TEXTFIELD);
 		textField.setDisable(isDisable);

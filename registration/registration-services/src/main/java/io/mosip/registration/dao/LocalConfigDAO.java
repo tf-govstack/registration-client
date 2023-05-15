@@ -1,9 +1,9 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 import java.util.Map;
 
-import io.mosip.registration.entity.PermittedLocalConfig;
+import io.github.tf-govstack.registration.entity.PermittedLocalConfig;
 
 public interface LocalConfigDAO {
 

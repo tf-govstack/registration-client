@@ -1,9 +1,9 @@
-package io.mosip.registration.service.operator.impl;
+package io.github.tf-govstack.registration.service.operator.impl;
 
-import static io.mosip.registration.constants.LoggerConstants.LOG_REG_MASTER_SYNC;
-import static io.mosip.registration.constants.LoggerConstants.LOG_REG_USER_DETAIL;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_MASTER_SYNC;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_USER_DETAIL;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 
 import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;
-import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.mosip.registration.context.SessionContext;
+import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.github.tf-govstack.registration.context.SessionContext;
 import lombok.NonNull;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,23 +26,23 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.UserDetailDAO;
-import io.mosip.registration.dto.ErrorResponseDTO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.SuccessResponseDTO;
-import io.mosip.registration.dto.UserDetailDto;
-import io.mosip.registration.entity.UserDetail;
-import io.mosip.registration.entity.UserRole;
-import io.mosip.registration.entity.id.UserRoleId;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.operator.UserDetailService;
+import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.UserDetailDAO;
+import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
+import io.github.tf-govstack.registration.dto.UserDetailDto;
+import io.github.tf-govstack.registration.entity.UserDetail;
+import io.github.tf-govstack.registration.entity.UserRole;
+import io.github.tf-govstack.registration.entity.id.UserRoleId;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.operator.UserDetailService;
 
 /**
  * Implementation for {@link UserDetailService}
@@ -68,7 +68,7 @@ public class UserDetailServiceImpl extends BaseService implements UserDetailServ
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.UserDetailService#save()
+	 * @see io.github.tf-govstack.registration.service.UserDetailService#save()
 	 */
 	@Timed
 	public synchronized ResponseDTO save(String triggerPoint) throws RegBaseCheckedException {

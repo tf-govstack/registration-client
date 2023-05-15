@@ -1,24 +1,24 @@
-package io.mosip.registration.jobs.impl;
+package io.github.tf-govstack.registration.jobs.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
-import io.mosip.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
 import org.quartz.JobExecutionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.jobs.BaseJob;
-import io.mosip.registration.service.sync.PolicySyncService;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.jobs.BaseJob;
+import io.github.tf-govstack.registration.service.sync.PolicySyncService;
 
 import java.sql.Timestamp;
 
@@ -99,7 +99,7 @@ public class KeyPolicySyncJob extends BaseJob {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.jobs.BaseJob#executeJob(java.lang.String,
+	 * @see io.github.tf-govstack.registration.jobs.BaseJob#executeJob(java.lang.String,
 	 * java.lang.String)
 	 */
 	@Override

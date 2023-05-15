@@ -1,7 +1,7 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
-import io.mosip.registration.entity.IdentitySchema;
-import io.mosip.registration.entity.ProcessSpec;
+import io.github.tf-govstack.registration.entity.IdentitySchema;
+import io.github.tf-govstack.registration.entity.ProcessSpec;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

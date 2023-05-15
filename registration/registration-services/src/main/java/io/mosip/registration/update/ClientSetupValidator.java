@@ -1,6 +1,6 @@
-package io.mosip.registration.update;
+package io.github.tf-govstack.registration.update;
 
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

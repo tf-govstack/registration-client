@@ -1,4 +1,4 @@
-package io.mosip.registration.test.service.packet;
+package io.github.tf-govstack.registration.test.service.packet;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.doNothing;
@@ -47,30 +47,30 @@ import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.HttpClientErrorException;
 
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.kernel.core.util.HMACUtils2;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.RegistrationClientStatusCode;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.context.SessionContext.UserContext;
-import io.mosip.registration.dao.RegistrationCenterDAO;
-import io.mosip.registration.dao.RegistrationDAO;
-import io.mosip.registration.entity.Registration;
-import io.mosip.registration.exception.ConnectionException;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.repositories.MachineMasterRepository;
-import io.mosip.registration.repositories.RegistrationRepository;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.packet.impl.PacketUploadServiceImpl;
-import io.mosip.registration.service.remap.CenterMachineReMapService;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
-import io.mosip.registration.util.restclient.RequestHTTPDTO;
-import io.mosip.registration.util.restclient.ServiceDelegateUtil;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.context.SessionContext.UserContext;
+import io.github.tf-govstack.registration.dao.RegistrationCenterDAO;
+import io.github.tf-govstack.registration.dao.RegistrationDAO;
+import io.github.tf-govstack.registration.entity.Registration;
+import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
+import io.github.tf-govstack.registration.repositories.RegistrationRepository;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.packet.impl.PacketUploadServiceImpl;
+import io.github.tf-govstack.registration.service.remap.CenterMachineReMapService;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.registration.util.restclient.RequestHTTPDTO;
+import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

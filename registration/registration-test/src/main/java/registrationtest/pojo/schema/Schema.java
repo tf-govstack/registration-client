@@ -1,6 +1,6 @@
 package registrationtest.pojo.schema;
 
-import io.mosip.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
 
 import java.util.HashMap;
 import java.util.List;

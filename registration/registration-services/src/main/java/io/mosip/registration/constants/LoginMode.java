@@ -1,4 +1,4 @@
-package io.mosip.registration.constants;
+package io.github.tf-govstack.registration.constants;
 
 /**
  * The Enum LoginMode contains the different modes of login.

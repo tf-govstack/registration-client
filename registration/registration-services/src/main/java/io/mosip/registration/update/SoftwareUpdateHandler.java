@@ -1,7 +1,7 @@
-package io.mosip.registration.update;
+package io.github.tf-govstack.registration.update;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -32,22 +32,22 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import io.micrometer.core.annotation.Counted;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.kernel.core.util.FileUtils;
-import io.mosip.kernel.logger.logback.util.MetricTag;
-import io.mosip.registration.audit.AuditManagerService;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.AuditReferenceIdTypes;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.LoggerConstants;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.FileUtils;
+import io.github.tf-govstack.kernel.logger.logback.util.MetricTag;
+import io.github.tf-govstack.registration.audit.AuditManagerService;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.LoggerConstants;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
 
 /**
  * This class will update the application based on comapring the versions of the
@@ -216,7 +216,7 @@ public class SoftwareUpdateHandler extends BaseService {
 
 		try {
 			rollBackSetup(backupFolder);
-		} catch (io.mosip.kernel.core.exception.IOException e) {
+		} catch (io.github.tf-govstack.kernel.core.exception.IOException e) {
 			LOGGER.error("Failed to rollback setup", e);
 		}
 	}
@@ -291,7 +291,7 @@ public class SoftwareUpdateHandler extends BaseService {
 				String.valueOf(Timestamp.valueOf(DateUtils.getUTCCurrentDateTime())));
 	}
 
-	private void backUpSetup(File backUpFolder) throws io.mosip.kernel.core.exception.IOException {
+	private void backUpSetup(File backUpFolder) throws io.github.tf-govstack.kernel.core.exception.IOException {
 		LOGGER.info("Backup of current version started {}", backUpFolder);
 		// bin backup folder
 		File bin = new File(backUpFolder.getAbsolutePath() + SLASH + binFolder);
@@ -473,7 +473,7 @@ public class SoftwareUpdateHandler extends BaseService {
 		LOGGER.info(LoggerConstants.LOG_REG_UPDATE, APPLICATION_NAME, APPLICATION_ID, "Execution completed sql file");
 	}
 
-	private void rollBackSetup(File backUpFolder) throws io.mosip.kernel.core.exception.IOException {
+	private void rollBackSetup(File backUpFolder) throws io.github.tf-govstack.kernel.core.exception.IOException {
 		LOGGER.info("Replacing Backup of current version started");
 		if(backUpFolder.exists()) {
 			FileUtils.copyDirectory(new File(backUpFolder.getAbsolutePath() + SLASH + binFolder), new File(binFolder));

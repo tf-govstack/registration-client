@@ -1,4 +1,4 @@
-package io.mosip.registration.test.audit;
+package io.github.tf-govstack.registration.test.audit;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -24,21 +24,21 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.mosip.kernel.auditmanager.request.AuditRequestDto;
-import io.mosip.kernel.core.auditmanager.spi.AuditHandler;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.audit.AuditManagerSerivceImpl;
-import io.mosip.registration.constants.AuditEvent;
-import io.mosip.registration.constants.Components;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.AuditDAO;
-import io.mosip.registration.dao.RegistrationDAO;
-import io.mosip.registration.dto.RegistrationDTO;
-import io.mosip.registration.service.config.GlobalParamService;
-import io.mosip.registration.service.config.LocalConfigService;
-import io.mosip.registration.service.packet.RegPacketStatusService;
+import io.github.tf-govstack.kernel.auditmanager.request.AuditRequestDto;
+import io.github.tf-govstack.kernel.core.auditmanager.spi.AuditHandler;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.audit.AuditManagerSerivceImpl;
+import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.github.tf-govstack.registration.constants.Components;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.AuditDAO;
+import io.github.tf-govstack.registration.dao.RegistrationDAO;
+import io.github.tf-govstack.registration.dto.RegistrationDTO;
+import io.github.tf-govstack.registration.service.config.GlobalParamService;
+import io.github.tf-govstack.registration.service.config.LocalConfigService;
+import io.github.tf-govstack.registration.service.packet.RegPacketStatusService;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

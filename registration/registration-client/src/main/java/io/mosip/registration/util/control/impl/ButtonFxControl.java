@@ -1,21 +1,21 @@
-package io.mosip.registration.util.control.impl;
+package io.github.tf-govstack.registration.util.control.impl;
 
 import java.util.*;
 
-import io.mosip.registration.controller.ClientApplication;
+import io.github.tf-govstack.registration.controller.ClientApplication;
 import javafx.scene.control.Tooltip;
 import org.springframework.context.ApplicationContext;
 
-import io.mosip.commons.packet.dto.packet.SimpleDto;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.dto.mastersync.GenericDto;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.controller.FXUtils;
-import io.mosip.registration.controller.Initialization;
-import io.mosip.registration.dto.schema.UiFieldDTO;
-import io.mosip.registration.service.sync.MasterSyncService;
-import io.mosip.registration.util.control.FxControl;
+import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.controller.FXUtils;
+import io.github.tf-govstack.registration.controller.Initialization;
+import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
+import io.github.tf-govstack.registration.service.sync.MasterSyncService;
+import io.github.tf-govstack.registration.util.control.FxControl;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -33,7 +33,7 @@ public class ButtonFxControl extends FxControl {
 
 	private FXUtils fxUtils;
 
-	private io.mosip.registration.context.ApplicationContext regApplicationContext;
+	private io.github.tf-govstack.registration.context.ApplicationContext regApplicationContext;
 
 	private String selectedResidence = "genderSelectedButton";
 
@@ -46,7 +46,7 @@ public class ButtonFxControl extends FxControl {
 	public ButtonFxControl() {
 		ApplicationContext applicationContext = ClientApplication.getApplicationContext();
 		fxUtils = FXUtils.getInstance();
-		regApplicationContext = io.mosip.registration.context.ApplicationContext.getInstance();
+		regApplicationContext = io.github.tf-govstack.registration.context.ApplicationContext.getInstance();
 		masterSyncService = applicationContext.getBean(MasterSyncService.class);
 	}
 

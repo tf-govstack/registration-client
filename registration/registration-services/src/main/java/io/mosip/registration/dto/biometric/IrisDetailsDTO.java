@@ -1,8 +1,8 @@
-package io.mosip.registration.dto.biometric;
+package io.github.tf-govstack.registration.dto.biometric;
 
 import java.util.List;
 
-import io.mosip.registration.dto.BaseDTO;
+import io.github.tf-govstack.registration.dto.BaseDTO;
 
 /**
  * This class contains the information on captured Iris.

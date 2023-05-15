@@ -1,4 +1,4 @@
-package io.mosip.registration.test.dao.impl;
+package io.github.tf-govstack.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,10 +13,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.mosip.registration.dao.impl.ValidDocumentDAOImpl;
-import io.mosip.registration.entity.ApplicantValidDocument;
-import io.mosip.registration.entity.id.ApplicantValidDocumentID;
-import io.mosip.registration.repositories.ApplicantValidDocumentRepository;
+import io.github.tf-govstack.registration.dao.impl.ValidDocumentDAOImpl;
+import io.github.tf-govstack.registration.entity.ApplicantValidDocument;
+import io.github.tf-govstack.registration.entity.id.ApplicantValidDocumentID;
+import io.github.tf-govstack.registration.repositories.ApplicantValidDocumentRepository;
 
 public class ValidDocumentDAOImplTest {
 

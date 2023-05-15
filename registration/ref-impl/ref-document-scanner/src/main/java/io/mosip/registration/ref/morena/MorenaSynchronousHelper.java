@@ -1,4 +1,4 @@
-package io.mosip.registration.ref.morena;
+package io.github.tf-govstack.registration.ref.morena;
 
 import eu.gnome.morena.Device;
 import eu.gnome.morena.DeviceBase;

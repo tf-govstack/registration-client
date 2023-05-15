@@ -1,4 +1,4 @@
-package io.mosip.registration.dto.schema;
+package io.github.tf-govstack.registration.dto.schema;
 
 /**
  * This class will contains the language code and value for the field

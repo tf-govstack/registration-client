@@ -1,4 +1,4 @@
-package io.mosip.registration.controller;
+package io.github.tf-govstack.registration.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,13 +12,13 @@ import java.util.ResourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.controller.vo.SyncDataProccessVO;
-import io.mosip.registration.dto.ErrorResponseDTO;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.dto.SuccessResponseDTO;
-import io.mosip.registration.dto.SyncDataProcessDTO;
-import io.mosip.registration.service.config.JobConfigurationService;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.controller.vo.SyncDataProccessVO;
+import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
+import io.github.tf-govstack.registration.dto.SyncDataProcessDTO;
+import io.github.tf-govstack.registration.service.config.JobConfigurationService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

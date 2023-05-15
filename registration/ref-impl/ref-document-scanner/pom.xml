@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.mosip.registration</groupId>
+    <groupId>io.github.tf-govstack.registration</groupId>
     <artifactId>ref-document-scanner</artifactId>
     <version>1.2.0.1-B1</version>
 
@@ -18,7 +18,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>io.mosip.registration</groupId>
+            <groupId>io.github.tf-govstack.registration</groupId>
             <artifactId>registration-api</artifactId>
             <version>1.2.0.1-B1</version>
             <scope>compile</scope>

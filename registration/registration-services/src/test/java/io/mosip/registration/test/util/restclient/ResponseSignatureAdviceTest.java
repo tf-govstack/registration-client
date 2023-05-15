@@ -1,4 +1,4 @@
-package io.mosip.registration.test.util.restclient;
+package io.github.tf-govstack.registration.test.util.restclient;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -13,16 +13,16 @@ import java.util.Optional;
 
 import javax.crypto.SecretKey;
 
-import io.mosip.commons.packet.constants.CryptomanagerConstant;
-import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
-import io.mosip.kernel.signature.dto.JWTSignatureResponseDto;
-import io.mosip.kernel.signature.dto.JWTSignatureVerifyResponseDto;
-import io.mosip.kernel.signature.dto.ValidatorResponseDto;
-import io.mosip.kernel.signature.service.SignatureService;
-import io.mosip.registration.service.sync.impl.PublicKeySyncImpl;
+import io.github.tf-govstack.commons.packet.constants.CryptomanagerConstant;
+import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
+import io.github.tf-govstack.kernel.signature.dto.JWTSignatureResponseDto;
+import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyResponseDto;
+import io.github.tf-govstack.kernel.signature.dto.ValidatorResponseDto;
+import io.github.tf-govstack.kernel.signature.service.SignatureService;
+import io.github.tf-govstack.registration.service.sync.impl.PublicKeySyncImpl;
 import org.aspectj.lang.JoinPoint;
 import org.junit.Before;
 import org.junit.Rule;
@@ -43,15 +43,15 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.RestTemplate;
 
-import io.mosip.kernel.core.crypto.spi.CryptoCoreSpec;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.signatureutil.spi.SignatureUtil;
-import io.mosip.kernel.keygenerator.bouncycastle.KeyGenerator;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.util.advice.ResponseSignatureAdvice;
-import io.mosip.registration.util.restclient.RequestHTTPDTO;
+import io.github.tf-govstack.kernel.core.crypto.spi.CryptoCoreSpec;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.signatureutil.spi.SignatureUtil;
+import io.github.tf-govstack.kernel.keygenerator.bouncycastle.KeyGenerator;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.util.advice.ResponseSignatureAdvice;
+import io.github.tf-govstack.registration.util.restclient.RequestHTTPDTO;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

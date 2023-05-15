@@ -1,9 +1,9 @@
 
-package io.mosip.registration.mdm.service.impl;
+package io.github.tf-govstack.registration.mdm.service.impl;
 
-import static io.mosip.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_INTEGERATOR;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_INTEGERATOR;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,19 +27,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.cbeffutil.jaxbclasses.SingleType;
-import io.mosip.kernel.core.exception.ExceptionUtils;
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegistrationExceptionConstants;
-import io.mosip.registration.mdm.constants.MosipBioDeviceConstants;
-import io.mosip.registration.mdm.dto.Biometric;
-import io.mosip.registration.mdm.dto.MdmBioDevice;
-import io.mosip.registration.mdm.integrator.MosipDeviceSpecificationProvider;
-import io.mosip.registration.service.BaseService;
+import io.github.tf-govstack.kernel.core.cbeffutil.jaxbclasses.SingleType;
+import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
+import io.github.tf-govstack.registration.mdm.constants.MosipBioDeviceConstants;
+import io.github.tf-govstack.registration.mdm.dto.Biometric;
+import io.github.tf-govstack.registration.mdm.dto.MdmBioDevice;
+import io.github.tf-govstack.registration.mdm.integrator.MosipDeviceSpecificationProvider;
+import io.github.tf-govstack.registration.service.BaseService;
 
 /**
  * 

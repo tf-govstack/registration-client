@@ -1,7 +1,7 @@
-package io.mosip.registration.service.template;
+package io.github.tf-govstack.registration.service.template;
 
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
 
 /**
  * This class is used to send notification service

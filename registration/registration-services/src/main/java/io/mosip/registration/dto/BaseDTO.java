@@ -1,4 +1,4 @@
-package io.mosip.registration.dto;
+package io.github.tf-govstack.registration.dto;
 
 /**
  * The base DTO class that would be extended by all DTOs in Registration Module.

@@ -1,4 +1,4 @@
-package io.mosip.registration.util.common;
+package io.github.tf-govstack.registration.util.common;
 
 import java.io.File;
 import java.util.ArrayList;

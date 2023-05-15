@@ -1,19 +1,19 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationClientStatusCode;
-import io.mosip.registration.dao.RegPacketStatusDAO;
-import io.mosip.registration.entity.Registration;
-import io.mosip.registration.repositories.RegistrationRepository;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
+import io.github.tf-govstack.registration.dao.RegPacketStatusDAO;
+import io.github.tf-govstack.registration.entity.Registration;
+import io.github.tf-govstack.registration.repositories.RegistrationRepository;
 
 /**
  * The implementation class of {@link RegPacketStatusDAO}.
@@ -36,7 +36,7 @@ public class RegPacketStatusDAOImpl implements RegPacketStatusDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.dao.RegPacketStatusDAO#getPacketIdsByStatusUploaded()
+	 * io.github.tf-govstack.registration.dao.RegPacketStatusDAO#getPacketIdsByStatusUploaded()
 	 */
 	@Override
 	public List<Registration> getPacketIdsByStatusUploadedOrExported() {
@@ -61,7 +61,7 @@ public class RegPacketStatusDAOImpl implements RegPacketStatusDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.registration.dao.RegPacketStatusDAO#update(io.mosip.registration.
+	 * io.github.tf-govstack.registration.dao.RegPacketStatusDAO#update(io.github.tf-govstack.registration.
 	 * entity.Registration)
 	 */
 	@Override

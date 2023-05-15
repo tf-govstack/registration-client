@@ -1,10 +1,10 @@
-package io.mosip.registration.repositories;
+package io.github.tf-govstack.registration.repositories;
 
 import java.util.Optional;
 
-import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.mosip.registration.entity.RegistrationCenter;
-import io.mosip.registration.entity.id.RegistartionCenterId;
+import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.github.tf-govstack.registration.entity.RegistrationCenter;
+import io.github.tf-govstack.registration.entity.id.RegistartionCenterId;
 
 /**
  * The repository interface for {@link RegistrationCenter} entity

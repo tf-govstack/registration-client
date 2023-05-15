@@ -1,35 +1,35 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.*;
 
-import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.CryptoUtil;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.kernel.core.util.HMACUtils2;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.context.SessionContext;
-import io.mosip.registration.dao.UserDetailDAO;
-import io.mosip.registration.dto.UserDetailDto;
-import io.mosip.registration.entity.UserBiometric;
-import io.mosip.registration.entity.UserDetail;
-import io.mosip.registration.entity.UserPassword;
-import io.mosip.registration.entity.UserRole;
-import io.mosip.registration.entity.UserToken;
-import io.mosip.registration.entity.id.UserRoleId;
-import io.mosip.registration.repositories.UserBiometricRepository;
-import io.mosip.registration.repositories.UserDetailRepository;
-import io.mosip.registration.repositories.UserPwdRepository;
-import io.mosip.registration.repositories.UserRoleRepository;
-import io.mosip.registration.repositories.UserTokenRepository;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.CryptoUtil;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.HMACUtils2;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.context.SessionContext;
+import io.github.tf-govstack.registration.dao.UserDetailDAO;
+import io.github.tf-govstack.registration.dto.UserDetailDto;
+import io.github.tf-govstack.registration.entity.UserBiometric;
+import io.github.tf-govstack.registration.entity.UserDetail;
+import io.github.tf-govstack.registration.entity.UserPassword;
+import io.github.tf-govstack.registration.entity.UserRole;
+import io.github.tf-govstack.registration.entity.UserToken;
+import io.github.tf-govstack.registration.entity.id.UserRoleId;
+import io.github.tf-govstack.registration.repositories.UserBiometricRepository;
+import io.github.tf-govstack.registration.repositories.UserDetailRepository;
+import io.github.tf-govstack.registration.repositories.UserPwdRepository;
+import io.github.tf-govstack.registration.repositories.UserRoleRepository;
+import io.github.tf-govstack.registration.repositories.UserTokenRepository;
 
 import javax.validation.constraints.NotNull;
 
@@ -89,7 +89,7 @@ public class UserDetailDAOImpl implements UserDetailDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.dao.UserDetailDAO#updateLoginParams(io.
+	 * @see io.github.tf-govstack.registration.dao.UserDetailDAO#updateLoginParams(io.
 	 * mosip.registration.entity.UserDetail)
 	 */
 	public void updateLoginParams(UserDetail userDetail) {

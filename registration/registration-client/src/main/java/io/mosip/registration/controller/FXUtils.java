@@ -1,6 +1,6 @@
-package io.mosip.registration.controller;
+package io.github.tf-govstack.registration.controller;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,13 +9,13 @@ import java.util.OptionalInt;
 import java.util.function.IntPredicate;
 import java.util.stream.IntStream;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.transliteration.spi.Transliteration;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.controller.reg.RegistrationController;
-import io.mosip.registration.dto.mastersync.DocumentCategoryDto;
-import io.mosip.registration.dto.mastersync.GenericDto;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.transliteration.spi.Transliteration;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.controller.reg.RegistrationController;
+import io.github.tf-govstack.registration.dto.mastersync.DocumentCategoryDto;
+import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
 import javafx.collections.ObservableList;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;

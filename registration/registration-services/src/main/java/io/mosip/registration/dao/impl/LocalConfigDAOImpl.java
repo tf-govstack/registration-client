@@ -1,4 +1,4 @@
-package io.mosip.registration.dao.impl;
+package io.github.tf-govstack.registration.dao.impl;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -12,16 +12,16 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.dao.LocalConfigDAO;
-import io.mosip.registration.entity.LocalPreferences;
-import io.mosip.registration.entity.PermittedLocalConfig;
-import io.mosip.registration.repositories.LocalPreferencesRepository;
-import io.mosip.registration.repositories.PermittedLocalConfigRepository;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.dao.LocalConfigDAO;
+import io.github.tf-govstack.registration.entity.LocalPreferences;
+import io.github.tf-govstack.registration.entity.PermittedLocalConfig;
+import io.github.tf-govstack.registration.repositories.LocalPreferencesRepository;
+import io.github.tf-govstack.registration.repositories.PermittedLocalConfigRepository;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 @Repository
 public class LocalConfigDAOImpl implements LocalConfigDAO {

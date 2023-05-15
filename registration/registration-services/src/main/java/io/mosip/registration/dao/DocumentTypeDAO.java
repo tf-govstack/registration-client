@@ -1,8 +1,8 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.util.List;
 
-import io.mosip.registration.entity.DocumentType;
+import io.github.tf-govstack.registration.entity.DocumentType;
 
 /**
  * This class is used to fetch all the Document type related details.

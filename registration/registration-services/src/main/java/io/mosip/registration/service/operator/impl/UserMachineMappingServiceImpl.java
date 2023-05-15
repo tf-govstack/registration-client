@@ -1,7 +1,7 @@
-package io.mosip.registration.service.operator.impl;
+package io.github.tf-govstack.registration.service.operator.impl;
 
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.net.SocketTimeoutException;
 import java.time.LocalDateTime;
@@ -12,31 +12,31 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import io.mosip.registration.exception.ConnectionException;
+import io.github.tf-govstack.registration.exception.ConnectionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.ResourceAccessException;
 
-import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.kernel.core.util.DateUtils;
-import io.mosip.kernel.core.util.JsonUtils;
-import io.mosip.kernel.core.util.exception.JsonProcessingException;
-import io.mosip.registration.config.AppConfig;
-import io.mosip.registration.constants.RegistrationConstants;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dao.MachineMappingDAO;
-import io.mosip.registration.dto.ErrorResponseDTO;
-import io.mosip.registration.dto.RegCenterMachineUserReqDto;
-import io.mosip.registration.dto.RegistrationCenterUserMachineMappingDto;
-import io.mosip.registration.dto.ResponseDTO;
-import io.mosip.registration.entity.UserMachineMapping;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.exception.RegBaseUncheckedException;
-import io.mosip.registration.service.BaseService;
-import io.mosip.registration.service.operator.UserMachineMappingService;
-import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.github.tf-govstack.kernel.core.logger.spi.Logger;
+import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.github.tf-govstack.kernel.core.util.JsonUtils;
+import io.github.tf-govstack.kernel.core.util.exception.JsonProcessingException;
+import io.github.tf-govstack.registration.config.AppConfig;
+import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dao.MachineMappingDAO;
+import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
+import io.github.tf-govstack.registration.dto.RegCenterMachineUserReqDto;
+import io.github.tf-govstack.registration.dto.RegistrationCenterUserMachineMappingDto;
+import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.github.tf-govstack.registration.entity.UserMachineMapping;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.github.tf-govstack.registration.service.BaseService;
+import io.github.tf-govstack.registration.service.operator.UserMachineMappingService;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 /**
  * Implementation for {@link UserMachineMappingService}
@@ -56,7 +56,7 @@ public class UserMachineMappingServiceImpl extends BaseService implements UserMa
 	/**
 	 * (non-Javadoc)
 	 * 
-	 * @see io.mosip.registration.service.operator.UserMachineMappingService#syncUserDetails()
+	 * @see io.github.tf-govstack.registration.service.operator.UserMachineMappingService#syncUserDetails()
 	 * 
 	 */
 	@SuppressWarnings("unchecked")

@@ -1,9 +1,9 @@
-package io.mosip.registration.test.config;
+package io.github.tf-govstack.registration.test.config;
 
-import io.mosip.kernel.clientcrypto.constant.ClientCryptoErrorConstants;
-import io.mosip.kernel.clientcrypto.exception.ClientCryptoException;
-import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.mosip.kernel.core.crypto.spi.CryptoCoreSpec;
+import io.github.tf-govstack.kernel.clientcrypto.constant.ClientCryptoErrorConstants;
+import io.github.tf-govstack.kernel.clientcrypto.exception.ClientCryptoException;
+import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.github.tf-govstack.kernel.core.crypto.spi.CryptoCoreSpec;
 
 import javax.crypto.SecretKey;
 import javax.validation.constraints.NotNull;

@@ -1,4 +1,4 @@
- package io.mosip.registration.test.template;
+ package io.github.tf-govstack.registration.test.template;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertNotNull;
@@ -16,10 +16,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.mosip.registration.dao.TemplateDao;
-import io.mosip.registration.entity.Template;
-import io.mosip.registration.exception.RegBaseCheckedException;
-import io.mosip.registration.service.template.impl.TemplateServiceImpl;
+import io.github.tf-govstack.registration.dao.TemplateDao;
+import io.github.tf-govstack.registration.entity.Template;
+import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.github.tf-govstack.registration.service.template.impl.TemplateServiceImpl;
 
 public class TemplateServiceTest {
 

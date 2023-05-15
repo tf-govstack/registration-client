@@ -1,4 +1,4 @@
-package io.mosip.registration.test.mdm.service;
+package io.github.tf-govstack.registration.test.mdm.service;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -28,20 +28,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.mosip.kernel.core.exception.IOException;
-import io.mosip.registration.context.ApplicationContext;
-import io.mosip.registration.dto.packetmanager.BiometricsDto;
-import io.mosip.registration.mdm.constants.MosipBioDeviceConstants;
-import io.mosip.registration.mdm.dto.DeviceInfo;
-import io.mosip.registration.mdm.dto.MDMRequestDto;
-import io.mosip.registration.mdm.dto.MdmBioDevice;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.MdmDeviceInfoResponse;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfo;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfoWrapper;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.SbiDigitalId;
-import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseDataDTO;
-import io.mosip.registration.mdm.sbi.spec_1_0.service.impl.MosipDeviceSpecification_SBI_1_0_ProviderImpl;
-import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
+import io.github.tf-govstack.kernel.core.exception.IOException;
+import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.github.tf-govstack.registration.mdm.constants.MosipBioDeviceConstants;
+import io.github.tf-govstack.registration.mdm.dto.DeviceInfo;
+import io.github.tf-govstack.registration.mdm.dto.MDMRequestDto;
+import io.github.tf-govstack.registration.mdm.dto.MdmBioDevice;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.MdmDeviceInfoResponse;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfo;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfoWrapper;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.SbiDigitalId;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.SbiRCaptureResponseDataDTO;
+import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.service.impl.MosipDeviceSpecification_SBI_1_0_ProviderImpl;
+import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})
@@ -99,7 +99,7 @@ public class MosipDeviceSpecification_SBI_1_0_ProviderImplTest {
 		MdmDeviceInfoResponse deviceInfoResponse = new MdmDeviceInfoResponse();
 		deviceInfoResponse.setDeviceInfo("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4g"
 				+ "RG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
-		io.mosip.registration.mdm.sbi.spec_1_0.dto.response.Error erro = new io.mosip.registration.mdm.sbi.spec_1_0.dto.response.Error();
+		io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.Error erro = new io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.Error();
 		erro.setErrorCode("100");
 		erro.setErrorInfo("Success");
 		deviceInfoResponse.setError(erro);

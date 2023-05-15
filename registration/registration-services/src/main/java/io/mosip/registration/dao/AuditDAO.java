@@ -1,9 +1,9 @@
-package io.mosip.registration.dao;
+package io.github.tf-govstack.registration.dao;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import io.mosip.kernel.auditmanager.entity.Audit;
+import io.github.tf-govstack.kernel.auditmanager.entity.Audit;
 
 /**
  * This class is used to fetch/delete audit related information to {@link Audit} table.

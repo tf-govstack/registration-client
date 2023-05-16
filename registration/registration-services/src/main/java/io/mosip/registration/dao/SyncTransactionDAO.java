@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 import java.sql.Timestamp;
 import java.util.List;
 
-import io.github.tf-govstack.registration.entity.SyncTransaction;
+import io.mosip.registration.entity.SyncTransaction;
 
 /**
  * To save and update the Sync Transactions in the DB

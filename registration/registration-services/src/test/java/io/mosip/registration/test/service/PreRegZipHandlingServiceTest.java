@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service;
+package io.mosip.registration.test.service;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -34,27 +34,27 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.crypto.spi.CryptoCoreSpec;
-import io.github.tf-govstack.kernel.core.exception.IOException;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.kernel.keygenerator.bouncycastle.KeyGenerator;
-import io.github.tf-govstack.kernel.keygenerator.bouncycastle.util.KeyGeneratorUtils;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.DocumentTypeDAO;
-import io.github.tf-govstack.registration.dto.OSIDataDTO;
-import io.github.tf-govstack.registration.dto.PreRegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationMetaDataDTO;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.entity.DocumentType;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
-import io.github.tf-govstack.registration.service.external.impl.PreRegZipHandlingServiceImpl;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.crypto.spi.CryptoCoreSpec;
+import io.mosip.kernel.core.exception.IOException;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.kernel.keygenerator.bouncycastle.KeyGenerator;
+import io.mosip.kernel.keygenerator.bouncycastle.util.KeyGeneratorUtils;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.DocumentTypeDAO;
+import io.mosip.registration.dto.OSIDataDTO;
+import io.mosip.registration.dto.PreRegistrationDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.RegistrationMetaDataDTO;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.entity.DocumentType;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.service.IdentitySchemaService;
+import io.mosip.registration.service.external.impl.PreRegZipHandlingServiceImpl;
 import org.springframework.test.util.ReflectionTestUtils;
 
 @RunWith(PowerMockRunner.class)
@@ -233,7 +233,7 @@ public class PreRegZipHandlingServiceTest {
 	
 	protected void mockExceptions() throws IOException {
 		PowerMockito.mockStatic(FileUtils.class);
-		PowerMockito.doThrow(new io.github.tf-govstack.kernel.core.exception.IOException("", "")).when(FileUtils.class);
+		PowerMockito.doThrow(new io.mosip.kernel.core.exception.IOException("", "")).when(FileUtils.class);
 		FileUtils.copyToFile(Mockito.any(), Mockito.any());
 	}
 	

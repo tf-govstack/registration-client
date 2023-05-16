@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.service.remap;
+package io.mosip.registration.service.remap;
 
 public enum RemapStatus {
 

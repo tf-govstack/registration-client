@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.util.advice;
+package io.mosip.registration.util.advice;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,17 +11,17 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.SecurityContext;
-import io.github.tf-govstack.registration.dto.UserDTO;
-import io.github.tf-govstack.registration.dto.UserRoleDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.service.login.LoginService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.SecurityContext;
+import io.mosip.registration.dto.UserDTO;
+import io.mosip.registration.dto.UserRoleDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.service.login.LoginService;
 
 /**
  * Helps to authenticate the current user details before proceeding the method

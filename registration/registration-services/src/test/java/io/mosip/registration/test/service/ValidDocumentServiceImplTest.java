@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service;
+package io.mosip.registration.test.service;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -13,12 +13,12 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.MasterSyncDao;
-import io.github.tf-govstack.registration.dao.ValidDocumentDAO;
-import io.github.tf-govstack.registration.entity.ApplicantValidDocument;
-import io.github.tf-govstack.registration.entity.DocumentType;
-import io.github.tf-govstack.registration.entity.id.ApplicantValidDocumentID;
-import io.github.tf-govstack.registration.service.doc.category.impl.ValidDocumentServiceImpl;
+import io.mosip.registration.dao.MasterSyncDao;
+import io.mosip.registration.dao.ValidDocumentDAO;
+import io.mosip.registration.entity.ApplicantValidDocument;
+import io.mosip.registration.entity.DocumentType;
+import io.mosip.registration.entity.id.ApplicantValidDocumentID;
+import io.mosip.registration.service.doc.category.impl.ValidDocumentServiceImpl;
 
 public class ValidDocumentServiceImplTest {
 

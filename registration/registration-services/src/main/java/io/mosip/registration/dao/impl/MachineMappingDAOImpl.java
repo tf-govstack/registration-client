@@ -1,25 +1,25 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.MACHINE_MAPPING_LOGGER_TITLE;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.MACHINE_MAPPING_LOGGER_TITLE;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.entity.UserMachineMapping;
-import io.github.tf-govstack.registration.repositories.UserMachineMappingRepository;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.registration.entity.UserMachineMapping;
+import io.mosip.registration.repositories.UserMachineMappingRepository;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.MachineMappingDAO;
-import io.github.tf-govstack.registration.entity.MachineMaster;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.MachineMappingDAO;
+import io.mosip.registration.entity.MachineMaster;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.repositories.MachineMasterRepository;
 
 /**
  * This DAO implementation of {@link MachineMappingDAO}
@@ -54,7 +54,7 @@ public class MachineMappingDAOImpl implements MachineMappingDAO {
 	 * (non-Javadoc) Getting station id based on machineName
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.MachineMappingDAO#getStationID(java.lang.String)
+	 * io.mosip.registration.dao.MachineMappingDAO#getStationID(java.lang.String)
 	 */
 	@Override
 	public String getStationID(String machineName) throws RegBaseCheckedException {
@@ -82,7 +82,7 @@ public class MachineMappingDAOImpl implements MachineMappingDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.MachineMappingDAO#getUserMappingDetails(java.lang.
+	 * io.mosip.registration.dao.MachineMappingDAO#getUserMappingDetails(java.lang.
 	 * String)
 	 */
 	@Override
@@ -101,7 +101,7 @@ public class MachineMappingDAOImpl implements MachineMappingDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.MachineMappingDAO#getKeyIndexByMachineName(java.
+	 * io.mosip.registration.dao.MachineMappingDAO#getKeyIndexByMachineName(java.
 	 * lang. String)
 	 */
 	@Override

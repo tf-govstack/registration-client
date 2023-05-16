@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.entity.ReasonCategory;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.entity.ReasonCategory;
 
 /**
  * The Interface MasterSyncReasonCategoryRepository.

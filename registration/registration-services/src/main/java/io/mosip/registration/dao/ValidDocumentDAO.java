@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.entity.ApplicantValidDocument;
+import io.mosip.registration.entity.ApplicantValidDocument;
 
 /**
  * This class is used to fetch all the ValidDocument from {@link ValidDocument} table.

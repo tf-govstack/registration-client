@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.authentication;
+package io.mosip.registration.test.authentication;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -22,31 +22,31 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricFunction;
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricType;
-import io.github.tf-govstack.kernel.biometrics.constant.ProcessedLevelType;
-import io.github.tf-govstack.kernel.biometrics.entities.BIR;
-import io.github.tf-govstack.kernel.biosdk.provider.factory.BioAPIFactory;
-import io.github.tf-govstack.kernel.biosdk.provider.impl.BioProviderImpl_V_0_9;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.bioapi.exception.BiometricException;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.HMACUtils2;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.impl.UserDetailDAOImpl;
-import io.github.tf-govstack.registration.dto.AuthTokenDTO;
-import io.github.tf-govstack.registration.dto.AuthenticationValidatorDTO;
-import io.github.tf-govstack.registration.dto.UserDTO;
-import io.github.tf-govstack.registration.dto.UserPasswordDTO;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.entity.UserBiometric;
-import io.github.tf-govstack.registration.entity.id.UserBiometricId;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.login.LoginService;
-import io.github.tf-govstack.registration.service.security.impl.AuthenticationServiceImpl;
-import io.github.tf-govstack.registration.util.common.BIRBuilder;
-import io.github.tf-govstack.registration.util.common.OTPManager;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.biometrics.constant.BiometricFunction;
+import io.mosip.kernel.biometrics.constant.BiometricType;
+import io.mosip.kernel.biometrics.constant.ProcessedLevelType;
+import io.mosip.kernel.biometrics.entities.BIR;
+import io.mosip.kernel.biosdk.provider.factory.BioAPIFactory;
+import io.mosip.kernel.biosdk.provider.impl.BioProviderImpl_V_0_9;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.bioapi.exception.BiometricException;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.HMACUtils2;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.impl.UserDetailDAOImpl;
+import io.mosip.registration.dto.AuthTokenDTO;
+import io.mosip.registration.dto.AuthenticationValidatorDTO;
+import io.mosip.registration.dto.UserDTO;
+import io.mosip.registration.dto.UserPasswordDTO;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.entity.UserBiometric;
+import io.mosip.registration.entity.id.UserBiometricId;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.login.LoginService;
+import io.mosip.registration.service.security.impl.AuthenticationServiceImpl;
+import io.mosip.registration.util.common.BIRBuilder;
+import io.mosip.registration.util.common.OTPManager;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

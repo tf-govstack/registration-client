@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -22,15 +22,15 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.impl.RegistrationCenterDAOImpl;
-import io.github.tf-govstack.registration.entity.MachineMaster;
-import io.github.tf-govstack.registration.entity.RegistrationCenter;
-import io.github.tf-govstack.registration.entity.id.RegistartionCenterId;
-import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
-import io.github.tf-govstack.registration.repositories.RegistrationCenterRepository;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.impl.RegistrationCenterDAOImpl;
+import io.mosip.registration.entity.MachineMaster;
+import io.mosip.registration.entity.RegistrationCenter;
+import io.mosip.registration.entity.id.RegistartionCenterId;
+import io.mosip.registration.repositories.MachineMasterRepository;
+import io.mosip.registration.repositories.RegistrationCenterRepository;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

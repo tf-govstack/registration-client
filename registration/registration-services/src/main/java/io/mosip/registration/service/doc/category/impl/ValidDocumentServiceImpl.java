@@ -1,5 +1,5 @@
 
-package io.github.tf-govstack.registration.service.doc.category.impl;
+package io.mosip.registration.service.doc.category.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.registration.dao.MasterSyncDao;
-import io.github.tf-govstack.registration.dao.ValidDocumentDAO;
-import io.github.tf-govstack.registration.dto.mastersync.DocumentCategoryDto;
-import io.github.tf-govstack.registration.entity.ApplicantValidDocument;
-import io.github.tf-govstack.registration.entity.DocumentType;
-import io.github.tf-govstack.registration.service.doc.category.ValidDocumentService;
+import io.mosip.registration.dao.MasterSyncDao;
+import io.mosip.registration.dao.ValidDocumentDAO;
+import io.mosip.registration.dto.mastersync.DocumentCategoryDto;
+import io.mosip.registration.entity.ApplicantValidDocument;
+import io.mosip.registration.entity.DocumentType;
+import io.mosip.registration.service.doc.category.ValidDocumentService;
 
 /**
  * Implementation for {@link ValidDocumentService} 

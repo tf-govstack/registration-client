@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.dto;
+package io.mosip.registration.dto;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.schema.ValuesDTO;
+import io.mosip.registration.dto.schema.ValuesDTO;
 import lombok.Getter;
 import lombok.Setter;
 

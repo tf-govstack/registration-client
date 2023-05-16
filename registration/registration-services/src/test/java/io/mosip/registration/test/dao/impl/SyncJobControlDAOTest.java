@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -11,9 +11,9 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.impl.SyncJobControlDAOImpl;
-import io.github.tf-govstack.registration.entity.SyncControl;
-import io.github.tf-govstack.registration.repositories.SyncJobControlRepository;
+import io.mosip.registration.dao.impl.SyncJobControlDAOImpl;
+import io.mosip.registration.entity.SyncControl;
+import io.mosip.registration.repositories.SyncJobControlRepository;
 
 public class SyncJobControlDAOTest {
 

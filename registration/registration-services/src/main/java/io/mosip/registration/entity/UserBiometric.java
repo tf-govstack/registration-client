@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import java.sql.Timestamp;
 
@@ -10,7 +10,7 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import io.github.tf-govstack.registration.entity.id.UserBiometricId;
+import io.mosip.registration.entity.id.UserBiometricId;
 import lombok.Getter;
 import lombok.Setter;
 

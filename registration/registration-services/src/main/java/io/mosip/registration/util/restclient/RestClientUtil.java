@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.util.restclient;
+package io.mosip.registration.util.restclient;
 
 import java.io.FileOutputStream;
 import java.net.MalformedURLException;
@@ -12,11 +12,11 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
-import io.github.tf-govstack.kernel.clientcrypto.constant.ClientCryptoManagerConstant;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.entity.FileSignature;
-import io.github.tf-govstack.registration.repositories.FileSignatureRepository;
+import io.mosip.kernel.clientcrypto.constant.ClientCryptoManagerConstant;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.entity.FileSignature;
+import io.mosip.registration.repositories.FileSignatureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
@@ -24,9 +24,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.client.*;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
 
 /**
  * This is a general method which gives the response for all httpmethod

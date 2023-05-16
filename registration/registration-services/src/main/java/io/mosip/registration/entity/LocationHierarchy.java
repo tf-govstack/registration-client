@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
-import io.github.tf-govstack.registration.entity.id.LocationHierarchyId;
+import io.mosip.registration.entity.id.LocationHierarchyId;
 import lombok.Data;
 
 import javax.persistence.*;

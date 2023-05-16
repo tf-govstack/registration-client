@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
-import io.github.tf-govstack.registration.entity.id.UserMachineMappingID;
+import io.mosip.registration.entity.id.UserMachineMappingID;
 
 /**
  * The Entity Class for User Machine Mapping.

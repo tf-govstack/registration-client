@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.service.remap.impl;
+package io.mosip.registration.service.remap.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -20,37 +20,37 @@ import org.springframework.jdbc.datasource.init.ScriptUtils;
 import org.springframework.stereotype.Service;
 
 import io.micrometer.core.annotation.Counted;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.exception.IOException;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.GlobalParamDAO;
-import io.github.tf-govstack.registration.dao.PreRegistrationDataSyncDAO;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
-import io.github.tf-govstack.registration.entity.GlobalParam;
-import io.github.tf-govstack.registration.entity.PreRegistrationList;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.entity.SyncJobDef;
-import io.github.tf-govstack.registration.entity.id.GlobalParamId;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RemapException;
-import io.github.tf-govstack.registration.service.config.GlobalParamService;
-import io.github.tf-govstack.registration.service.packet.PacketUploadService;
-import io.github.tf-govstack.registration.service.packet.RegPacketStatusService;
-import io.github.tf-govstack.registration.service.remap.CenterMachineReMapService;
-import io.github.tf-govstack.registration.service.remap.RemapStatus;
-import io.github.tf-govstack.registration.service.sync.PacketSynchService;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.exception.IOException;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.AuditReferenceIdTypes;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.GlobalParamDAO;
+import io.mosip.registration.dao.PreRegistrationDataSyncDAO;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dao.SyncJobConfigDAO;
+import io.mosip.registration.entity.GlobalParam;
+import io.mosip.registration.entity.PreRegistrationList;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.entity.SyncJobDef;
+import io.mosip.registration.entity.id.GlobalParamId;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RemapException;
+import io.mosip.registration.service.config.GlobalParamService;
+import io.mosip.registration.service.packet.PacketUploadService;
+import io.mosip.registration.service.packet.RegPacketStatusService;
+import io.mosip.registration.service.remap.CenterMachineReMapService;
+import io.mosip.registration.service.remap.RemapStatus;
+import io.mosip.registration.service.sync.PacketSynchService;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 /**
  * Class {@code CenterMachineReMapServiceImpl} to handles all the operations
@@ -101,7 +101,7 @@ public class CenterMachineReMapServiceImpl implements CenterMachineReMapService 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.remap.CenterMachineReMapService#
+	 * @see io.mosip.registration.service.remap.CenterMachineReMapService#
 	 * handleReMapProcess()
 	 */
 	@Counted
@@ -244,7 +244,7 @@ public class CenterMachineReMapServiceImpl implements CenterMachineReMapService 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.remap.CenterMachineReMapService#
+	 * @see io.mosip.registration.service.remap.CenterMachineReMapService#
 	 * isPacketsPendingForProcessing()
 	 */
 	@Override
@@ -261,7 +261,7 @@ public class CenterMachineReMapServiceImpl implements CenterMachineReMapService 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.remap.CenterMachineReMapService#
+	 * @see io.mosip.registration.service.remap.CenterMachineReMapService#
 	 * isPacketsPendingForEOD()
 	 */
 	@Override
@@ -293,7 +293,7 @@ public class CenterMachineReMapServiceImpl implements CenterMachineReMapService 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.remap.CenterMachineReMapService#
+	 * @see io.mosip.registration.service.remap.CenterMachineReMapService#
 	 * isMachineRemapped()
 	 */
 	@Override

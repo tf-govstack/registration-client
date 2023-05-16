@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.controller;
+package io.mosip.registration.controller;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,13 +11,13 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
-import io.github.tf-govstack.registration.jobs.BaseJob;
-import io.github.tf-govstack.registration.service.config.JobConfigurationService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.constants.RegistrationUIConstants;
+import io.mosip.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.jobs.BaseJob;
+import io.mosip.registration.service.config.JobConfigurationService;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;

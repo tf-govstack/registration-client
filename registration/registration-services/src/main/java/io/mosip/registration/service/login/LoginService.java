@@ -1,13 +1,13 @@
-package io.github.tf-govstack.registration.service.login;
+package io.mosip.registration.service.login;
 
 import java.util.List;
 import java.util.Set;
 
-import io.github.tf-govstack.kernel.logger.logback.util.MetricTag;
-import io.github.tf-govstack.registration.dto.AuthorizationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationCenterDetailDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.UserDTO;
+import io.mosip.kernel.logger.logback.util.MetricTag;
+import io.mosip.registration.dto.AuthorizationDTO;
+import io.mosip.registration.dto.RegistrationCenterDetailDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.UserDTO;
 
 /**
  * The {@code LoginService} represents to fetch the information related to

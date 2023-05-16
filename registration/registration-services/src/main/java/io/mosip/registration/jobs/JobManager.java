@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.jobs;
+package io.mosip.registration.jobs;
 
 import java.util.Map;
 
@@ -6,7 +6,7 @@ import org.quartz.JobDetail;
 import org.quartz.JobExecutionContext;
 import org.quartz.Trigger;
 
-import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.mosip.registration.entity.SyncJobDef;
 
 /**
  * This class includes the functionalities of what transaction table needed,

@@ -1,12 +1,12 @@
-package io.github.tf-govstack.registration.test.util.restclient;
+package io.mosip.registration.test.util.restclient;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.github.tf-govstack.registration.util.restclient.AuthTokenUtilService;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.mosip.registration.util.restclient.AuthTokenUtilService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.junit.Assert;
 import org.junit.Before;
@@ -29,20 +29,20 @@ import org.springframework.http.MediaType;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.HttpClientErrorException;
 
-import io.github.tf-govstack.kernel.core.util.JsonUtils;
-import io.github.tf-govstack.kernel.core.util.exception.JsonProcessingException;
-import io.github.tf-govstack.registration.constants.LoginMode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.MachineMappingDAO;
-import io.github.tf-govstack.registration.dto.AuthTokenDTO;
-import io.github.tf-govstack.registration.dto.LoginUserDTO;
-import io.github.tf-govstack.registration.entity.MachineMaster;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.util.advice.RestClientAuthAdvice;
-import io.github.tf-govstack.registration.util.restclient.RequestHTTPDTO;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.core.util.JsonUtils;
+import io.mosip.kernel.core.util.exception.JsonProcessingException;
+import io.mosip.registration.constants.LoginMode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.MachineMappingDAO;
+import io.mosip.registration.dto.AuthTokenDTO;
+import io.mosip.registration.dto.LoginUserDTO;
+import io.mosip.registration.entity.MachineMaster;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.util.advice.RestClientAuthAdvice;
+import io.mosip.registration.util.restclient.RequestHTTPDTO;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

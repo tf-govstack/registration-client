@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import io.github.tf-govstack.registration.entity.id.CodeLangCodeAndRsnCatCodeID;
+import io.mosip.registration.entity.id.CodeLangCodeAndRsnCatCodeID;
 
 /**
  * This Entity Class contains list of reasons [Invalid Address, Gender-Photo Mismatch...] 

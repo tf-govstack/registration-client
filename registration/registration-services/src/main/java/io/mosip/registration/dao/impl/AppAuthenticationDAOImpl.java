@@ -1,21 +1,21 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import io.github.tf-govstack.registration.enums.Role;
+import io.mosip.registration.enums.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.ProcessNames;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.AppAuthenticationDAO;
-import io.github.tf-govstack.registration.dao.AppAuthenticationDetails;
-import io.github.tf-govstack.registration.dao.AppRolePriorityDetails;
-import io.github.tf-govstack.registration.repositories.AppAuthenticationRepository;
-import io.github.tf-govstack.registration.repositories.AppRolePriorityRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.ProcessNames;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.AppAuthenticationDAO;
+import io.mosip.registration.dao.AppAuthenticationDetails;
+import io.mosip.registration.dao.AppRolePriorityDetails;
+import io.mosip.registration.repositories.AppAuthenticationRepository;
+import io.mosip.registration.repositories.AppRolePriorityRepository;
 
 /**
  * The implementation class of {@link AppAuthenticationDAO}.

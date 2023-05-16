@@ -1,13 +1,13 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.registration.dao.TemplateDao;
-import io.github.tf-govstack.registration.entity.Template;
-import io.github.tf-govstack.registration.repositories.TemplateRepository;
+import io.mosip.registration.dao.TemplateDao;
+import io.mosip.registration.entity.Template;
+import io.mosip.registration.repositories.TemplateRepository;
 
 /**
  * DaoImpl for calling the respective template repositories and getting data from database

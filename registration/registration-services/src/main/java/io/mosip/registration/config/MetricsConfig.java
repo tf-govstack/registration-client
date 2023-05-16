@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.config;
+package io.mosip.registration.config;
 
 import io.micrometer.core.aop.CountedAspect;
 import io.micrometer.core.aop.TimedAspect;
@@ -9,13 +9,13 @@ import io.micrometer.core.instrument.Tags;
 import io.micrometer.core.instrument.binder.jvm.*;
 import io.micrometer.core.instrument.binder.system.ProcessorMetrics;
 import io.micrometer.core.instrument.logging.LoggingRegistryConfig;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.logger.logback.util.MetricTag;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.metrics.DiskMetrics;
-import io.github.tf-govstack.registration.metrics.PacketMetrics;
-import io.github.tf-govstack.registration.metrics.SystemTimeMetrics;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.logger.logback.util.MetricTag;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.metrics.DiskMetrics;
+import io.mosip.registration.metrics.PacketMetrics;
+import io.mosip.registration.metrics.SystemTimeMetrics;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 import io.tus.java.client.*;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -186,9 +186,9 @@ public class MetricsConfig {
             TusClient client = new TusClient();
             // Configure tus HTTP endpoint. This URL will be used for creating new uploads
             // using the Creation extension
-            String url = (String) io.github.tf-govstack.registration.context.ApplicationContext.map()
+            String url = (String) io.mosip.registration.context.ApplicationContext.map()
                     .getOrDefault(TUS_SERVER_URL_CONFIG,"https://dev.mosip.net/files/");
-            int chunkSize = Integer.valueOf((String)io.github.tf-govstack.registration.context.ApplicationContext.map()
+            int chunkSize = Integer.valueOf((String)io.mosip.registration.context.ApplicationContext.map()
                     .getOrDefault(TUS_SERVER_UPLOAD_CHUNKSIZE,"1024"));
             client.setUploadCreationURL(new URL(url));
 

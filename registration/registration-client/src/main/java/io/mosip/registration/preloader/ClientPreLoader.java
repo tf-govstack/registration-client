@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.preloader;
+package io.mosip.registration.preloader;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.update.ClientSetupValidator;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.update.ClientSetupValidator;
 import javafx.application.Preloader;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service.packet;
+package io.mosip.registration.test.service.packet;
 
 
 import static org.junit.Assert.assertEquals;
@@ -17,13 +17,13 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.service.packet.impl.ReRegistrationServiceImpl;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.service.packet.impl.ReRegistrationServiceImpl;
 
 public class ReRegistrationServiceTest {
 

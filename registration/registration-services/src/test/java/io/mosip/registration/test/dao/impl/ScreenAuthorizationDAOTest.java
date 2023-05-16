@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -15,9 +15,9 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.ScreenAuthorizationDetails;
-import io.github.tf-govstack.registration.dao.impl.ScreenAuthorizationDAOImpl;
-import io.github.tf-govstack.registration.repositories.ScreenAuthorizationRepository;
+import io.mosip.registration.dao.ScreenAuthorizationDetails;
+import io.mosip.registration.dao.impl.ScreenAuthorizationDAOImpl;
+import io.mosip.registration.repositories.ScreenAuthorizationRepository;
 
 public class ScreenAuthorizationDAOTest {
 

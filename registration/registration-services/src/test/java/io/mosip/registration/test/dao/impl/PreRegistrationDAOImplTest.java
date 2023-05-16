@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,9 +16,9 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.impl.PreRegistrationDataSyncDAOImpl;
-import io.github.tf-govstack.registration.entity.PreRegistrationList;
-import io.github.tf-govstack.registration.repositories.PreRegistrationDataSyncRepository;
+import io.mosip.registration.dao.impl.PreRegistrationDataSyncDAOImpl;
+import io.mosip.registration.entity.PreRegistrationList;
+import io.mosip.registration.repositories.PreRegistrationDataSyncRepository;
 
 public class PreRegistrationDAOImplTest {
 

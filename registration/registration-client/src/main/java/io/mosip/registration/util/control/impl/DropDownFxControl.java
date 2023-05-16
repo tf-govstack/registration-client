@@ -1,27 +1,27 @@
-package io.github.tf-govstack.registration.util.control.impl;
+package io.mosip.registration.util.control.impl;
 
 import java.util.*;
 import java.util.Map.Entry;
 
-import io.github.tf-govstack.registration.controller.ClientApplication;
-import io.github.tf-govstack.registration.dao.MasterSyncDao;
+import io.mosip.registration.controller.ClientApplication;
+import io.mosip.registration.dao.MasterSyncDao;
 import org.springframework.context.ApplicationContext;
 
-import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
-import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.controller.FXUtils;
-import io.github.tf-govstack.registration.controller.GenericController;
-import io.github.tf-govstack.registration.controller.Initialization;
-import io.github.tf-govstack.registration.controller.reg.Validations;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.entity.Location;
-import io.github.tf-govstack.registration.service.sync.MasterSyncService;
-import io.github.tf-govstack.registration.util.common.ComboBoxAutoComplete;
-import io.github.tf-govstack.registration.util.common.DemographicChangeActionHandler;
-import io.github.tf-govstack.registration.util.control.FxControl;
+import io.mosip.registration.dto.mastersync.GenericDto;
+import io.mosip.commons.packet.dto.packet.SimpleDto;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.controller.FXUtils;
+import io.mosip.registration.controller.GenericController;
+import io.mosip.registration.controller.Initialization;
+import io.mosip.registration.controller.reg.Validations;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.entity.Location;
+import io.mosip.registration.service.sync.MasterSyncService;
+import io.mosip.registration.util.common.ComboBoxAutoComplete;
+import io.mosip.registration.util.common.DemographicChangeActionHandler;
+import io.mosip.registration.util.control.FxControl;
 import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;

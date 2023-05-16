@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.util.mastersync;
+package io.mosip.registration.test.util.mastersync;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -17,7 +17,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import io.github.tf-govstack.registration.util.mastersync.EmptyCheckUtils;
+import io.mosip.registration.util.mastersync.EmptyCheckUtils;
 
 /**
  * 

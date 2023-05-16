@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response;
+package io.mosip.registration.mdm.sbi.spec_1_0.dto.response;
 
-import io.github.tf-govstack.registration.mdm.dto.DeviceInfo;
+import io.mosip.registration.mdm.dto.DeviceInfo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

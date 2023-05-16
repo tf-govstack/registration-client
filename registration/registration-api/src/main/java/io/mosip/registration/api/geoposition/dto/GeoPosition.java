@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.api.geoposition.dto;
+package io.mosip.registration.api.geoposition.dto;
 
 import lombok.Data;
 

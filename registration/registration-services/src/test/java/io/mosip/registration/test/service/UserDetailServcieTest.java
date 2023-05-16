@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service;
+package io.mosip.registration.test.service;
 
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
@@ -31,32 +31,32 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.UserContext;
-import io.github.tf-govstack.registration.dao.RegistrationCenterDAO;
-import io.github.tf-govstack.registration.dao.UserDetailDAO;
-import io.github.tf-govstack.registration.dto.UserDetailDto;
-import io.github.tf-govstack.registration.dto.UserDetailResponseDto;
-import io.github.tf-govstack.registration.entity.UserDetail;
-import io.github.tf-govstack.registration.entity.UserRole;
-import io.github.tf-govstack.registration.entity.id.UserRoleId;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.config.GlobalParamService;
-import io.github.tf-govstack.registration.service.config.LocalConfigService;
-import io.github.tf-govstack.registration.service.operator.UserOnboardService;
-import io.github.tf-govstack.registration.service.operator.impl.UserDetailServiceImpl;
-import io.github.tf-govstack.registration.service.remap.CenterMachineReMapService;
-import io.github.tf-govstack.registration.test.config.TestClientCryptoServiceImpl;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.UserContext;
+import io.mosip.registration.dao.RegistrationCenterDAO;
+import io.mosip.registration.dao.UserDetailDAO;
+import io.mosip.registration.dto.UserDetailDto;
+import io.mosip.registration.dto.UserDetailResponseDto;
+import io.mosip.registration.entity.UserDetail;
+import io.mosip.registration.entity.UserRole;
+import io.mosip.registration.entity.id.UserRoleId;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.repositories.MachineMasterRepository;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.config.GlobalParamService;
+import io.mosip.registration.service.config.LocalConfigService;
+import io.mosip.registration.service.operator.UserOnboardService;
+import io.mosip.registration.service.operator.impl.UserDetailServiceImpl;
+import io.mosip.registration.service.remap.CenterMachineReMapService;
+import io.mosip.registration.test.config.TestClientCryptoServiceImpl;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

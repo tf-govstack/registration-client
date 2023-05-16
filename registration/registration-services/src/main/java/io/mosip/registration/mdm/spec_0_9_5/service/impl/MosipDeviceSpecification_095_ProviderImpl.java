@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.mdm.spec_0_9_5.service.impl;
+package io.mosip.registration.mdm.spec_0_9_5.service.impl;
 
-import static io.github.tf-govstack.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_INTEGERATOR;
-import static io.github.tf-govstack.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_MANAGER;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_INTEGERATOR;
+import static io.mosip.registration.constants.LoggerConstants.MOSIP_BIO_DEVICE_MANAGER;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,35 +26,35 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.exception.DeviceException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.mdm.constants.MosipBioDeviceConstants;
-import io.github.tf-govstack.registration.mdm.dto.Biometric;
-import io.github.tf-govstack.registration.mdm.dto.DeviceInfo;
-import io.github.tf-govstack.registration.mdm.dto.MDMRequestDto;
-import io.github.tf-govstack.registration.mdm.dto.MdmBioDevice;
-import io.github.tf-govstack.registration.mdm.dto.MdmDeviceInfo;
-import io.github.tf-govstack.registration.mdm.integrator.MosipDeviceSpecificationProvider;
-import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
-import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.request.DeviceDiscoveryRequest;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.request.RCaptureRequestBioDTO;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.request.RCaptureRequestDTO;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.request.StreamRequestDTO;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.response.DeviceDiscoveryMDSResponse;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.response.DigitalId;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.response.MdmDeviceInfoResponse;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.response.RCaptureResponseBiometricsDTO;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.response.RCaptureResponseDTO;
-import io.github.tf-govstack.registration.mdm.spec_0_9_5.dto.response.RCaptureResponseDataDTO;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.exception.DeviceException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.mdm.constants.MosipBioDeviceConstants;
+import io.mosip.registration.mdm.dto.Biometric;
+import io.mosip.registration.mdm.dto.DeviceInfo;
+import io.mosip.registration.mdm.dto.MDMRequestDto;
+import io.mosip.registration.mdm.dto.MdmBioDevice;
+import io.mosip.registration.mdm.dto.MdmDeviceInfo;
+import io.mosip.registration.mdm.integrator.MosipDeviceSpecificationProvider;
+import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
+import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationHelper;
+import io.mosip.registration.mdm.spec_0_9_5.dto.request.DeviceDiscoveryRequest;
+import io.mosip.registration.mdm.spec_0_9_5.dto.request.RCaptureRequestBioDTO;
+import io.mosip.registration.mdm.spec_0_9_5.dto.request.RCaptureRequestDTO;
+import io.mosip.registration.mdm.spec_0_9_5.dto.request.StreamRequestDTO;
+import io.mosip.registration.mdm.spec_0_9_5.dto.response.DeviceDiscoveryMDSResponse;
+import io.mosip.registration.mdm.spec_0_9_5.dto.response.DigitalId;
+import io.mosip.registration.mdm.spec_0_9_5.dto.response.MdmDeviceInfoResponse;
+import io.mosip.registration.mdm.spec_0_9_5.dto.response.RCaptureResponseBiometricsDTO;
+import io.mosip.registration.mdm.spec_0_9_5.dto.response.RCaptureResponseDTO;
+import io.mosip.registration.mdm.spec_0_9_5.dto.response.RCaptureResponseDataDTO;
 
 @Service
 public class MosipDeviceSpecification_095_ProviderImpl implements MosipDeviceSpecificationProvider {
@@ -302,7 +302,7 @@ public class MosipDeviceSpecification_095_ProviderImpl implements MosipDeviceSpe
 
 		if (exceptions != null) {
 			for (int index = 0; index < exceptions.length; index++) {
-				exceptions[index] = io.github.tf-govstack.registration.mdm.dto.Biometric
+				exceptions[index] = io.mosip.registration.mdm.dto.Biometric
 						.getmdmRequestAttributeName(exceptions[index], SPEC_VERSION);
 			}
 

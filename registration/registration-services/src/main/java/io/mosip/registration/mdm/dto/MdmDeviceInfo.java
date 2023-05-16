@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.mdm.dto;
+package io.mosip.registration.mdm.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

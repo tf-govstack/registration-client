@@ -39,7 +39,7 @@
 		</triggeringPolicy>
 	</appender>
 
-	<logger name="io.github.tf-govstack" level="INFO" additivity="false">
+	<logger name="io.mosip" level="INFO" additivity="false">
 		<appender-ref ref="applicationLog" />
 	</logger>
 

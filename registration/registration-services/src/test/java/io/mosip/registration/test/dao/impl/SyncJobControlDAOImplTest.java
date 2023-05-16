@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -18,17 +18,17 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.audit.AuditManagerSerivceImpl;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.dao.SyncJobControlDAO.SyncJobInfo;
-import io.github.tf-govstack.registration.dao.impl.SyncJobControlDAOImpl;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.entity.SyncControl;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.repositories.RegistrationRepository;
-import io.github.tf-govstack.registration.repositories.SyncJobControlRepository;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.audit.AuditManagerSerivceImpl;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.dao.SyncJobControlDAO.SyncJobInfo;
+import io.mosip.registration.dao.impl.SyncJobControlDAOImpl;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.entity.SyncControl;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.repositories.RegistrationRepository;
+import io.mosip.registration.repositories.SyncJobControlRepository;
 
 public class SyncJobControlDAOImplTest {
 

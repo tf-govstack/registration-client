@@ -1,14 +1,14 @@
-package io.github.tf-govstack.registration.service.packet;
+package io.mosip.registration.service.packet;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.PreConditionCheckException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.dto.ErrorResponseDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.PreConditionCheckException;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 /**
  * Interface to update status of the registration packets based on Packet Status

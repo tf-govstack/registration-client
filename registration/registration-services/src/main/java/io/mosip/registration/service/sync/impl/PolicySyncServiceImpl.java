@@ -1,12 +1,12 @@
-package io.github.tf-govstack.registration.service.sync.impl;
+package io.mosip.registration.service.sync.impl;
 
 import java.util.*;
 
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.kernel.cryptomanager.util.CryptomanagerUtils;
-import io.github.tf-govstack.kernel.keymanagerservice.util.KeymanagerUtil;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.mosip.kernel.cryptomanager.util.CryptomanagerUtils;
+import io.mosip.kernel.keymanagerservice.util.KeymanagerUtil;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.exception.ConnectionException;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.retry.RetryCallback;
@@ -17,17 +17,17 @@ import org.springframework.retry.support.RetryTemplate;
 import org.springframework.retry.support.RetryTemplateBuilder;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.github.tf-govstack.kernel.keymanagerservice.dto.UploadCertificateRequestDto;
-import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.sync.PolicySyncService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.mosip.kernel.keymanagerservice.dto.UploadCertificateRequestDto;
+import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.sync.PolicySyncService;
 
 import javax.annotation.PostConstruct;
 
@@ -77,7 +77,7 @@ public class PolicySyncServiceImpl extends BaseService implements PolicySyncServ
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see io.github.tf-govstack.registration.service.PolicySyncService#fetchPolicy(centerId)
+	 * @see io.mosip.registration.service.PolicySyncService#fetchPolicy(centerId)
 	 */
 	@Timed
 	@Override
@@ -176,7 +176,7 @@ public class PolicySyncServiceImpl extends BaseService implements PolicySyncServ
 	/**
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.sync.PolicySyncService#checkKeyValidation()
+	 * @see io.mosip.registration.service.sync.PolicySyncService#checkKeyValidation()
 	 */
 	@Override
 	public ResponseDTO checkKeyValidation() {

@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -29,51 +29,51 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.IdentitySchemaDao;
-import io.github.tf-govstack.registration.dao.impl.MasterSyncDaoImpl;
-import io.github.tf-govstack.registration.dto.response.SyncDataResponseDto;
-import io.github.tf-govstack.registration.dto.schema.SchemaDto;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.repositories.AppAuthenticationRepository;
-import io.github.tf-govstack.registration.repositories.AppRolePriorityRepository;
-import io.github.tf-govstack.registration.repositories.ApplicantValidDocumentRepository;
-import io.github.tf-govstack.registration.repositories.BiometricAttributeRepository;
-import io.github.tf-govstack.registration.repositories.BiometricTypeRepository;
-import io.github.tf-govstack.registration.repositories.BlocklistedWordsRepository;
-import io.github.tf-govstack.registration.repositories.DocumentCategoryRepository;
-import io.github.tf-govstack.registration.repositories.DocumentTypeRepository;
-import io.github.tf-govstack.registration.repositories.DynamicFieldRepository;
-import io.github.tf-govstack.registration.repositories.LanguageRepository;
-import io.github.tf-govstack.registration.repositories.LocationHierarchyRepository;
-import io.github.tf-govstack.registration.repositories.LocationRepository;
-import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
-import io.github.tf-govstack.registration.repositories.MachineSpecificationRepository;
-import io.github.tf-govstack.registration.repositories.MachineTypeRepository;
-import io.github.tf-govstack.registration.repositories.PermittedLocalConfigRepository;
-import io.github.tf-govstack.registration.repositories.ProcessListRepository;
-import io.github.tf-govstack.registration.repositories.ReasonCategoryRepository;
-import io.github.tf-govstack.registration.repositories.ReasonListRepository;
-import io.github.tf-govstack.registration.repositories.RegistrationCenterRepository;
-import io.github.tf-govstack.registration.repositories.RegistrationCenterTypeRepository;
-import io.github.tf-govstack.registration.repositories.ScreenAuthorizationRepository;
-import io.github.tf-govstack.registration.repositories.ScreenDetailRepository;
-import io.github.tf-govstack.registration.repositories.SyncJobControlRepository;
-import io.github.tf-govstack.registration.repositories.SyncJobDefRepository;
-import io.github.tf-govstack.registration.repositories.TemplateRepository;
-import io.github.tf-govstack.registration.repositories.UserMachineMappingRepository;
-import io.github.tf-govstack.registration.service.config.LocalConfigService;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.github.tf-govstack.registration.util.mastersync.ClientSettingSyncHelper;
-import io.github.tf-govstack.registration.util.mastersync.MetaDataUtils;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.IdentitySchemaDao;
+import io.mosip.registration.dao.impl.MasterSyncDaoImpl;
+import io.mosip.registration.dto.response.SyncDataResponseDto;
+import io.mosip.registration.dto.schema.SchemaDto;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.repositories.AppAuthenticationRepository;
+import io.mosip.registration.repositories.AppRolePriorityRepository;
+import io.mosip.registration.repositories.ApplicantValidDocumentRepository;
+import io.mosip.registration.repositories.BiometricAttributeRepository;
+import io.mosip.registration.repositories.BiometricTypeRepository;
+import io.mosip.registration.repositories.BlocklistedWordsRepository;
+import io.mosip.registration.repositories.DocumentCategoryRepository;
+import io.mosip.registration.repositories.DocumentTypeRepository;
+import io.mosip.registration.repositories.DynamicFieldRepository;
+import io.mosip.registration.repositories.LanguageRepository;
+import io.mosip.registration.repositories.LocationHierarchyRepository;
+import io.mosip.registration.repositories.LocationRepository;
+import io.mosip.registration.repositories.MachineMasterRepository;
+import io.mosip.registration.repositories.MachineSpecificationRepository;
+import io.mosip.registration.repositories.MachineTypeRepository;
+import io.mosip.registration.repositories.PermittedLocalConfigRepository;
+import io.mosip.registration.repositories.ProcessListRepository;
+import io.mosip.registration.repositories.ReasonCategoryRepository;
+import io.mosip.registration.repositories.ReasonListRepository;
+import io.mosip.registration.repositories.RegistrationCenterRepository;
+import io.mosip.registration.repositories.RegistrationCenterTypeRepository;
+import io.mosip.registration.repositories.ScreenAuthorizationRepository;
+import io.mosip.registration.repositories.ScreenDetailRepository;
+import io.mosip.registration.repositories.SyncJobControlRepository;
+import io.mosip.registration.repositories.SyncJobDefRepository;
+import io.mosip.registration.repositories.TemplateRepository;
+import io.mosip.registration.repositories.UserMachineMappingRepository;
+import io.mosip.registration.service.config.LocalConfigService;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.registration.util.mastersync.ClientSettingSyncHelper;
+import io.mosip.registration.util.mastersync.MetaDataUtils;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({ "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*" })
@@ -214,7 +214,7 @@ public class ClientSettingsHelperTest {
 	}
 
 	@Test
-	public void testClientSettingsSyncForValidJson() throws RegBaseCheckedException, ConnectionException, IOException, io.github.tf-govstack.kernel.core.exception.IOException {
+	public void testClientSettingsSyncForValidJson() throws RegBaseCheckedException, ConnectionException, IOException, io.mosip.kernel.core.exception.IOException {
 		PowerMockito.mockStatic(RegistrationAppHealthCheckUtil.class);
 		PowerMockito.mockStatic(Paths.class);
 		PowerMockito.mockStatic(FileUtils.class);

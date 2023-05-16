@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.util.healthcheck;
+package io.mosip.registration.util.healthcheck;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 /**
  * Registration System Properties Checker

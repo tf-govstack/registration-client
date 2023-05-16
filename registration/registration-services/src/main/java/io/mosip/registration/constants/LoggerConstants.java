@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.constants;
+package io.mosip.registration.constants;
 
 /**
  * Contains the constants to be used for logging

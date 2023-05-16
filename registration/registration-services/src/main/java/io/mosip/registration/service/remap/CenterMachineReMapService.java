@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.service.remap;
+package io.mosip.registration.service.remap;
 
-import io.github.tf-govstack.registration.exception.RemapException;
+import io.mosip.registration.exception.RemapException;
 
 /**
  * Service class {@code CenterMachineReMapService} for Center Machine Remapping

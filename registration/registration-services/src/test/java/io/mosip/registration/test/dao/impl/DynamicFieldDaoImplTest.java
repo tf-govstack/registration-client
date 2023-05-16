@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,11 +20,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.registration.dao.impl.DynamicFieldDAOImpl;
-import io.github.tf-govstack.registration.dto.mastersync.DynamicFieldValueDto;
-import io.github.tf-govstack.registration.entity.DynamicField;
-import io.github.tf-govstack.registration.repositories.DynamicFieldRepository;
-import io.github.tf-govstack.registration.util.mastersync.MapperUtils;
+import io.mosip.registration.dao.impl.DynamicFieldDAOImpl;
+import io.mosip.registration.dto.mastersync.DynamicFieldValueDto;
+import io.mosip.registration.entity.DynamicField;
+import io.mosip.registration.repositories.DynamicFieldRepository;
+import io.mosip.registration.util.mastersync.MapperUtils;
 
 public class DynamicFieldDaoImplTest {
 

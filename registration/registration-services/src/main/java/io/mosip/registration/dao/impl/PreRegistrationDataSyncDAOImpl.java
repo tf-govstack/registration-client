@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
 import java.sql.Timestamp;
 import java.util.Date;
@@ -7,12 +7,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.PreRegistrationDataSyncDAO;
-import io.github.tf-govstack.registration.entity.PreRegistrationList;
-import io.github.tf-govstack.registration.repositories.PreRegistrationDataSyncRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.PreRegistrationDataSyncDAO;
+import io.mosip.registration.entity.PreRegistrationList;
+import io.mosip.registration.repositories.PreRegistrationDataSyncRepository;
 
 /**
  * {@link PreRegistrationDataSyncDAO}
@@ -39,7 +39,7 @@ public class PreRegistrationDataSyncDAOImpl implements PreRegistrationDataSyncDA
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.PreRegistrationDAO#getPreRegistration(java.lang.
+	 * io.mosip.registration.dao.PreRegistrationDAO#getPreRegistration(java.lang.
 	 * String)
 	 */
 	@Override
@@ -57,7 +57,7 @@ public class PreRegistrationDataSyncDAOImpl implements PreRegistrationDataSyncDA
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.PreRegistrationDAO#savePreRegistration(io.github.tf-govstack.
+	 * io.mosip.registration.dao.PreRegistrationDAO#savePreRegistration(io.mosip.
 	 * registration.entity.PreRegistration)
 	 */
 	@Override

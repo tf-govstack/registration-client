@@ -1,17 +1,17 @@
-package io.github.tf-govstack.registration.service.bio;
+package io.mosip.registration.service.bio;
 
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
-import io.github.tf-govstack.kernel.core.bioapi.exception.BiometricException;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.enums.Modality;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.mdm.dto.MDMRequestDto;
-import io.github.tf-govstack.registration.mdm.dto.MdmBioDevice;
+import io.mosip.kernel.core.bioapi.exception.BiometricException;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.enums.Modality;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.mdm.dto.MDMRequestDto;
+import io.mosip.registration.mdm.dto.MdmBioDevice;
 import lombok.NonNull;
 
 /**

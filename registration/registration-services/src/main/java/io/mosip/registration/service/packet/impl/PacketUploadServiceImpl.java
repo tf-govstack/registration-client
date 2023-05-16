@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.service.packet.impl;
+package io.mosip.registration.service.packet.impl;
 
 import java.io.File;
 import java.sql.Timestamp;
@@ -8,7 +8,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
-import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.mosip.kernel.core.util.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
@@ -27,28 +27,28 @@ import org.springframework.util.LinkedMultiValueMap;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.repositories.RegistrationRepository;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.packet.PacketUploadService;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.AuditReferenceIdTypes;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.repositories.RegistrationRepository;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.packet.PacketUploadService;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 
@@ -105,7 +105,7 @@ public class PacketUploadServiceImpl extends BaseService implements PacketUpload
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * io.github.tf-govstack.registration.service.packet.PacketUploadService#uploadPacket(java.
+	 * io.mosip.registration.service.packet.PacketUploadService#uploadPacket(java.
 	 * lang.String)
 	 */
 	@Override
@@ -128,7 +128,7 @@ public class PacketUploadServiceImpl extends BaseService implements PacketUpload
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see io.github.tf-govstack.registration.service.packet.PacketUploadService#
+	 * @see io.mosip.registration.service.packet.PacketUploadService#
 	 * uploadAllSyncedPackets()
 	 */
 	@Override
@@ -139,7 +139,7 @@ public class PacketUploadServiceImpl extends BaseService implements PacketUpload
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see io.github.tf-govstack.registration.service.packet.PacketUploadService#
+	 * @see io.mosip.registration.service.packet.PacketUploadService#
 	 * uploadSyncedPackets()
 	 */
 	@Override

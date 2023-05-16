@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.context;
+package io.mosip.registration.context;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,12 +11,12 @@ import java.util.stream.Stream;
 
 import com.neovisionaries.i18n.LanguageAlpha3Code;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dto.AuthTokenDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dto.AuthTokenDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
 
 /**
  * This class will load all the property files as bundles All application level

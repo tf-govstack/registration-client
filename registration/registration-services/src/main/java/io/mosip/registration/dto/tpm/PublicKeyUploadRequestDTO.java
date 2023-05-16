@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dto.tpm;
+package io.mosip.registration.dto.tpm;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.controller;
+package io.mosip.registration.controller;
 
 import java.util.Timer;
 

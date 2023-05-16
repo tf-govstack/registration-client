@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.controller.reg;
+package io.mosip.registration.controller.reg;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -8,22 +8,22 @@ import java.util.*;
 
 import javax.imageio.ImageIO;
 
-import io.github.tf-govstack.registration.api.docscanner.DocScannerFacade;
-import io.github.tf-govstack.registration.api.docscanner.DocScannerUtil;
-import io.github.tf-govstack.registration.api.docscanner.dto.DocScanDevice;
-import io.github.tf-govstack.registration.util.control.FxControl;
+import io.mosip.registration.api.docscanner.DocScannerFacade;
+import io.mosip.registration.api.docscanner.DocScannerUtil;
+import io.mosip.registration.api.docscanner.dto.DocScanDevice;
+import io.mosip.registration.util.control.FxControl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.controller.BaseController;
-import io.github.tf-govstack.registration.controller.device.ScanPopUpViewController;
-import io.github.tf-govstack.registration.dto.mastersync.DocumentCategoryDto;
-import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.constants.RegistrationUIConstants;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.controller.BaseController;
+import io.mosip.registration.controller.device.ScanPopUpViewController;
+import io.mosip.registration.dto.mastersync.DocumentCategoryDto;
+import io.mosip.registration.dto.packetmanager.DocumentDto;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;

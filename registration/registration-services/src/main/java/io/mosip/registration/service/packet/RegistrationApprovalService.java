@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.service.packet;
+package io.mosip.registration.service.packet;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.RegistrationApprovalDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.dto.RegistrationApprovalDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 /**
  * {@code RegistrationApprovalService} is the interface for registration

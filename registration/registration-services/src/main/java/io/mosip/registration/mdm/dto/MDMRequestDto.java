@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.mdm.dto;
+package io.mosip.registration.mdm.dto;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
 import lombok.Data;
 
 @Data

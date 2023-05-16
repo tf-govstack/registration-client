@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.service.packet.impl;
+package io.mosip.registration.service.packet.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,15 +9,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.service.packet.PacketExportService;
-import io.github.tf-govstack.registration.util.advice.AuthenticationAdvice;
-import io.github.tf-govstack.registration.util.advice.PreAuthorizeUserId;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.service.packet.PacketExportService;
+import io.mosip.registration.util.advice.AuthenticationAdvice;
+import io.mosip.registration.util.advice.PreAuthorizeUserId;
 
 /**
  * Implementation class for {@link PacketExportService}
@@ -36,7 +36,7 @@ public class PacketExportServiceImpl implements PacketExportService {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.packet.impl.PacketExportService#
+	 * @see io.mosip.registration.service.packet.impl.PacketExportService#
 	 * getSynchedRecords()
 	 */
 	@Override
@@ -63,7 +63,7 @@ public class PacketExportServiceImpl implements PacketExportService {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.packet.impl.PacketExportService#
+	 * @see io.mosip.registration.service.packet.impl.PacketExportService#
 	 * updateRegistrationStatus(java.util.List)
 	 */
 	@Override

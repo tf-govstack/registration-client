@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -23,19 +23,19 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.impl.UserDetailDAOImpl;
-import io.github.tf-govstack.registration.dto.UserDetailDto;
-import io.github.tf-govstack.registration.dto.UserDetailResponseDto;
-import io.github.tf-govstack.registration.entity.UserBiometric;
-import io.github.tf-govstack.registration.entity.UserDetail;
-import io.github.tf-govstack.registration.entity.UserPassword;
-import io.github.tf-govstack.registration.entity.UserRole;
-import io.github.tf-govstack.registration.repositories.UserBiometricRepository;
-import io.github.tf-govstack.registration.repositories.UserDetailRepository;
-import io.github.tf-govstack.registration.repositories.UserPwdRepository;
-import io.github.tf-govstack.registration.repositories.UserRoleRepository;
-import io.github.tf-govstack.registration.repositories.UserTokenRepository;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.impl.UserDetailDAOImpl;
+import io.mosip.registration.dto.UserDetailDto;
+import io.mosip.registration.dto.UserDetailResponseDto;
+import io.mosip.registration.entity.UserBiometric;
+import io.mosip.registration.entity.UserDetail;
+import io.mosip.registration.entity.UserPassword;
+import io.mosip.registration.entity.UserRole;
+import io.mosip.registration.repositories.UserBiometricRepository;
+import io.mosip.registration.repositories.UserDetailRepository;
+import io.mosip.registration.repositories.UserPwdRepository;
+import io.mosip.registration.repositories.UserRoleRepository;
+import io.mosip.registration.repositories.UserTokenRepository;
 
 
 @RunWith(PowerMockRunner.class)

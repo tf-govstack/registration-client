@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.builder;
+package io.mosip.registration.builder;
 
 import java.util.function.Consumer;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
 
 /**
  * Generic Builder Pattern

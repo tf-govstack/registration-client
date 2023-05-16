@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
@@ -26,25 +26,25 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.UserContext;
-import io.github.tf-govstack.registration.dao.impl.RegistrationDAOImpl;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.dto.RegistrationCenterDetailDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationMetaDataDTO;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.dto.schema.ValuesDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.entity.UserDetail;
-import io.github.tf-govstack.registration.enums.FlowType;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.repositories.RegistrationRepository;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
-import io.github.tf-govstack.registration.service.impl.IdentitySchemaServiceImpl;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.UserContext;
+import io.mosip.registration.dao.impl.RegistrationDAOImpl;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.dto.RegistrationCenterDetailDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.RegistrationMetaDataDTO;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.dto.schema.ValuesDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.entity.UserDetail;
+import io.mosip.registration.enums.FlowType;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.repositories.RegistrationRepository;
+import io.mosip.registration.service.IdentitySchemaService;
+import io.mosip.registration.service.impl.IdentitySchemaServiceImpl;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

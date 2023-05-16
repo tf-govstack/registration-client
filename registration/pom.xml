@@ -5,18 +5,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!--<parent>
-		<groupId>io.github.tf-govstack</groupId>
+		<groupId>io.mosip</groupId>
 		<artifactId>registration</artifactId>
 		<version>1.2.0.1-B1</version>
 	</parent>-->
 
-	<groupId>io.github.tf-govstack.registration</groupId>
+	<groupId>io.mosip.registration</groupId>
 	<version>1.2.0.1-B1</version>
 	<artifactId>registration-client-parent</artifactId>
 	<packaging>pom</packaging>
 	<name>MOSIP Registration Client</name>
         <description>Mosip Registration Client Project</description>	
-        <url>https://github.com/tf-govstack/registration-client</url>
+        <url>https://github.com/mosip/registration-client</url>
         <licenses>	
           <license>	
                 <name>MPL 2.0</name>	
@@ -24,24 +24,24 @@
           </license>	
         </licenses>	
                 <scm>	
-                <connection>scm:git:git://github.com/tf-govstack/registration-client.git</connection>
-                <developerConnection>scm:git:ssh://github.com:tf-govstack/registration-client.git</developerConnection>
-                <url>https://github.com/tf-govstack/registration-client</url>
+                <connection>scm:git:git://github.com/mosip/registration-client.git</connection>	
+                <developerConnection>scm:git:ssh://github.com:mosip/registration-client.git</developerConnection>	
+                <url>https://github.com/mosip/registration-client</url>	
                 <tag>HEAD</tag>	
         </scm>	
         <developers>	
                 <developer>	
                   <name>Mosip</name>	
-                  <email>pramodbelal8@gmail.com</email>	
-                  <organization>io.github.tf-govstack</organization>	
-                  <organizationUrl>https://github.com/tf-govstack/registration-client</organizationUrl>
+                  <email>mosip.emailnotifier@gmail.com</email>	
+                  <organization>io.mosip</organization>	
+                  <organizationUrl>https://github.com/mosip/registration-client</organizationUrl>	
                 </developer>	
      </developers>
          <repositories>	
                 <repository>	
                         <id>ossrh</id>	
                         <name>Central Repository</name>	
-                        <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>	
+                        <url>https://oss.sonatype.org/content/repositories/snapshots</url>	
                         <layout>default</layout>	
                         <snapshots>	
                         <enabled>true</enabled>	
@@ -61,11 +61,11 @@
          <distributionManagement>	
                 <snapshotRepository>	
                         <id>ossrh</id>	
-                        <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>	
+                        <url>https://oss.sonatype.org/content/repositories/snapshots</url>	
                 </snapshotRepository>	
                 <repository>	
                         <id>ossrh</id>	
-                        <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>	
+                        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>	
                 </repository>	
         </distributionManagement>	
 
@@ -199,7 +199,7 @@
 			</dependency>
 
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-core</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
@@ -228,58 +228,58 @@
 				<artifactId>commons-dbcp2</artifactId>
 				<version>${apache.commons.dpce.version}</version>
 			</dependency>
-			<!-- <dependency> <groupId>io.github.tf-govstack</groupId> <artifactId>kernel-utils</artifactId> 
+			<!-- <dependency> <groupId>io.mosip</groupId> <artifactId>kernel-utils</artifactId> 
 				<version>${project.version}</version> </dependency> -->
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-logger-logback</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
-			<!-- <dependency> <groupId>io.github.tf-govstack</groupId> <artifactId>kernel-security</artifactId> 
+			<!-- <dependency> <groupId>io.mosip</groupId> <artifactId>kernel-security</artifactId> 
 				<version>${project.version}</version> </dependency> -->
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-dataaccess-hibernate</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-auditmanager-api</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-idvalidator-rid</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-idvalidator-uin</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-idvalidator-vid</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-idvalidator-prid</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-idgenerator-rid</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-idgenerator-prid</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-templatemanager-velocity</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 				<exclusions>
@@ -290,12 +290,12 @@
 				</exclusions>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-qrcodegenerator-zxing</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-pdfgenerator-itext</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
@@ -358,7 +358,7 @@
 			</dependency>
 
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-applicanttype-api</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
@@ -371,12 +371,12 @@
 			</dependency>
 
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-idobjectvalidator</artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>io.github.tf-govstack.kernel</groupId>
+				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-bioapi-provider </artifactId>
 				<version>${mosip.core.kernel.version}</version>
 			</dependency>
@@ -512,7 +512,7 @@
                   <extensions>true</extensions>	
                   <configuration>	
                         <serverId>ossrh</serverId>	
-                        <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>	
+                        <nexusUrl>https://oss.sonatype.org/</nexusUrl>	
                         <autoReleaseAfterClose>false</autoReleaseAfterClose>	
                   </configuration>	
              	</plugin>

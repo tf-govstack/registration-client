@@ -1,21 +1,21 @@
-package io.github.tf-govstack.registration.service.template.impl;
+package io.mosip.registration.service.template.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.StringUtils;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.dao.TemplateDao;
-import io.github.tf-govstack.registration.entity.Template;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.service.template.TemplateService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.StringUtils;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.dao.TemplateDao;
+import io.mosip.registration.entity.Template;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.service.template.TemplateService;
 
 /**
  * Implementation class for {@link TemplateService}
@@ -35,7 +35,7 @@ public class TemplateServiceImpl implements TemplateService {
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * io.github.tf-govstack.registration.service.template.TemplateService#getHtmlTemplate(java.
+	 * io.mosip.registration.service.template.TemplateService#getHtmlTemplate(java.
 	 * lang.String, java.lang.String)
 	 */
 	public String getHtmlTemplate(String templateTypeCode, String langCode) throws RegBaseCheckedException {

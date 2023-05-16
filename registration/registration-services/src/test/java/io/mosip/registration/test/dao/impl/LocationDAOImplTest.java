@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,10 +13,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.impl.LocationDAOImpl;
-import io.github.tf-govstack.registration.entity.Location;
-import io.github.tf-govstack.registration.entity.id.GenericId;
-import io.github.tf-govstack.registration.repositories.LocationRepository;
+import io.mosip.registration.dao.impl.LocationDAOImpl;
+import io.mosip.registration.entity.Location;
+import io.mosip.registration.entity.id.GenericId;
+import io.mosip.registration.repositories.LocationRepository;
 
 public class LocationDAOImplTest {
 	@Rule

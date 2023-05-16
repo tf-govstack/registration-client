@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.util.common;
+package io.mosip.registration.util.common;
 
 import javafx.scene.Node;
 import javafx.scene.Scene;

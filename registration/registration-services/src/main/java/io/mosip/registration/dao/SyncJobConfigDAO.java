@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.entity.SyncJobDef;
+import io.mosip.registration.entity.SyncJobDef;
 
 /**
  * DAO class for all the Sync Job related details

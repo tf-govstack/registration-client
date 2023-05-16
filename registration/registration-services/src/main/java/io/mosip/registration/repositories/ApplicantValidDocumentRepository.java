@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
 import java.util.List;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.entity.ApplicantValidDocument;
-import io.github.tf-govstack.registration.entity.id.ApplicantValidDocumentID;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.entity.ApplicantValidDocument;
+import io.mosip.registration.entity.id.ApplicantValidDocumentID;
 
 /**
  * Interface for {@link ApplicantValidDocument} 

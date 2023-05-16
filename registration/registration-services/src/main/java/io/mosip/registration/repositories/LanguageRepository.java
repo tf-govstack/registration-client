@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
 import java.util.List;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.entity.Language;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.entity.Language;
 
 /**
  * Repository to perform CRUD operations on Language.

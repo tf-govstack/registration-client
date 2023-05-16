@@ -17,7 +17,7 @@ This document covers the design of 'Registration client' application initial set
    7.run.bat - This will initialize the run.jar with embedded jre.
 
 **Build Process:**  
-   During build process of 'registraion-lib' project the pom.xml file should be updated with inclusion 'io.github.tf-govstack.registration.cipher.ClientJarEncryption' file to prepare the Initial Setup Zip file.  
+   During build process of 'registraion-lib' project the pom.xml file should be updated with inclusion 'io.mosip.registration.cipher.ClientJarEncryption' file to prepare the Initial Setup Zip file.  
   
 **Initial Lib download:**  
    A class should be created with the name of 'ClientJarDecryption' and that will have the following process:

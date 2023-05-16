@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.api;
+package io.mosip.registration.api;
 
-import io.github.tf-govstack.registration.api.docscanner.DeviceType;
-import io.github.tf-govstack.registration.api.docscanner.DocScannerFacade;
-import io.github.tf-govstack.registration.api.docscanner.DocScannerService;
-import io.github.tf-govstack.registration.api.docscanner.dto.DocScanDevice;
+import io.mosip.registration.api.docscanner.DeviceType;
+import io.mosip.registration.api.docscanner.DocScannerFacade;
+import io.mosip.registration.api.docscanner.DocScannerService;
+import io.mosip.registration.api.docscanner.dto.DocScanDevice;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.test.util.ReflectionTestUtils;

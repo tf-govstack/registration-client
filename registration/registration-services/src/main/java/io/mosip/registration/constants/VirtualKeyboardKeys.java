@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.constants;
+package io.mosip.registration.constants;
 
 /**
  * Class contains the keys for the virtual keyboard

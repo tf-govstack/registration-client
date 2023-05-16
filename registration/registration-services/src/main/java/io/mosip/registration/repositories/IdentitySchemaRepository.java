@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
 import java.sql.Timestamp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import io.github.tf-govstack.registration.entity.IdentitySchema;
+import io.mosip.registration.entity.IdentitySchema;
 
 /**
  * The Interface IdentitySchemaRepository.

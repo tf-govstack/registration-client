@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
-import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_SAVE_PKT;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.LoggerConstants.LOG_SAVE_PKT;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -18,27 +18,27 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.kernel.core.util.JsonUtils;
-import io.github.tf-govstack.kernel.core.util.exception.JsonProcessingException;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDataDto;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.repositories.RegistrationRepository;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
+import io.mosip.commons.packet.dto.packet.SimpleDto;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.kernel.core.util.JsonUtils;
+import io.mosip.kernel.core.util.exception.JsonProcessingException;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.RegistrationDataDto;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.repositories.RegistrationRepository;
+import io.mosip.registration.service.IdentitySchemaService;
 import lombok.NonNull;
 
 /**
@@ -66,8 +66,8 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.RegistrationDAO#save(java.lang.String,
-	 * io.github.tf-govstack.registration.dto.RegistrationDTO)
+	 * @see io.mosip.registration.dao.RegistrationDAO#save(java.lang.String,
+	 * io.mosip.registration.dto.RegistrationDTO)
 	 */
 	@Override
 	public void save(String zipFileName, RegistrationDTO registrationDTO) throws RegBaseCheckedException {
@@ -251,7 +251,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.RegistrationDAO#getPacketsToBeSynched(java.util.
+	 * io.mosip.registration.dao.RegistrationDAO#getPacketsToBeSynched(java.util.
 	 * List)
 	 */
 	public List<Registration> getPacketsToBeSynched(List<String> statusCodes) {
@@ -262,7 +262,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.RegistrationDAO#getRegistrationByStatus(java.util.
+	 * io.mosip.registration.dao.RegistrationDAO#getRegistrationByStatus(java.util.
 	 * List)
 	 */
 	@Override
@@ -304,7 +304,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.RegistrationDAO#updatePacketSyncStatus(io.github.tf-govstack.
+	 * io.mosip.registration.dao.RegistrationDAO#updatePacketSyncStatus(io.mosip.
 	 * registration.entity.Registration)
 	 */
 	public Registration updatePacketSyncStatus(PacketStatusDTO packet) {
@@ -324,7 +324,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.RegistrationDAO#getAllReRegistrationPackets(java.
+	 * io.mosip.registration.dao.RegistrationDAO#getAllReRegistrationPackets(java.
 	 * lang.String[])
 	 */
 	public List<Registration> getAllReRegistrationPackets(String clientStatus, List<String> serverStatus) {
@@ -341,7 +341,7 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.RegistrationDAO#get(java.sql.Timestamp,
+	 * @see io.mosip.registration.dao.RegistrationDAO#get(java.sql.Timestamp,
 	 * java.lang.String)
 	 */
 	@Override

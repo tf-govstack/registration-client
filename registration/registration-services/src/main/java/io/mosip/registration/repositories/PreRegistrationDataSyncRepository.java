@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
 import java.util.Date;
 import java.util.List;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.entity.PreRegistrationList;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.entity.PreRegistrationList;
 
 /**
  * Pre registration repository to get/save/update and verify pre-reg

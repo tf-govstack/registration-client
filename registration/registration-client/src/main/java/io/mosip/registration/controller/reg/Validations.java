@@ -1,33 +1,33 @@
-package io.github.tf-govstack.registration.controller.reg;
+package io.mosip.registration.controller.reg;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.text.MessageFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import io.github.tf-govstack.registration.controller.GenericController;
-import io.github.tf-govstack.registration.enums.FlowType;
+import io.mosip.registration.controller.GenericController;
+import io.mosip.registration.enums.FlowType;
 import javafx.scene.control.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.idvalidator.exception.InvalidIDException;
-import io.github.tf-govstack.kernel.core.idvalidator.spi.RidValidator;
-import io.github.tf-govstack.kernel.core.idvalidator.spi.UinValidator;
-import io.github.tf-govstack.kernel.core.idvalidator.spi.VidValidator;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.controller.BaseController;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.dto.schema.Validator;
-import io.github.tf-govstack.registration.service.sync.MasterSyncService;
-import io.github.tf-govstack.registration.validator.RequiredFieldValidator;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.idvalidator.exception.InvalidIDException;
+import io.mosip.kernel.core.idvalidator.spi.RidValidator;
+import io.mosip.kernel.core.idvalidator.spi.UinValidator;
+import io.mosip.kernel.core.idvalidator.spi.VidValidator;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.controller.BaseController;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.dto.schema.Validator;
+import io.mosip.registration.service.sync.MasterSyncService;
+import io.mosip.registration.validator.RequiredFieldValidator;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 

@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.jobs;
+package io.mosip.registration.jobs;
 
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -6,12 +6,12 @@ import org.quartz.listeners.JobListenerSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.exception.RegBaseUncheckedException;
 
 /**
  * This class gives the information of job process like the jobs to be executed

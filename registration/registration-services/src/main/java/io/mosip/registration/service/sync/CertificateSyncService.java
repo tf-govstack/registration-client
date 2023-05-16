@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.service.sync;
+package io.mosip.registration.service.sync;
 
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 import java.net.SocketTimeoutException;
 

@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.controller.device;
+package io.mosip.registration.controller.device;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -7,9 +7,9 @@ import java.io.StringWriter;
 
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.context.SessionContext;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.context.SessionContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 

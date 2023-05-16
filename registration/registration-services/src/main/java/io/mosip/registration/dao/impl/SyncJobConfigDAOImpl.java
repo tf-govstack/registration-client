@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,11 +9,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
-import io.github.tf-govstack.registration.entity.SyncJobDef;
-import io.github.tf-govstack.registration.repositories.JobConfigRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.dao.SyncJobConfigDAO;
+import io.mosip.registration.entity.SyncJobDef;
+import io.mosip.registration.repositories.JobConfigRepository;
 
 /**
  * implementation class of {@link SyncJobConfigDAO}
@@ -33,7 +33,7 @@ public class SyncJobConfigDAOImpl implements SyncJobConfigDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.JobConfigDAO#getJob()
+	 * @see io.mosip.registration.dao.JobConfigDAO#getJob()
 	 */
 	@Override
 	public List<SyncJobDef> getAll() {
@@ -52,7 +52,7 @@ public class SyncJobConfigDAOImpl implements SyncJobConfigDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.SyncJobConfigDAO#getActiveJobs()
+	 * @see io.mosip.registration.dao.SyncJobConfigDAO#getActiveJobs()
 	 */
 	@Override
 	public List<SyncJobDef> getActiveJobs() {
@@ -61,7 +61,7 @@ public class SyncJobConfigDAOImpl implements SyncJobConfigDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see io.github.tf-govstack.registration.dao.SyncJobConfigDAO#updateAll(java.util.List)
+	 * @see io.mosip.registration.dao.SyncJobConfigDAO#updateAll(java.util.List)
 	 */
 	@Override
 	public List<SyncJobDef> updateAll(List<SyncJobDef> syncJobDefs) {

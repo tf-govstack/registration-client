@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.service.external;
+package io.mosip.registration.service.external;
 
-import io.github.tf-govstack.registration.dto.PreRegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.entity.PreRegistrationList;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.dto.PreRegistrationDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.entity.PreRegistrationList;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 /**
  * Interface to handles the Pre-Registration Packet data.

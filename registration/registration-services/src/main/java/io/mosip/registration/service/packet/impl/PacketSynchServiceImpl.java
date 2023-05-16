@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.service.packet.impl;
+package io.mosip.registration.service.packet.impl;
 
-import static io.github.tf-govstack.kernel.core.util.JsonUtils.javaObjectToJsonString;
+import static io.mosip.kernel.core.util.JsonUtils.javaObjectToJsonString;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -32,37 +32,37 @@ import org.springframework.stereotype.Service;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import io.github.tf-govstack.commons.packet.spi.IPacketCryptoService;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.kernel.core.util.HMACUtils2;
-import io.github.tf-govstack.kernel.core.util.JsonUtils;
-import io.github.tf-govstack.kernel.core.util.exception.JsonMappingException;
-import io.github.tf-govstack.kernel.core.util.exception.JsonParseException;
-import io.github.tf-govstack.kernel.core.util.exception.JsonProcessingException;
-import io.github.tf-govstack.kernel.keymanagerservice.exception.KeymanagerServiceException;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDataDto;
-import io.github.tf-govstack.registration.dto.RegistrationPacketSyncDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
-import io.github.tf-govstack.registration.dto.SyncRegistrationDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.repositories.RegistrationRepository;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.sync.PacketSynchService;
+import io.mosip.commons.packet.spi.IPacketCryptoService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.kernel.core.util.HMACUtils2;
+import io.mosip.kernel.core.util.JsonUtils;
+import io.mosip.kernel.core.util.exception.JsonMappingException;
+import io.mosip.kernel.core.util.exception.JsonParseException;
+import io.mosip.kernel.core.util.exception.JsonProcessingException;
+import io.mosip.kernel.keymanagerservice.exception.KeymanagerServiceException;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.ErrorResponseDTO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.dto.RegistrationDataDto;
+import io.mosip.registration.dto.RegistrationPacketSyncDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.dto.SyncRegistrationDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.repositories.RegistrationRepository;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.sync.PacketSynchService;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 
@@ -119,7 +119,7 @@ public class PacketSynchServiceImpl extends BaseService implements PacketSynchSe
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * io.github.tf-govstack.registration.service.sync.PacketSynchService#fetchPacketsToBeSynched
+	 * io.mosip.registration.service.sync.PacketSynchService#fetchPacketsToBeSynched
 	 * ()
 	 */
 	@Override
@@ -144,7 +144,7 @@ public class PacketSynchServiceImpl extends BaseService implements PacketSynchSe
 	 * (non-Javadoc)
 	 *
 	 * @see
-	 * io.github.tf-govstack.registration.service.sync.PacketSynchService#syncPacket(java
+	 * io.mosip.registration.service.sync.PacketSynchService#syncPacket(java
 	 * .lang.String)
 	 */
 	@Override
@@ -297,7 +297,7 @@ public class PacketSynchServiceImpl extends BaseService implements PacketSynchSe
 							registrationDataDto.getLangCode().split(",")[0] :
 							ApplicationContext.applicationLanguage());
 				}
-			} catch (JsonParseException | JsonMappingException | io.github.tf-govstack.kernel.core.exception.IOException exception) {
+			} catch (JsonParseException | JsonMappingException | io.mosip.kernel.core.exception.IOException exception) {
 				LOGGER.error(exception.getMessage(), exception);
 			}
 

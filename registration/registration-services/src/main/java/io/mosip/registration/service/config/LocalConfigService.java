@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.service.config;
+package io.mosip.registration.service.config;
 
 import java.util.List;
 import java.util.Map;
 
-import io.github.tf-govstack.registration.entity.PermittedLocalConfig;
+import io.mosip.registration.entity.PermittedLocalConfig;
 
 public interface LocalConfigService {
 	

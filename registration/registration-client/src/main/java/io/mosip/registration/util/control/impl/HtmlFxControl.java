@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.util.control.impl;
+package io.mosip.registration.util.control.impl;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -8,10 +8,10 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.controller.ClientApplication;
+import io.mosip.commons.packet.dto.packet.SimpleDto;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.controller.ClientApplication;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
@@ -20,21 +20,21 @@ import org.apache.commons.io.IOUtils;
 import org.w3c.dom.Document;
 
 
-import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.templatemanager.spi.TemplateManager;
-import io.github.tf-govstack.kernel.core.templatemanager.spi.TemplateManagerBuilder;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.controller.Initialization;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.template.TemplateService;
-import io.github.tf-govstack.registration.util.control.FxControl;
+import io.mosip.registration.dto.mastersync.GenericDto;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.templatemanager.spi.TemplateManager;
+import io.mosip.kernel.core.templatemanager.spi.TemplateManagerBuilder;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.AuditReferenceIdTypes;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.controller.Initialization;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.template.TemplateService;
+import io.mosip.registration.util.control.FxControl;
 import javafx.scene.Node;
 import javafx.scene.web.WebView;
 

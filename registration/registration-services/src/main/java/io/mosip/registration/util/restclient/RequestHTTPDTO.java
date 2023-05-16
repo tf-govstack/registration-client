@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.util.restclient;
+package io.mosip.registration.util.restclient;
 
 import java.net.URI;
 import java.nio.file.Path;

@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.entity.MachineType;
-import io.github.tf-govstack.registration.entity.id.CodeAndLanguageCodeID;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.entity.MachineType;
+import io.mosip.registration.entity.id.CodeAndLanguageCodeID;
 
 /**
  * Repository to perform CRUD operations on MachineType.

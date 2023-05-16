@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.constants;
+package io.mosip.registration.constants;
 
 import java.util.ArrayList;
 import java.util.Arrays;

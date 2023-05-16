@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.dto.biometric;
+package io.mosip.registration.dto.biometric;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.BaseDTO;
+import io.mosip.registration.dto.BaseDTO;
 import lombok.Getter;
 import lombok.Setter;
 

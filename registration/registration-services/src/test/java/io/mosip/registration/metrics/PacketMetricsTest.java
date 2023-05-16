@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.metrics;
+package io.mosip.registration.metrics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +15,12 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import io.micrometer.core.instrument.ImmutableTag;
 import io.micrometer.core.instrument.Tag;
-import io.github.tf-govstack.registration.config.LoggingJsonMeterRegistry;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dao.impl.RegistrationDAOImpl;
-import io.github.tf-govstack.registration.repositories.RegistrationRepository;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.registration.config.LoggingJsonMeterRegistry;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dao.impl.RegistrationDAOImpl;
+import io.mosip.registration.repositories.RegistrationRepository;
+import io.mosip.registration.service.IdentitySchemaService;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
 
 
 /**

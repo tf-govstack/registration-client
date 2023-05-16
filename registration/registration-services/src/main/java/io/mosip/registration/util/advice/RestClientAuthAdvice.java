@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.util.advice;
+package io.mosip.registration.util.advice;
 
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.util.restclient.AuthTokenUtilService;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.util.restclient.AuthTokenUtilService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,16 +12,16 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.JsonUtils;
-import io.github.tf-govstack.kernel.core.util.exception.JsonProcessingException;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dto.AuthTokenDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.util.restclient.RequestHTTPDTO;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.JsonUtils;
+import io.mosip.kernel.core.util.exception.JsonProcessingException;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dto.AuthTokenDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.util.restclient.RequestHTTPDTO;
 
 
 /**
@@ -57,7 +57,7 @@ public class RestClientAuthAdvice {
 	 * @throws RegBaseCheckedException
 	 *             - generalized exception with errorCode and errorMessage
 	 */
-	@Around("execution(* io.github.tf-govstack.registration.util.restclient.RestClientUtil.invokeURL(..))")
+	@Around("execution(* io.mosip.registration.util.restclient.RestClientUtil.invokeURL(..))")
 	public Object addAuthZToken(ProceedingJoinPoint joinPoint) throws RegBaseCheckedException, ConnectionException {
 		RequestHTTPDTO requestHTTPDTO = (RequestHTTPDTO) joinPoint.getArgs()[0];
 		try {
@@ -87,7 +87,7 @@ public class RestClientAuthAdvice {
 		}
 	}
 
-	@Around("execution(* io.github.tf-govstack.registration.util.restclient.RestClientUtil.downloadFile(..))")
+	@Around("execution(* io.mosip.registration.util.restclient.RestClientUtil.downloadFile(..))")
 	public void addAuthZTokenToDownloadRequest(ProceedingJoinPoint joinPoint) throws RegBaseCheckedException, ConnectionException {
 		RequestHTTPDTO requestHTTPDTO = (RequestHTTPDTO) joinPoint.getArgs()[0];
 		addAuthZToken(joinPoint);

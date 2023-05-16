@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.api.docscanner;
+package io.mosip.registration.api.docscanner;
 
-import io.github.tf-govstack.registration.api.docscanner.dto.DocScanDevice;
+import io.mosip.registration.api.docscanner.dto.DocScanDevice;
 
 import java.awt.image.BufferedImage;
 import java.util.List;

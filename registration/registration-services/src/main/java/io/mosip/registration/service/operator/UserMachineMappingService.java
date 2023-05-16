@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.service.operator;
+package io.mosip.registration.service.operator;
 
-import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.ResponseDTO;
 
 /**
  * The {@code UserMachineMappingService} represents to sync the user mapping information

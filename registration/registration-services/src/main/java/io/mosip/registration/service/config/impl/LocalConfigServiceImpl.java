@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.service.config.impl;
+package io.mosip.registration.service.config.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -6,10 +6,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.registration.dao.LocalConfigDAO;
-import io.github.tf-govstack.registration.entity.PermittedLocalConfig;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.config.LocalConfigService;
+import io.mosip.registration.dao.LocalConfigDAO;
+import io.mosip.registration.entity.PermittedLocalConfig;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.config.LocalConfigService;
 
 @Service
 public class LocalConfigServiceImpl extends BaseService implements LocalConfigService {

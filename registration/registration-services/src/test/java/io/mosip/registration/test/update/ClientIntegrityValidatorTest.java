@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.update;
+package io.mosip.registration.test.update;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,11 +16,11 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.kernel.core.util.HMACUtils2;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.update.ClientIntegrityValidator;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.kernel.core.util.HMACUtils2;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.update.ClientIntegrityValidator;
 
 /**
  * 

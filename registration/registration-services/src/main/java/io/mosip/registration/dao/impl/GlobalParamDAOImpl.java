@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
 import java.sql.Timestamp;
 import java.util.LinkedHashMap;
@@ -8,15 +8,15 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.GlobalParamDAO;
-import io.github.tf-govstack.registration.dao.GlobalParamName;
-import io.github.tf-govstack.registration.entity.GlobalParam;
-import io.github.tf-govstack.registration.entity.id.GlobalParamId;
-import io.github.tf-govstack.registration.repositories.GlobalParamRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.GlobalParamDAO;
+import io.mosip.registration.dao.GlobalParamName;
+import io.mosip.registration.entity.GlobalParam;
+import io.mosip.registration.entity.id.GlobalParamId;
+import io.mosip.registration.repositories.GlobalParamRepository;
 
 import javax.validation.constraints.NotNull;
 
@@ -41,7 +41,7 @@ public class GlobalParamDAOImpl implements GlobalParamDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.GlobalParamDAO#getGlobalParams()
+	 * @see io.mosip.registration.dao.GlobalParamDAO#getGlobalParams()
 	 */
 	public Map<String, Object> getGlobalParams() {
 
@@ -61,7 +61,7 @@ public class GlobalParamDAOImpl implements GlobalParamDAO {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see io.github.tf-govstack.registration.dao.GlobalParamDAO#getGlobalParams(String)
+	 * @see io.mosip.registration.dao.GlobalParamDAO#getGlobalParams(String)
 	 */
 	public Map<String, Object> getGlobalParams(@NotNull String pattern) {
 
@@ -77,7 +77,7 @@ public class GlobalParamDAOImpl implements GlobalParamDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see io.github.tf-govstack.registration.dao.GlobalParamDAO#saveAll(java.util.List)
+	 * @see io.mosip.registration.dao.GlobalParamDAO#saveAll(java.util.List)
 	 */
 	@Override
 	public void saveAll(List<GlobalParam> globalParamList) {
@@ -99,7 +99,7 @@ public class GlobalParamDAOImpl implements GlobalParamDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.GlobalParamDAO#get(java.lang.String)
+	 * @see io.mosip.registration.dao.GlobalParamDAO#get(java.lang.String)
 	 */
 	@Override
 	public GlobalParam get(GlobalParamId globalParamId) {
@@ -111,7 +111,7 @@ public class GlobalParamDAOImpl implements GlobalParamDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.GlobalParamDAO#getAll(java.util.List)
+	 * @see io.mosip.registration.dao.GlobalParamDAO#getAll(java.util.List)
 	 */
 	@Override
 	public List<GlobalParam> getAll(List<String> names) {
@@ -125,7 +125,7 @@ public class GlobalParamDAOImpl implements GlobalParamDAO {
 	/**
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.GlobalParamDAO#getAllEntries()
+	 * @see io.mosip.registration.dao.GlobalParamDAO#getAllEntries()
 	 */
 	@Override
 	public List<GlobalParam> getAllEntries() {
@@ -133,7 +133,7 @@ public class GlobalParamDAOImpl implements GlobalParamDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see io.github.tf-govstack.registration.dao.GlobalParamDAO#updateSoftwareUpdateStatus(java.lang.String)
+	 * @see io.mosip.registration.dao.GlobalParamDAO#updateSoftwareUpdateStatus(java.lang.String)
 	 */
 	@Override
 	public GlobalParam updateSoftwareUpdateStatus(boolean isUpdateAvailable,Timestamp timestamp) {

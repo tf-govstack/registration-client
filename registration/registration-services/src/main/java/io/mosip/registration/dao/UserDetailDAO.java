@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.UserDetailDto;
-import io.github.tf-govstack.registration.entity.UserBiometric;
-import io.github.tf-govstack.registration.entity.UserDetail;
-import io.github.tf-govstack.registration.entity.UserRole;
+import io.mosip.registration.dto.UserDetailDto;
+import io.mosip.registration.entity.UserBiometric;
+import io.mosip.registration.entity.UserDetail;
+import io.mosip.registration.entity.UserRole;
 
 import javax.validation.constraints.NotNull;
 

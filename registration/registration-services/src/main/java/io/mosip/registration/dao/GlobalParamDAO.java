@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
 
-import io.github.tf-govstack.registration.entity.GlobalParam;
-import io.github.tf-govstack.registration.entity.id.GlobalParamId;
+import io.mosip.registration.entity.GlobalParam;
+import io.mosip.registration.entity.id.GlobalParamId;
 
 /**
  * This class is used to fetch/save/update the Global Parameter.

@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.controller.eodapproval;
+package io.mosip.registration.controller.eodapproval;
 
-import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_REJECT_CONTROLLER;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.LoggerConstants.LOG_REG_REJECT_CONTROLLER;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -15,16 +15,16 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.controller.BaseController;
-import io.github.tf-govstack.registration.controller.vo.RegistrationApprovalVO;
-import io.github.tf-govstack.registration.dto.mastersync.ReasonListDto;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.sync.MasterSyncService;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.controller.BaseController;
+import io.mosip.registration.controller.vo.RegistrationApprovalVO;
+import io.mosip.registration.dto.mastersync.ReasonListDto;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.sync.MasterSyncService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

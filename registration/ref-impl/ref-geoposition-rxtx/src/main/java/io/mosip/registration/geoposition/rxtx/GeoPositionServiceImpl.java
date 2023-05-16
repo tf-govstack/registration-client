@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.geoposition.rxtx;
+package io.mosip.registration.geoposition.rxtx;
 
 import gnu.io.*;
-import io.github.tf-govstack.registration.api.geoposition.GeoPositionService;
-import io.github.tf-govstack.registration.api.geoposition.dto.GeoPosition;
+import io.mosip.registration.api.geoposition.GeoPositionService;
+import io.mosip.registration.api.geoposition.dto.GeoPosition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

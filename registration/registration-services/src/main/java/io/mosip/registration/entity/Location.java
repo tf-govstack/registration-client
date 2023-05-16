@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import java.io.Serializable;
 
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
-import io.github.tf-govstack.registration.entity.id.CodeAndLanguageCodeID;
+import io.mosip.registration.entity.id.CodeAndLanguageCodeID;
 
 /**
  * This Entity Class contains list of locations that are being used in Registration with respect to language code.

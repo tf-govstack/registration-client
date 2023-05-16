@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.jobs;
+package io.mosip.registration.test.jobs;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,8 +18,8 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobKey;
 import org.quartz.Trigger;
 
-import io.github.tf-govstack.registration.entity.SyncJobDef;
-import io.github.tf-govstack.registration.jobs.impl.JobManagerImpl;
+import io.mosip.registration.entity.SyncJobDef;
+import io.mosip.registration.jobs.impl.JobManagerImpl;
 
 public class JobManagerTest {
 

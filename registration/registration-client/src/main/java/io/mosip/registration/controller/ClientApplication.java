@@ -1,50 +1,50 @@
-package io.github.tf-govstack.registration.controller;
+package io.mosip.registration.controller;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
-import io.github.tf-govstack.registration.controller.reg.Validations;
-import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.exception.PreConditionCheckException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
-import io.github.tf-govstack.registration.preloader.ClientPreLoader;
-import io.github.tf-govstack.registration.preloader.ClientPreLoaderErrorNotification;
-import io.github.tf-govstack.registration.preloader.ClientPreLoaderNotification;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.config.GlobalParamService;
-import io.github.tf-govstack.registration.service.config.JobConfigurationService;
-import io.github.tf-govstack.registration.service.config.LocalConfigService;
-import io.github.tf-govstack.registration.service.login.LoginService;
-import io.github.tf-govstack.registration.update.ClientIntegrityValidator;
-import io.github.tf-govstack.registration.update.SoftwareUpdateHandler;
-import io.github.tf-govstack.registration.util.restclient.AuthTokenUtilService;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.registration.constants.RegistrationUIConstants;
+import io.mosip.registration.controller.reg.Validations;
+import io.mosip.registration.dto.ErrorResponseDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.exception.PreConditionCheckException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
+import io.mosip.registration.preloader.ClientPreLoader;
+import io.mosip.registration.preloader.ClientPreLoaderErrorNotification;
+import io.mosip.registration.preloader.ClientPreLoaderNotification;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.config.GlobalParamService;
+import io.mosip.registration.service.config.JobConfigurationService;
+import io.mosip.registration.service.config.LocalConfigService;
+import io.mosip.registration.service.login.LoginService;
+import io.mosip.registration.update.ClientIntegrityValidator;
+import io.mosip.registration.update.SoftwareUpdateHandler;
+import io.mosip.registration.util.restclient.AuthTokenUtilService;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.controller.auth.LoginController;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.AuditReferenceIdTypes;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.controller.auth.LoginController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -97,9 +97,9 @@ public class ClientApplication extends Application {
 			setupResourceBundleBasedOnDefaultAppLang();
 
 			notifyPreloader(new ClientPreLoaderNotification(RegistrationConstants.MOSIP_HOSTNAME + " : " +
-					io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.MOSIP_HOSTNAME)));
+					io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.MOSIP_HOSTNAME)));
 			notifyPreloader(new ClientPreLoaderNotification(RegistrationConstants.MOSIP_UPGRADE_SERVER_URL + " : " +
-					io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.MOSIP_UPGRADE_SERVER_URL)));
+					io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.MOSIP_UPGRADE_SERVER_URL)));
 
 			handleInitialSync();
 			discoverDevices();
@@ -231,8 +231,8 @@ public class ClientApplication extends Application {
 
 	private void setupLanguages() throws PreConditionCheckException {
 		BaseService baseService = applicationContext.getBean("baseService", BaseService.class);
-		io.github.tf-govstack.registration.context.ApplicationContext.getInstance().setMandatoryLanguages(baseService.getMandatoryLanguages());
-		io.github.tf-govstack.registration.context.ApplicationContext.getInstance().setOptionalLanguages(baseService.getOptionalLanguages());
+		io.mosip.registration.context.ApplicationContext.getInstance().setMandatoryLanguages(baseService.getMandatoryLanguages());
+		io.mosip.registration.context.ApplicationContext.getInstance().setOptionalLanguages(baseService.getOptionalLanguages());
 	}
 
 	private void setupAppProperties() {
@@ -240,15 +240,15 @@ public class ClientApplication extends Application {
 		LocalConfigService localConfigService = applicationContext.getBean(LocalConfigService.class);
 		Map<String, Object> globalProps = globalParamService.getGlobalParams();
 		globalProps.putAll(localConfigService.getLocalConfigurations());
-		io.github.tf-govstack.registration.context.ApplicationContext.setApplicationMap(globalProps);
+		io.mosip.registration.context.ApplicationContext.setApplicationMap(globalProps);
 	}
 
 	protected void setupResourceBundleBasedOnDefaultAppLang() throws RegBaseCheckedException {
 		//load all bundles in memory and sets default application language
-		io.github.tf-govstack.registration.context.ApplicationContext.loadResources();
+		io.mosip.registration.context.ApplicationContext.loadResources();
 
-		ResourceBundle messageBundle = io.github.tf-govstack.registration.context.ApplicationContext.getBundle(
-				io.github.tf-govstack.registration.context.ApplicationContext.applicationLanguage(),
+		ResourceBundle messageBundle = io.mosip.registration.context.ApplicationContext.getBundle(
+				io.mosip.registration.context.ApplicationContext.applicationLanguage(),
 				RegistrationConstants.MESSAGES);
 		Validations.setResourceBundle(messageBundle);
 		RegistrationUIConstants.setBundle(messageBundle);

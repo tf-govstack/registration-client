@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.exception;
+package io.mosip.registration.exception;
 
 
 public class PreConditionCheckException extends RegBaseCheckedException {

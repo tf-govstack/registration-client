@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.constants;
+package io.mosip.registration.constants;
 
 /**
  * Enum for Application Modules to be used in Audit

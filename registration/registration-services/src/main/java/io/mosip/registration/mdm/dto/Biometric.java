@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.mdm.dto;
+package io.mosip.registration.mdm.dto;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import io.github.tf-govstack.kernel.core.cbeffutil.jaxbclasses.SingleType;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.mosip.kernel.core.cbeffutil.jaxbclasses.SingleType;
+import io.mosip.registration.constants.RegistrationConstants;
 
 public enum Biometric {
 

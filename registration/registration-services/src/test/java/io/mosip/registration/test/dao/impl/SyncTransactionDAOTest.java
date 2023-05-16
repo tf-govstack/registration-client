@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,10 +13,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.dao.impl.SyncTransactionDAOImpl;
-import io.github.tf-govstack.registration.entity.SyncTransaction;
-import io.github.tf-govstack.registration.repositories.SyncTransactionRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.dao.impl.SyncTransactionDAOImpl;
+import io.mosip.registration.entity.SyncTransaction;
+import io.mosip.registration.repositories.SyncTransactionRepository;
 
 public class SyncTransactionDAOTest {
 	@Mock

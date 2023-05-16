@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.context;
+package io.mosip.registration.context;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,25 +13,25 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-import io.github.tf-govstack.registration.dto.*;
+import io.mosip.registration.dto.*;
 import org.springframework.context.ApplicationContext;
 
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricType;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.LoginMode;
-import io.github.tf-govstack.registration.constants.ProcessNames;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.enums.Role;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.mdm.dto.MDMRequestDto;
-import io.github.tf-govstack.registration.service.bio.BioService;
-import io.github.tf-govstack.registration.service.login.LoginService;
-import io.github.tf-govstack.registration.service.security.AuthenticationService;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
-import io.github.tf-govstack.registration.util.restclient.AuthTokenUtilService;
+import io.mosip.kernel.biometrics.constant.BiometricType;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.LoginMode;
+import io.mosip.registration.constants.ProcessNames;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.enums.Role;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.mdm.dto.MDMRequestDto;
+import io.mosip.registration.service.bio.BioService;
+import io.mosip.registration.service.login.LoginService;
+import io.mosip.registration.service.security.AuthenticationService;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.registration.util.restclient.AuthTokenUtilService;
 
 import javax.validation.constraints.NotNull;
 
@@ -332,14 +332,14 @@ public class SessionContext {
 		BioService bioService = applicationContext.getBean(BioService.class);
 		AuthenticationService authService = applicationContext.getBean(AuthenticationService.class);
 
-		String authSlab = io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.AUTH_FINGERPRINT_SLAB);
+		String authSlab = io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.AUTH_FINGERPRINT_SLAB);
 		if(authSlab == null) { authSlab = RegistrationConstants.FINGERPRINT_SLAB_LEFT; }
 
 		MDMRequestDto mdmRequestDto = new MDMRequestDto(authSlab, null,
-				"Registration", io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
-				io.github.tf-govstack.registration.context.ApplicationContext
+				"Registration", io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
+				io.mosip.registration.context.ApplicationContext
 						.getIntValueFromApplicationMap(RegistrationConstants.CAPTURE_TIME_OUT),
-				1, io.github.tf-govstack.registration.context.ApplicationContext
+				1, io.mosip.registration.context.ApplicationContext
 						.getIntValueFromApplicationMap(RegistrationConstants.FINGERPRINT_AUTHENTICATION_THRESHOLD));
 
 		List<BiometricsDto> biometrics = bioService.captureModalityForAuth(mdmRequestDto);
@@ -379,10 +379,10 @@ public class SessionContext {
 		AuthenticationService authService = applicationContext.getBean(AuthenticationService.class);
 
 		MDMRequestDto mdmRequestDto = new MDMRequestDto(RegistrationConstants.IRIS_DOUBLE, null, "Registration",
-				io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
-				io.github.tf-govstack.registration.context.ApplicationContext
+				io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
+				io.mosip.registration.context.ApplicationContext
 						.getIntValueFromApplicationMap(RegistrationConstants.CAPTURE_TIME_OUT),
-				2, io.github.tf-govstack.registration.context.ApplicationContext
+				2, io.mosip.registration.context.ApplicationContext
 						.getIntValueFromApplicationMap(RegistrationConstants.IRIS_AUTHENTICATION_THRESHOLD));
 
 		List<BiometricsDto> biometrics = bioService.captureModalityForAuth(mdmRequestDto);
@@ -421,9 +421,9 @@ public class SessionContext {
 		BioService bioService = applicationContext.getBean(BioService.class);
 		AuthenticationService authService = applicationContext.getBean(AuthenticationService.class);
 		
-		MDMRequestDto mdmRequestDto = new MDMRequestDto(RegistrationConstants.FACE_FULLFACE, null, "Registration", io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
-				io.github.tf-govstack.registration.context.ApplicationContext
-				.getIntValueFromApplicationMap(RegistrationConstants.CAPTURE_TIME_OUT), 1, io.github.tf-govstack.registration.context.ApplicationContext
+		MDMRequestDto mdmRequestDto = new MDMRequestDto(RegistrationConstants.FACE_FULLFACE, null, "Registration", io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE), 
+				io.mosip.registration.context.ApplicationContext
+				.getIntValueFromApplicationMap(RegistrationConstants.CAPTURE_TIME_OUT), 1, io.mosip.registration.context.ApplicationContext
 				.getIntValueFromApplicationMap(RegistrationConstants.FACE_AUTHENTICATION_THRESHOLD));
 		
 		List<BiometricsDto> biometrics = bioService.captureModalityForAuth(mdmRequestDto);
@@ -499,10 +499,10 @@ public class SessionContext {
 	 */
 	private static void updateSessionContext(UserDTO userDTO, List<String> roleList) {
 
-		long refreshedLoginTime = Long.parseLong(String.valueOf(io.github.tf-govstack.registration.context.ApplicationContext.map()
+		long refreshedLoginTime = Long.parseLong(String.valueOf(io.mosip.registration.context.ApplicationContext.map()
 				.get(RegistrationConstants.REFRESHED_LOGIN_TIME)));
 		long idealTime = Long.parseLong(String
-				.valueOf(io.github.tf-govstack.registration.context.ApplicationContext.map()
+				.valueOf(io.mosip.registration.context.ApplicationContext.map()
 						.getOrDefault(RegistrationConstants.IDLE_TIME, "900")));
 
 		sessionContext.setLoginTime(new Date());
@@ -517,7 +517,7 @@ public class SessionContext {
 
 		userContext.setRegistrationCenterDetailDTO(
 				loginService.getRegistrationCenterDetails(userDTO.getRegCenterId(),
-						io.github.tf-govstack.registration.context.ApplicationContext.applicationLanguage()));
+						io.mosip.registration.context.ApplicationContext.applicationLanguage()));
 		userContext.setAuthorizationDTO(loginService.getScreenAuthorizationDetails(roleList));
 		userContext.setUserMap(new HashMap<String, Object>());
 	}

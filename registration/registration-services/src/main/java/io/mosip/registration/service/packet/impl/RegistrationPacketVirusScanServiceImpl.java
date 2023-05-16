@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.service.packet.impl;
+package io.mosip.registration.service.packet.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,19 +13,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.kernel.core.virusscanner.exception.VirusScannerException;
-import io.github.tf-govstack.kernel.core.virusscanner.spi.VirusScanner;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.packet.RegistrationPacketVirusScanService;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.kernel.core.virusscanner.exception.VirusScannerException;
+import io.mosip.kernel.core.virusscanner.spi.VirusScanner;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dto.ErrorResponseDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.packet.RegistrationPacketVirusScanService;
 
 /**
  * Implementation class for {@link RegistrationPacketVirusScanService}
@@ -47,7 +47,7 @@ public class RegistrationPacketVirusScanServiceImpl extends BaseService implemen
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.service.packet.impl.RegistrationPacketVirusScanService#
+	 * io.mosip.registration.service.packet.impl.RegistrationPacketVirusScanService#
 	 * scanPacket()
 	 */
 	@Override

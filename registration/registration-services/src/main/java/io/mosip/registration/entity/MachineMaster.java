@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
-import io.github.tf-govstack.registration.entity.id.RegMachineSpecId;
+import io.mosip.registration.entity.id.RegMachineSpecId;
 
 /**
  * This Entity Class conatins list of machine related data[mac address, serial number, machine name...] 

@@ -4,7 +4,7 @@ package registrationtest.pages;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
+import io.mosip.registration.dto.mastersync.GenericDto;
 
 
 import org.testfx.api.FxRobot;

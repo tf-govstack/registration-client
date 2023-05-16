@@ -1,24 +1,24 @@
-package io.github.tf-govstack.registration.mdm.service.impl;
+package io.mosip.registration.mdm.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.kernel.signature.constant.SignatureConstant;
-import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyRequestDto;
-import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyResponseDto;
-import io.github.tf-govstack.kernel.signature.service.SignatureService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.exception.DeviceException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.mdm.dto.DeviceInfo;
-import io.github.tf-govstack.registration.mdm.dto.MDMError;
-import io.github.tf-govstack.registration.mdm.dto.MdmDeviceInfo;
-import io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfoWrapper;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.kernel.signature.constant.SignatureConstant;
+import io.mosip.kernel.signature.dto.JWTSignatureVerifyRequestDto;
+import io.mosip.kernel.signature.dto.JWTSignatureVerifyResponseDto;
+import io.mosip.kernel.signature.service.SignatureService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.exception.DeviceException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.mdm.dto.DeviceInfo;
+import io.mosip.registration.mdm.dto.MDMError;
+import io.mosip.registration.mdm.dto.MdmDeviceInfo;
+import io.mosip.registration.mdm.sbi.spec_1_0.dto.response.MdmSbiDeviceInfoWrapper;
 
 import org.apache.http.Consts;
 import org.apache.http.client.config.RequestConfig;
@@ -42,8 +42,8 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 /**
  * All helper methods commons to spec implementations
@@ -106,7 +106,7 @@ public class MosipDeviceSpecificationHelper {
 		try {
 			validateJWTResponse(deviceInfo, deviceInfoTrustDomain);
 			String result = new String(CryptoUtil.decodeURLSafeBase64(getPayLoad(deviceInfo)));
-			if(classType.getName().equals("io.github.tf-govstack.registration.mdm.sbi.spec_1_0.service.impl.MosipDeviceSpecification_SBI_1_0_ProviderImpl")) {
+			if(classType.getName().equals("io.mosip.registration.mdm.sbi.spec_1_0.service.impl.MosipDeviceSpecification_SBI_1_0_ProviderImpl")) {
 				return mapper.readValue(result, MdmSbiDeviceInfoWrapper.class);
 			} else {
 				return mapper.readValue(result, MdmDeviceInfo.class);

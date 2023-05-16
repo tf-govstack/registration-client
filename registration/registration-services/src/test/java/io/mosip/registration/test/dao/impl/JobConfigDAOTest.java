@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 
 import static org.hamcrest.CoreMatchers.is;
@@ -18,11 +18,11 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.dao.impl.SyncJobConfigDAOImpl;
-import io.github.tf-govstack.registration.entity.SyncJobDef;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.repositories.JobConfigRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.dao.impl.SyncJobConfigDAOImpl;
+import io.mosip.registration.entity.SyncJobDef;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.repositories.JobConfigRepository;
 
 public class JobConfigDAOTest {
 	

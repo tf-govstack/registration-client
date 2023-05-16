@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service;
+package io.mosip.registration.test.service;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -24,24 +24,24 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.kernel.keygenerator.bouncycastle.KeyGenerator;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.UserContext;
-import io.github.tf-govstack.registration.dao.IdentitySchemaDao;
-import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
-import io.github.tf-govstack.registration.dto.schema.SchemaDto;
-import io.github.tf-govstack.registration.dto.schema.SettingsSchema;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.dto.schema.UiScreenDTO;
-import io.github.tf-govstack.registration.entity.IdentitySchema;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.repositories.IdentitySchemaRepository;
-import io.github.tf-govstack.registration.service.impl.IdentitySchemaServiceImpl;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.kernel.keygenerator.bouncycastle.KeyGenerator;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.UserContext;
+import io.mosip.registration.dao.IdentitySchemaDao;
+import io.mosip.registration.dto.schema.ProcessSpecDto;
+import io.mosip.registration.dto.schema.SchemaDto;
+import io.mosip.registration.dto.schema.SettingsSchema;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.dto.schema.UiScreenDTO;
+import io.mosip.registration.entity.IdentitySchema;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.repositories.IdentitySchemaRepository;
+import io.mosip.registration.service.impl.IdentitySchemaServiceImpl;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 
 /**
  * 

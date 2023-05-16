@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import java.sql.Timestamp;
 
@@ -7,7 +7,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import io.github.tf-govstack.registration.entity.id.ScreenDetailId;
+import io.mosip.registration.entity.id.ScreenDetailId;
 import lombok.Getter;
 import lombok.Setter;
 

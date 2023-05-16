@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.test.util.mastersync;
+package io.mosip.registration.test.util.mastersync;
 
-import static io.github.tf-govstack.registration.util.mastersync.MetaDataUtils.setCreateMetaData;
-import static io.github.tf-govstack.registration.util.mastersync.MetaDataUtils.setUpdateMetaData;
+import static io.mosip.registration.util.mastersync.MetaDataUtils.setCreateMetaData;
+import static io.mosip.registration.util.mastersync.MetaDataUtils.setUpdateMetaData;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
@@ -25,15 +25,15 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.UserContext;
-import io.github.tf-govstack.registration.dto.mastersync.LanguageDto;
-import io.github.tf-govstack.registration.entity.Language;
-import io.github.tf-govstack.registration.entity.RegistrationCommonFields;
-import io.github.tf-govstack.registration.entity.UserRole;
-import io.github.tf-govstack.registration.util.mastersync.MetaDataUtils;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.UserContext;
+import io.mosip.registration.dto.mastersync.LanguageDto;
+import io.mosip.registration.entity.Language;
+import io.mosip.registration.entity.RegistrationCommonFields;
+import io.mosip.registration.entity.UserRole;
+import io.mosip.registration.util.mastersync.MetaDataUtils;
 
 
 /**
@@ -53,7 +53,7 @@ public class MetaDataUtilsTest {
 	MetaDataUtils metaDataUtils;
 
 	@Mock
-	io.github.tf-govstack.registration.context.ApplicationContext context;
+	io.mosip.registration.context.ApplicationContext context;
 
 	@Before
 	public void setup() throws Exception {

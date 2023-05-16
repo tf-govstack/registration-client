@@ -1,20 +1,20 @@
-package io.github.tf-govstack.registration.service.impl;
+package io.mosip.registration.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
+import io.mosip.registration.dto.schema.ProcessSpecDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.dao.IdentitySchemaDao;
-import io.github.tf-govstack.registration.dto.schema.SettingsSchema;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.dto.schema.SchemaDto;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.dao.IdentitySchemaDao;
+import io.mosip.registration.dto.schema.SettingsSchema;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.dto.schema.SchemaDto;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.IdentitySchemaService;
 
 @Service
 public class IdentitySchemaServiceImpl implements IdentitySchemaService {

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="rejectionPane" styleClass="rejectionParentPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.tf-govstack.registration.controller.eodapproval.RejectionController">
+<AnchorPane fx:id="rejectionPane" styleClass="rejectionParentPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.mosip.registration.controller.eodapproval.RejectionController">
    <children>
       <AnchorPane fx:id="rejectionLabelPane" layoutX="30.0" layoutY="10.0" styleClass="rejectionPageHeader">
          <children>

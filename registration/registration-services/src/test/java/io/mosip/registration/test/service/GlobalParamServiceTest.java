@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service;
+package io.mosip.registration.test.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -29,25 +29,25 @@ import org.springframework.web.client.HttpClientErrorException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.registration.audit.AuditManagerSerivceImpl;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.UserOnboardDAO;
-import io.github.tf-govstack.registration.dao.impl.GlobalParamDAOImpl;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.entity.GlobalParam;
-import io.github.tf-govstack.registration.entity.id.GlobalParamId;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.config.impl.GlobalParamServiceImpl;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.registration.audit.AuditManagerSerivceImpl;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.UserOnboardDAO;
+import io.mosip.registration.dao.impl.GlobalParamDAOImpl;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.entity.GlobalParam;
+import io.mosip.registration.entity.id.GlobalParamId;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.config.impl.GlobalParamServiceImpl;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

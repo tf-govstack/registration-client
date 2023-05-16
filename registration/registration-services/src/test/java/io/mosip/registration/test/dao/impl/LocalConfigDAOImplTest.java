@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,13 +21,13 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.impl.LocalConfigDAOImpl;
-import io.github.tf-govstack.registration.entity.LocalPreferences;
-import io.github.tf-govstack.registration.entity.PermittedLocalConfig;
-import io.github.tf-govstack.registration.repositories.LocalPreferencesRepository;
-import io.github.tf-govstack.registration.repositories.PermittedLocalConfigRepository;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.impl.LocalConfigDAOImpl;
+import io.mosip.registration.entity.LocalPreferences;
+import io.mosip.registration.entity.PermittedLocalConfig;
+import io.mosip.registration.repositories.LocalPreferencesRepository;
+import io.mosip.registration.repositories.PermittedLocalConfigRepository;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

@@ -1,13 +1,13 @@
-package io.github.tf-govstack.registration.service.sync;
+package io.mosip.registration.service.sync;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.mastersync.*;
-import io.github.tf-govstack.registration.entity.DocumentType;
-import io.github.tf-govstack.registration.entity.Location;
-import io.github.tf-govstack.registration.entity.SyncJobDef;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.mastersync.*;
+import io.mosip.registration.entity.DocumentType;
+import io.mosip.registration.entity.Location;
+import io.mosip.registration.entity.SyncJobDef;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 /**
  * It makes call to the external 'MASTER Sync' services to download the master

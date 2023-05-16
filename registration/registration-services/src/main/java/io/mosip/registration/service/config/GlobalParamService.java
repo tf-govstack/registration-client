@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.service.config;
+package io.mosip.registration.service.config;
 
 import java.sql.Timestamp;
 import java.util.Map;
 
-import io.github.tf-govstack.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.ResponseDTO;
 
 /**
  * It interface with the external 'global' service and sync the application specific configuration data from server to local machine. 

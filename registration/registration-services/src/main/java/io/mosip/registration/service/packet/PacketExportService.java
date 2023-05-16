@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.service.packet;
+package io.mosip.registration.service.packet;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.entity.Registration;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.entity.Registration;
 
 /**
  * Service class for Exporting the Registration Packets

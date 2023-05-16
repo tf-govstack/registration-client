@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.jobs;
+package io.mosip.registration.test.jobs;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -14,11 +14,11 @@ import org.quartz.Trigger;
 import org.quartz.Trigger.CompletedExecutionInstruction;
 import org.quartz.TriggerKey;
 
-import io.github.tf-govstack.registration.entity.SyncTransaction;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.jobs.JobManager;
-import io.github.tf-govstack.registration.jobs.JobTriggerListener;
-import io.github.tf-govstack.registration.jobs.SyncManager;
+import io.mosip.registration.entity.SyncTransaction;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.jobs.JobManager;
+import io.mosip.registration.jobs.JobTriggerListener;
+import io.mosip.registration.jobs.SyncManager;
 
 public class JobTriggerTest {
 

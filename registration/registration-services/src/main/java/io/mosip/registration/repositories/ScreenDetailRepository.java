@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.entity.ScreenDetail;
-import io.github.tf-govstack.registration.entity.id.ScreenDetailId;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.entity.ScreenDetail;
+import io.mosip.registration.entity.id.ScreenDetailId;
 
 /**
  * Interface for ScreenDetailRepository

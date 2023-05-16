@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.service.packet.impl;
+package io.mosip.registration.service.packet.impl;
 
-import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_PKT_HANLDER;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
-import static io.github.tf-govstack.registration.exception.RegistrationExceptionConstants.REG_PACKET_CREATION_ERROR_CODE;
+import static io.mosip.registration.constants.LoggerConstants.LOG_PKT_HANLDER;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.exception.RegistrationExceptionConstants.REG_PACKET_CREATION_ERROR_CODE;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -17,18 +17,18 @@ import java.util.Map.Entry;
 
 import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.commons.packet.dto.PacketInfo;
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
-import io.github.tf-govstack.registration.entity.MachineMaster;
-import io.github.tf-govstack.registration.enums.FlowType;
-import io.github.tf-govstack.registration.service.config.GlobalParamService;
-import io.github.tf-govstack.registration.service.sync.MasterSyncService;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.commons.packet.dto.PacketInfo;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.registration.dto.schema.ProcessSpecDto;
+import io.mosip.registration.entity.MachineMaster;
+import io.mosip.registration.enums.FlowType;
+import io.mosip.registration.service.config.GlobalParamService;
+import io.mosip.registration.service.sync.MasterSyncService;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,53 +37,53 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.commons.packet.constants.PacketManagerConstants;
-import io.github.tf-govstack.commons.packet.dto.Document;
-import io.github.tf-govstack.commons.packet.dto.packet.DeviceMetaInfo;
-import io.github.tf-govstack.commons.packet.dto.packet.DigitalId;
-import io.github.tf-govstack.commons.packet.facade.PacketWriter;
-import io.github.tf-govstack.kernel.auditmanager.entity.Audit;
-import io.github.tf-govstack.kernel.biometrics.entities.BIR;
-import io.github.tf-govstack.kernel.biometrics.entities.BiometricRecord;
-import io.github.tf-govstack.kernel.core.idgenerator.spi.RidGenerator;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.idgenerator.rid.constant.RidGeneratorPropertyConstant;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.AuditDAO;
-import io.github.tf-govstack.registration.dao.MachineMappingDAO;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
-import io.github.tf-govstack.registration.dto.OSIDataDTO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.dto.RegistrationCenterDetailDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationMetaDataDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
-import io.github.tf-govstack.registration.dto.packetmanager.metadata.BiometricsMetaInfoDto;
-import io.github.tf-govstack.registration.dto.packetmanager.metadata.DocumentMetaInfoDTO;
-import io.github.tf-govstack.registration.dto.schema.SchemaDto;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
-import io.github.tf-govstack.registration.service.bio.BioService;
-import io.github.tf-govstack.registration.service.packet.PacketHandlerService;
-import io.github.tf-govstack.registration.update.SoftwareUpdateHandler;
-import io.github.tf-govstack.registration.util.common.BIRBuilder;
-import io.github.tf-govstack.kernel.biometrics.constant.OtherKey;
+import io.mosip.commons.packet.constants.PacketManagerConstants;
+import io.mosip.commons.packet.dto.Document;
+import io.mosip.commons.packet.dto.packet.DeviceMetaInfo;
+import io.mosip.commons.packet.dto.packet.DigitalId;
+import io.mosip.commons.packet.facade.PacketWriter;
+import io.mosip.kernel.auditmanager.entity.Audit;
+import io.mosip.kernel.biometrics.entities.BIR;
+import io.mosip.kernel.biometrics.entities.BiometricRecord;
+import io.mosip.kernel.core.idgenerator.spi.RidGenerator;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.idgenerator.rid.constant.RidGeneratorPropertyConstant;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.AuditReferenceIdTypes;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.AuditDAO;
+import io.mosip.registration.dao.MachineMappingDAO;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.ErrorResponseDTO;
+import io.mosip.registration.dto.OSIDataDTO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.dto.RegistrationCenterDetailDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.RegistrationMetaDataDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.dto.packetmanager.DocumentDto;
+import io.mosip.registration.dto.packetmanager.metadata.BiometricsMetaInfoDto;
+import io.mosip.registration.dto.packetmanager.metadata.DocumentMetaInfoDTO;
+import io.mosip.registration.dto.schema.SchemaDto;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.mdm.service.impl.MosipDeviceSpecificationFactory;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.IdentitySchemaService;
+import io.mosip.registration.service.bio.BioService;
+import io.mosip.registration.service.packet.PacketHandlerService;
+import io.mosip.registration.update.SoftwareUpdateHandler;
+import io.mosip.registration.util.common.BIRBuilder;
+import io.mosip.kernel.biometrics.constant.OtherKey;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
@@ -167,7 +167,7 @@ public class PacketHandlerServiceImpl extends BaseService implements PacketHandl
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.service.packet.PacketHandlerService#handle(io.github.tf-govstack.
+	 * io.mosip.registration.service.packet.PacketHandlerService#handle(io.mosip.
 	 * registration.dto.RegistrationDTO)
 	 */
 	@Counted
@@ -639,7 +639,7 @@ public class PacketHandlerServiceImpl extends BaseService implements PacketHandl
 
 	@Override
 	public void createAcknowledgmentReceipt(@NonNull String packetId, byte[] content, String format)
-			throws io.github.tf-govstack.kernel.core.exception.IOException {
+			throws io.mosip.kernel.core.exception.IOException {
 		LOGGER.debug("Starting to create Registration ack receipt : {}", packetId);
 		byte[] signature = clientCryptoFacade.getClientSecurity().signData(content);
 		byte[] key = clientCryptoFacade.getClientSecurity().getEncryptionPublicPart();
@@ -650,7 +650,7 @@ public class PacketHandlerServiceImpl extends BaseService implements PacketHandl
 
 
 	public String getAcknowledgmentReceipt(@NonNull String packetId, @NonNull String filepath)
-			throws RegBaseCheckedException, io.github.tf-govstack.kernel.core.exception.IOException {
+			throws RegBaseCheckedException, io.mosip.kernel.core.exception.IOException {
 		Registration registration = registrationDAO.getRegistrationByPacketId(packetId);
 
 		//handling backward compatibility for existing pre-LTS packets receipt
@@ -661,7 +661,7 @@ public class PacketHandlerServiceImpl extends BaseService implements PacketHandl
 						FileUtils.readFileToByteArray(new File(filepath)),
 						RegistrationConstants.ACKNOWLEDGEMENT_FORMAT);
 				registration = registrationDAO.getRegistrationByPacketId(packetId);
-			} catch (io.github.tf-govstack.kernel.core.exception.IOException  ex) {
+			} catch (io.mosip.kernel.core.exception.IOException  ex) {
 				LOGGER.error("Failed to sign and encrypt existing ack receipt : {}", packetId, ex);
 			}
 		}

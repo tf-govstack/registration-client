@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.notificationservice;
+package io.mosip.registration.test.notificationservice;
 
 import static org.mockito.Mockito.doNothing;
 
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.mosip.registration.exception.ConnectionException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -26,16 +26,16 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.ResourceAccessException;
 
-import io.github.tf-govstack.registration.audit.AuditManagerSerivceImpl;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.UserContext;
-import io.github.tf-govstack.registration.dto.NotificationDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.template.impl.NotificationServiceImpl;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.registration.audit.AuditManagerSerivceImpl;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.UserContext;
+import io.mosip.registration.dto.NotificationDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.template.impl.NotificationServiceImpl;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

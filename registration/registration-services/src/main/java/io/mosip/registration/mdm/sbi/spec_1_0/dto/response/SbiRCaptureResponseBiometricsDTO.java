@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.mdm.sbi.spec_1_0.dto.response;
+package io.mosip.registration.mdm.sbi.spec_1_0.dto.response;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.mdm.spec_0_9_2.dto.response;
+package io.mosip.registration.mdm.spec_0_9_2.dto.response;
 
 import java.util.List;
 

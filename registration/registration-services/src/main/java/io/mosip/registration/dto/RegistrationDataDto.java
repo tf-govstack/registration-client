@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dto;
+package io.mosip.registration.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

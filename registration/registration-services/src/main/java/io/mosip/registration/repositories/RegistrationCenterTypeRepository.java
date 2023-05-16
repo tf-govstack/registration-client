@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.entity.RegistrationCenterType;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.entity.RegistrationCenterType;
 
 /**
  * Interface for RegistrationCenterType Repository.

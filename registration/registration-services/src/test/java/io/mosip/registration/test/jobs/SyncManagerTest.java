@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.jobs;
+package io.mosip.registration.test.jobs;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -11,11 +11,11 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.dao.*;
-import io.github.tf-govstack.registration.entity.*;
-import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
-import io.github.tf-govstack.registration.service.BaseService;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.dao.*;
+import io.mosip.registration.entity.*;
+import io.mosip.registration.repositories.MachineMasterRepository;
+import io.mosip.registration.service.BaseService;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -39,16 +39,16 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dto.response.SyncDataResponseDto;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.jobs.impl.SyncManagerImpl;
-import io.github.tf-govstack.registration.repositories.SyncTransactionRepository;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dto.response.SyncDataResponseDto;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.jobs.impl.SyncManagerImpl;
+import io.mosip.registration.repositories.SyncTransactionRepository;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})
-@PrepareForTest({io.github.tf-govstack.registration.context.ApplicationContext.class})
+@PrepareForTest({io.mosip.registration.context.ApplicationContext.class})
 public class SyncManagerTest {
 
 	@Mock
@@ -128,9 +128,9 @@ public class SyncManagerTest {
 			jobMap.put(job.getId(), job);
 		});
 
-		PowerMockito.mockStatic(io.github.tf-govstack.registration.context.ApplicationContext.class);
+		PowerMockito.mockStatic(io.mosip.registration.context.ApplicationContext.class);
 		applicationMap.put(RegistrationConstants.REG_DELETION_CONFIGURED_DAYS, "5");
-		io.github.tf-govstack.registration.context.ApplicationContext.setApplicationMap(applicationMap);
+		io.mosip.registration.context.ApplicationContext.setApplicationMap(applicationMap);
 
 		Mockito.when(baseService.getCenterId()).thenReturn("10011");
 		Mockito.when(baseService.getStationId()).thenReturn("11002");

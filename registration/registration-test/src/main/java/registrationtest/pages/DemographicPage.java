@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.TreeMap;
 
-import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
+import io.mosip.registration.dto.mastersync.GenericDto;
 
 import org.testfx.api.FxRobot;
 

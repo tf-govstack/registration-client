@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.util.advice;
+package io.mosip.registration.test.util.advice;
 
 import static org.mockito.Mockito.times;
 
@@ -21,16 +21,16 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.SecurityContext;
-import io.github.tf-govstack.registration.dto.LoginUserDTO;
-import io.github.tf-govstack.registration.dto.UserDTO;
-import io.github.tf-govstack.registration.dto.UserRoleDTO;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.login.LoginService;
-import io.github.tf-govstack.registration.util.advice.AuthenticationAdvice;
-import io.github.tf-govstack.registration.util.advice.PreAuthorizeUserId;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.SecurityContext;
+import io.mosip.registration.dto.LoginUserDTO;
+import io.mosip.registration.dto.UserDTO;
+import io.mosip.registration.dto.UserRoleDTO;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.login.LoginService;
+import io.mosip.registration.util.advice.AuthenticationAdvice;
+import io.mosip.registration.util.advice.PreAuthorizeUserId;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

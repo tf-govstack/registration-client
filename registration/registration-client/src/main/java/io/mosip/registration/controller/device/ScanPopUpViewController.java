@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.controller.device;
+package io.mosip.registration.controller.device;
 
-import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_IRIS_CAPTURE_CONTROLLER;
-import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_SCAN_CONTROLLER;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.LoggerConstants.LOG_REG_IRIS_CAPTURE_CONTROLLER;
+import static io.mosip.registration.constants.LoggerConstants.LOG_REG_SCAN_CONTROLLER;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -11,10 +11,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import io.github.tf-govstack.registration.api.docscanner.DocScannerFacade;
-import io.github.tf-govstack.registration.api.docscanner.DocScannerUtil;
-import io.github.tf-govstack.registration.api.docscanner.dto.DocScanDevice;
-import io.github.tf-govstack.registration.util.common.RectangleSelection;
+import io.mosip.registration.api.docscanner.DocScannerFacade;
+import io.mosip.registration.api.docscanner.DocScannerUtil;
+import io.mosip.registration.api.docscanner.dto.DocScanDevice;
+import io.mosip.registration.util.common.RectangleSelection;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.property.DoubleProperty;
@@ -28,14 +28,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.controller.BaseController;
-import io.github.tf-govstack.registration.controller.reg.DocumentScanController;
-import io.github.tf-govstack.registration.util.control.FxControl;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.constants.RegistrationUIConstants;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.controller.BaseController;
+import io.mosip.registration.controller.reg.DocumentScanController;
+import io.mosip.registration.util.control.FxControl;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

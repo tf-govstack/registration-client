@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.util.restclient;
+package io.mosip.registration.test.util.restclient;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -24,21 +24,21 @@ import org.springframework.retry.ExhaustedRetryException;
 import org.springframework.retry.RetryCallback;
 import org.springframework.retry.support.RetryTemplate;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.service.spi.ClientCryptoService;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.UserDetailDAO;
-import io.github.tf-govstack.registration.dto.LoginUserDTO;
-import io.github.tf-govstack.registration.entity.UserToken;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.repositories.UserTokenRepository;
-import io.github.tf-govstack.registration.util.restclient.AuthTokenUtilService;
-import io.github.tf-govstack.registration.util.restclient.RestClientUtil;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.service.spi.ClientCryptoService;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.UserDetailDAO;
+import io.mosip.registration.dto.LoginUserDTO;
+import io.mosip.registration.entity.UserToken;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.repositories.UserTokenRepository;
+import io.mosip.registration.util.restclient.AuthTokenUtilService;
+import io.mosip.registration.util.restclient.RestClientUtil;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

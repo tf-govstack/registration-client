@@ -1,30 +1,30 @@
-package io.github.tf-govstack.registration.util.common;
+package io.mosip.registration.util.common;
 
-import static io.github.tf-govstack.registration.constants.LoggerConstants.BIO_SERVICE;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.LoggerConstants.BIO_SERVICE;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
 
-import io.github.tf-govstack.kernel.biometrics.entities.*;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.kernel.biometrics.entities.*;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.commons.packet.constants.Biometric;
-import io.github.tf-govstack.commons.packet.constants.PacketManagerConstants;
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricType;
-import io.github.tf-govstack.kernel.biometrics.constant.ProcessedLevelType;
-import io.github.tf-govstack.kernel.biometrics.constant.PurposeType;
-import io.github.tf-govstack.kernel.biometrics.constant.QualityType;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.StringUtils;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.kernel.biometrics.constant.OtherKey;
+import io.mosip.commons.packet.constants.Biometric;
+import io.mosip.commons.packet.constants.PacketManagerConstants;
+import io.mosip.kernel.biometrics.constant.BiometricType;
+import io.mosip.kernel.biometrics.constant.ProcessedLevelType;
+import io.mosip.kernel.biometrics.constant.PurposeType;
+import io.mosip.kernel.biometrics.constant.QualityType;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.StringUtils;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.kernel.biometrics.constant.OtherKey;
 
 @Component
 public class BIRBuilder {

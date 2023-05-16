@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
-import io.github.tf-govstack.registration.dto.RegistrationCenterDetailDTO;
-import io.github.tf-govstack.registration.entity.RegistrationCenter;
+import io.mosip.registration.dto.RegistrationCenterDetailDTO;
+import io.mosip.registration.entity.RegistrationCenter;
 
 /**
  * This class is used to get the Registration Center details from {@link RegistrationCenter} 

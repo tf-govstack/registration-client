@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.metrics;
+package io.mosip.registration.metrics;
 
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;

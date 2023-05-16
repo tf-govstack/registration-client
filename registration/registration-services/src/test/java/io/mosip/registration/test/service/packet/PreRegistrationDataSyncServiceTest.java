@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service.packet;
+package io.mosip.registration.test.service.packet;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -38,33 +38,33 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.web.client.HttpClientErrorException;
 
-import io.github.tf-govstack.kernel.core.exception.IOException;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.UserContext;
-import io.github.tf-govstack.registration.dao.PreRegistrationDataSyncDAO;
-import io.github.tf-govstack.registration.dao.impl.RegistrationCenterDAOImpl;
-import io.github.tf-govstack.registration.dto.PreRegistrationDTO;
-import io.github.tf-govstack.registration.dto.PreRegistrationExceptionJSONInfoDTO;
-import io.github.tf-govstack.registration.dto.RegistrationCenterDetailDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.entity.MachineMaster;
-import io.github.tf-govstack.registration.entity.PreRegistrationList;
-import io.github.tf-govstack.registration.entity.SyncTransaction;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.jobs.SyncManager;
-import io.github.tf-govstack.registration.repositories.MachineMasterRepository;
-import io.github.tf-govstack.registration.service.external.PreRegZipHandlingService;
-import io.github.tf-govstack.registration.service.operator.UserDetailService;
-import io.github.tf-govstack.registration.service.remap.CenterMachineReMapService;
-import io.github.tf-govstack.registration.service.sync.impl.PreRegistrationDataSyncServiceImpl;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.core.exception.IOException;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.UserContext;
+import io.mosip.registration.dao.PreRegistrationDataSyncDAO;
+import io.mosip.registration.dao.impl.RegistrationCenterDAOImpl;
+import io.mosip.registration.dto.PreRegistrationDTO;
+import io.mosip.registration.dto.PreRegistrationExceptionJSONInfoDTO;
+import io.mosip.registration.dto.RegistrationCenterDetailDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.entity.MachineMaster;
+import io.mosip.registration.entity.PreRegistrationList;
+import io.mosip.registration.entity.SyncTransaction;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.jobs.SyncManager;
+import io.mosip.registration.repositories.MachineMasterRepository;
+import io.mosip.registration.service.external.PreRegZipHandlingService;
+import io.mosip.registration.service.operator.UserDetailService;
+import io.mosip.registration.service.remap.CenterMachineReMapService;
+import io.mosip.registration.service.sync.impl.PreRegistrationDataSyncServiceImpl;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.registration.util.healthcheck.RegistrationSystemPropertiesChecker;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

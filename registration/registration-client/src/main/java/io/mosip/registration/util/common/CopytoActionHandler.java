@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.util.common;
+package io.mosip.registration.util.common;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.mosip.registration.constants.RegistrationConstants;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;

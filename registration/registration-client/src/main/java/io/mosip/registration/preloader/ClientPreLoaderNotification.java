@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.preloader;
+package io.mosip.registration.preloader;
 
 import javafx.application.Preloader;
 

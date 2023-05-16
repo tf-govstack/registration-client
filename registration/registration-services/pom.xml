@@ -4,7 +4,7 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>io.github.tf-govstack.registration</groupId>
+		<groupId>io.mosip.registration</groupId>
 		<artifactId>registration-client-parent</artifactId>
 		<version>1.2.0.1-B1</version>
 	</parent>
@@ -78,7 +78,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-core</artifactId>
 			<exclusions>
 				<exclusion>
@@ -106,67 +106,67 @@
 					<artifactId>spring-boot-starter-actuator</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-idgenerator-rid</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-idgenerator-prid</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-idvalidator-rid</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-idvalidator-uin</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-idvalidator-vid</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-idvalidator-prid</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
@@ -196,7 +196,7 @@
 			<artifactId>derbytools</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-logger-logback</artifactId>
 			<exclusions>
 				<exclusion>
@@ -207,31 +207,31 @@
 			<version>${mosip.core.kernel.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-dataaccess-hibernate</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-auditmanager-api</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-qrcodegenerator-zxing</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
@@ -279,7 +279,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-templatemanager-velocity</artifactId>
 			<exclusions>
 				<exclusion>
@@ -291,7 +291,7 @@
 					<artifactId>dom4j</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
@@ -318,11 +318,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-idobjectvalidator</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
@@ -330,11 +330,11 @@
 
 		<dependency>
 			<artifactId>kernel-biosdk-provider</artifactId>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<version>${mosip.core.kernel.version}</version>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 				<exclusion>
@@ -349,7 +349,7 @@
 			<version>2.3.1</version>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.commons</groupId>
+			<groupId>io.mosip.commons</groupId>
 			<artifactId>commons-packet-manager</artifactId>
 			<version>${mosip.core.kernel.version}</version>
 			<exclusions>
@@ -362,22 +362,22 @@
 					<artifactId>vertx-web</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-auth-adapter</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>io.github.tf-govstack.kernel</groupId>
+			<groupId>io.mosip.kernel</groupId>
 			<artifactId>kernel-biometrics-api</artifactId>
 			<version>1.2.0.1-B2-SNAPSHOT</version>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
@@ -409,30 +409,30 @@
 		</dependency>
 
 		<dependency>
-			<groupId>io.github.tf-govstack.registration</groupId>
+			<groupId>io.mosip.registration</groupId>
 			<artifactId>registration-api</artifactId>
 			<version>${mosip.core.kernel.version}</version>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 
 		<dependency>
-			<groupId>io.github.tf-govstack.registration</groupId>
+			<groupId>io.mosip.registration</groupId>
 			<artifactId>registration-api-stub-impl</artifactId>
 			<version>${mosip.core.kernel.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>io.github.tf-govstack.biometric.util</groupId>
+			<groupId>io.mosip.biometric.util</groupId>
 			<artifactId>biometrics-util</artifactId>
 			<version>${mosip.biometric.util.version}</version>
 			<exclusions>
 				<exclusion>
-					<groupId>io.github.tf-govstack.kernel</groupId>
+					<groupId>io.mosip.kernel</groupId>
 					<artifactId>kernel-logger-logback</artifactId>
 				</exclusion>
 				<exclusion>

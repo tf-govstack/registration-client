@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.test.util.mastersync;
+package io.mosip.registration.test.util.mastersync;
 
-import static io.github.tf-govstack.registration.util.mastersync.MapperUtils.map;
-import static io.github.tf-govstack.registration.util.mastersync.MetaDataUtils.setCreateMetaData;
-import static io.github.tf-govstack.registration.util.mastersync.MetaDataUtils.setUpdateMetaData;
+import static io.mosip.registration.util.mastersync.MapperUtils.map;
+import static io.mosip.registration.util.mastersync.MetaDataUtils.setCreateMetaData;
+import static io.mosip.registration.util.mastersync.MetaDataUtils.setUpdateMetaData;
 import static org.junit.Assert.assertTrue;
 
 import java.sql.Timestamp;
@@ -17,10 +17,10 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.context.SessionContext.UserContext;
-import io.github.tf-govstack.registration.dto.mastersync.LanguageDto;
-import io.github.tf-govstack.registration.entity.Language;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.context.SessionContext.UserContext;
+import io.mosip.registration.dto.mastersync.LanguageDto;
+import io.mosip.registration.entity.Language;
 
 /**
  * 

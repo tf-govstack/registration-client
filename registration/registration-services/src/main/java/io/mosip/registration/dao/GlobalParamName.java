@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
-import io.github.tf-govstack.registration.entity.GlobalParam;
+import io.mosip.registration.entity.GlobalParam;
 
 /**
  * This class is used to fetch only specified columns from {@link GlobalParam} table

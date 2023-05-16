@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.util.healthcheck;
+package io.mosip.registration.util.healthcheck;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,15 +19,15 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.virusscanner.spi.VirusScanner;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.config.DaoConfig;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.util.restclient.RestClientUtil;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.virusscanner.spi.VirusScanner;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.config.DaoConfig;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.util.restclient.RestClientUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import oshi.SystemInfo;

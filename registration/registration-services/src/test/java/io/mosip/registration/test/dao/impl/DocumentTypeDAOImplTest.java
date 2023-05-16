@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -14,10 +14,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.impl.DocumentTypeDAOImpl;
-import io.github.tf-govstack.registration.entity.DocumentType;
-import io.github.tf-govstack.registration.entity.id.GenericId;
-import io.github.tf-govstack.registration.repositories.DocumentTypeRepository;
+import io.mosip.registration.dao.impl.DocumentTypeDAOImpl;
+import io.mosip.registration.entity.DocumentType;
+import io.mosip.registration.entity.id.GenericId;
+import io.mosip.registration.repositories.DocumentTypeRepository;
 
 public class DocumentTypeDAOImplTest {
 	@Rule

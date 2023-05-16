@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dto.schema;
+package io.mosip.registration.dto.schema;
 
 import java.util.HashMap;
 import java.util.List;

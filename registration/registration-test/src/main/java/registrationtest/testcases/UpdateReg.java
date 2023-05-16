@@ -12,7 +12,7 @@ import org.testfx.api.FxRobotContext;
 
 import com.aventstack.extentreports.Status;
 
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
+import io.mosip.registration.dao.RegistrationDAO;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

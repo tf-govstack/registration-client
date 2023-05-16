@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.service.packet.impl;
+package io.mosip.registration.service.packet.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,16 +10,16 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.packet.ReRegistrationService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.packet.ReRegistrationService;
 
 /**
  * Implementation class for {@link ReRegistrationService}
@@ -42,7 +42,7 @@ public class ReRegistrationServiceImpl extends BaseService implements ReRegistra
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.impl.ReRegistrationService#
+	 * @see io.mosip.registration.service.impl.ReRegistrationService#
 	 * getAllReRegistrationPackets()
 	 */
 	@Override
@@ -69,7 +69,7 @@ public class ReRegistrationServiceImpl extends BaseService implements ReRegistra
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.impl.ReRegistrationService#
+	 * @see io.mosip.registration.service.impl.ReRegistrationService#
 	 * updateReRegistrationStatus(java.util.Map)
 	 */
 	@Override

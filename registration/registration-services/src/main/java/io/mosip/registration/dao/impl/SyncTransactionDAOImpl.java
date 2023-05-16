@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.dao.impl;
+package io.mosip.registration.dao.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -9,12 +9,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dao.SyncTransactionDAO;
-import io.github.tf-govstack.registration.entity.SyncTransaction;
-import io.github.tf-govstack.registration.repositories.SyncTransactionRepository;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dao.SyncTransactionDAO;
+import io.mosip.registration.entity.SyncTransaction;
+import io.mosip.registration.repositories.SyncTransactionRepository;
 
 /**
  * implementation class of {@link SyncTransactionDAO}
@@ -38,7 +38,7 @@ public class SyncTransactionDAOImpl implements SyncTransactionDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.JobTransactionDAO#save(io.github.tf-govstack.registration.entity
+	 * io.mosip.registration.dao.JobTransactionDAO#save(io.mosip.registration.entity
 	 * .SyncTransaction)
 	 */
 	@Override
@@ -53,7 +53,7 @@ public class SyncTransactionDAOImpl implements SyncTransactionDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.dao.SyncJobTransactionDAO#getAll()
+	 * @see io.mosip.registration.dao.SyncJobTransactionDAO#getAll()
 	 */
 	@Override
 	public List<SyncTransaction> getAll() {
@@ -66,7 +66,7 @@ public class SyncTransactionDAOImpl implements SyncTransactionDAO {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.dao.SyncTransactionDAO#getSyncTransactions(java.sql.
+	 * io.mosip.registration.dao.SyncTransactionDAO#getSyncTransactions(java.sql.
 	 * Timestamp, java.lang.String)
 	 */
 	@Override
@@ -77,7 +77,7 @@ public class SyncTransactionDAOImpl implements SyncTransactionDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see io.github.tf-govstack.registration.dao.SyncTransactionDAO#getAll(java.lang.String, java.sql.Timestamp, java.sql.Timestamp)
+	 * @see io.mosip.registration.dao.SyncTransactionDAO#getAll(java.lang.String, java.sql.Timestamp, java.sql.Timestamp)
 	 */
 	@Override
 	public List<SyncTransaction> getAll(String syncJobId, Timestamp previousFiredTime, Timestamp currentFiredTime) {

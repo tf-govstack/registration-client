@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.service.packet.impl;
+package io.mosip.registration.service.packet.impl;
 
 
 import java.io.File;
@@ -28,25 +28,25 @@ import org.springframework.retry.support.RetryTemplate;
 import org.springframework.retry.support.RetryTemplateBuilder;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.commons.packet.spi.IPacketCryptoService;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationClientStatusCode;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.RegPacketStatusDAO;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.PacketStatusReaderDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.repositories.RegistrationRepository;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.packet.RegPacketStatusService;
+import io.mosip.commons.packet.spi.IPacketCryptoService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationClientStatusCode;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.RegPacketStatusDAO;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.PacketStatusReaderDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.repositories.RegistrationRepository;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.packet.RegPacketStatusService;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 
@@ -101,7 +101,7 @@ public class RegPacketStatusServiceImpl extends BaseService implements RegPacket
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.packet.RegPacketStatusService#
+	 * @see io.mosip.registration.service.packet.RegPacketStatusService#
 	 * deleteRegistrationPackets()
 	 */
 	@Override
@@ -137,7 +137,7 @@ public class RegPacketStatusServiceImpl extends BaseService implements RegPacket
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.packet.RegPacketStatusService#
+	 * @see io.mosip.registration.service.packet.RegPacketStatusService#
 	 * deleteAllProcessedRegPackets()
 	 */
 	@Override
@@ -254,7 +254,7 @@ public class RegPacketStatusServiceImpl extends BaseService implements RegPacket
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.service.packet.RegPacketStatusService#packetSyncStatus(
+	 * io.mosip.registration.service.packet.RegPacketStatusService#packetSyncStatus(
 	 * java.lang.String)
 	 */
 	public synchronized ResponseDTO syncServerPacketStatus(@NonNull String triggerPoint) throws RegBaseCheckedException,
@@ -352,7 +352,7 @@ public class RegPacketStatusServiceImpl extends BaseService implements RegPacket
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.packet.RegPacketStatusService#
+	 * @see io.mosip.registration.service.packet.RegPacketStatusService#
 	 * deleteRegistrations(java.util.List)
 	 */
 	@Override

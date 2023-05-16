@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.config;
+package io.mosip.registration.config;
 
 import io.micrometer.core.instrument.Clock;
 import io.micrometer.core.instrument.Measurement;

@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dto.mastersync;
+package io.mosip.registration.dto.mastersync;
 
 /**
  * Class that holds the variables of each registration center type list data to

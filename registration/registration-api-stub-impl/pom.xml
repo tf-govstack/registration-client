@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.tf-govstack.registration</groupId>
+    <groupId>io.mosip.registration</groupId>
     <artifactId>registration-api-stub-impl</artifactId>
     <version>1.2.0.1-B1</version>
 
@@ -32,7 +32,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.github.tf-govstack.kernel</groupId>
+            <groupId>io.mosip.kernel</groupId>
             <artifactId>kernel-logger-logback</artifactId>
             <version>${mosip.core.kernel.version}</version>
             <scope>compile</scope>
@@ -45,7 +45,7 @@
         </dependency>
 
         <dependency>
-            <groupId>io.github.tf-govstack.registration</groupId>
+            <groupId>io.mosip.registration</groupId>
             <artifactId>registration-api</artifactId>
             <version>${mosip.registration.api.version}</version>
              <scope>compile</scope>
@@ -107,9 +107,9 @@
                  </plugins>
         </build>
 		<scm>
-                <connection>scm:git:git://github.com/tf-govstack/registration-client.git</connection>
-                <developerConnection>scm:git:ssh://github.com:tf-govstack/registration-client.git</developerConnection>
-                <url>https://github.com/tf-govstack/registration-client</url>
+                <connection>scm:git:git://github.com/mosip/registration-client.git</connection>
+                <developerConnection>scm:git:ssh://github.com:mosip/registration-client.git</developerConnection>
+                <url>https://github.com/mosip/registration-client</url>
                 <tag>HEAD</tag>
         </scm>
 		<licenses>
@@ -122,8 +122,8 @@
                 <developer>
                   <name>Mosip</name>
                   <email>mosip.emailnotifier@gmail.com</email>
-                  <organization>io.github.tf-govstack</organization>
-                  <organizationUrl>https://github.com/tf-govstack/registration-client</organizationUrl>
+                  <organization>io.mosip</organization>
+                  <organizationUrl>https://github.com/mosip/registration-client</organizationUrl>
                 </developer>
         </developers>
 		<name>Registration-api-stub-impl</name>

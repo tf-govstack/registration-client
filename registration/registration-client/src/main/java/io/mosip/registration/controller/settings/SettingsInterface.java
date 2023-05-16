@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.controller.settings;
+package io.mosip.registration.controller.settings;
 
 import org.springframework.stereotype.Component;
 

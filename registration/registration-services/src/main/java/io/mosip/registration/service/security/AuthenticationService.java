@@ -1,12 +1,12 @@
-package io.github.tf-govstack.registration.service.security;
+package io.mosip.registration.service.security;
 
 import java.util.List;
 
-import io.github.tf-govstack.kernel.logger.logback.util.MetricTag;
-import io.github.tf-govstack.registration.dto.AuthTokenDTO;
-import io.github.tf-govstack.registration.dto.AuthenticationValidatorDTO;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.kernel.logger.logback.util.MetricTag;
+import io.mosip.registration.dto.AuthTokenDTO;
+import io.mosip.registration.dto.AuthenticationValidatorDTO;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 public interface AuthenticationService {
 

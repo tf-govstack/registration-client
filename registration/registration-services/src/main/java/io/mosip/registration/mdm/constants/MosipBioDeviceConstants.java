@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.mdm.constants;
+package io.mosip.registration.mdm.constants;
 
 /**
  * 

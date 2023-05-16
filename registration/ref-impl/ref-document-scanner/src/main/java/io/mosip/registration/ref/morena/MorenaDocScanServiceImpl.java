@@ -1,12 +1,12 @@
-package io.github.tf-govstack.registration.ref.morena;
+package io.mosip.registration.ref.morena;
 
 import eu.gnome.morena.Camera;
 import eu.gnome.morena.Device;
 import eu.gnome.morena.Manager;
 import eu.gnome.morena.Scanner;
-import io.github.tf-govstack.registration.api.docscanner.DeviceType;
-import io.github.tf-govstack.registration.api.docscanner.DocScannerService;
-import io.github.tf-govstack.registration.api.docscanner.dto.DocScanDevice;
+import io.mosip.registration.api.docscanner.DeviceType;
+import io.mosip.registration.api.docscanner.DocScannerService;
+import io.mosip.registration.api.docscanner.dto.DocScanDevice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

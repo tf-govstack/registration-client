@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.update;
+package io.mosip.registration.test.update;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -29,12 +29,12 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import com.itextpdf.io.IOException;
 
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.service.config.GlobalParamService;
-import io.github.tf-govstack.registration.update.SoftwareUpdateHandler;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.service.config.GlobalParamService;
+import io.mosip.registration.update.SoftwareUpdateHandler;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "javax.management.*"})

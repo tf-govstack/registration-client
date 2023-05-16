@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.service.operator.impl;
+package io.mosip.registration.service.operator.impl;
 
-import static io.github.tf-govstack.registration.constants.LoggerConstants.LOG_REG_USER_ONBOARD;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.LoggerConstants.LOG_REG_USER_ONBOARD;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -35,46 +35,46 @@ import org.springframework.stereotype.Service;
 
 import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.commons.packet.constants.Biometric;
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricFunction;
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricType;
-import io.github.tf-govstack.kernel.biometrics.constant.ProcessedLevelType;
-import io.github.tf-govstack.kernel.biometrics.entities.BIR;
-import io.github.tf-govstack.kernel.biometrics.entities.SingleAnySubtypeType;
-import io.github.tf-govstack.kernel.biosdk.provider.factory.BioAPIFactory;
-import io.github.tf-govstack.kernel.core.bioapi.exception.BiometricException;
-import io.github.tf-govstack.kernel.core.crypto.spi.CryptoCoreSpec;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.kernel.core.util.HMACUtils2;
-import io.github.tf-govstack.kernel.core.util.StringUtils;
-import io.github.tf-govstack.kernel.cryptomanager.dto.CryptomanagerRequestDto;
-import io.github.tf-govstack.kernel.cryptomanager.dto.CryptomanagerResponseDto;
-import io.github.tf-govstack.kernel.cryptomanager.service.CryptomanagerService;
-import io.github.tf-govstack.kernel.keygenerator.bouncycastle.util.KeyGeneratorUtils;
-import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.github.tf-govstack.kernel.keymanagerservice.dto.UploadCertificateRequestDto;
-import io.github.tf-govstack.kernel.keymanagerservice.exception.InvalidApplicationIdException;
-import io.github.tf-govstack.kernel.keymanagerservice.exception.KeymanagerServiceException;
-import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
-import io.github.tf-govstack.kernel.keymanagerservice.util.KeymanagerUtil;
-import io.github.tf-govstack.kernel.logger.logback.util.MetricTag;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.UserOnboardDAO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.exception.PreConditionCheckException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.operator.UserOnboardService;
-import io.github.tf-govstack.registration.util.common.BIRBuilder;
+import io.mosip.commons.packet.constants.Biometric;
+import io.mosip.kernel.biometrics.constant.BiometricFunction;
+import io.mosip.kernel.biometrics.constant.BiometricType;
+import io.mosip.kernel.biometrics.constant.ProcessedLevelType;
+import io.mosip.kernel.biometrics.entities.BIR;
+import io.mosip.kernel.biometrics.entities.SingleAnySubtypeType;
+import io.mosip.kernel.biosdk.provider.factory.BioAPIFactory;
+import io.mosip.kernel.core.bioapi.exception.BiometricException;
+import io.mosip.kernel.core.crypto.spi.CryptoCoreSpec;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.kernel.core.util.HMACUtils2;
+import io.mosip.kernel.core.util.StringUtils;
+import io.mosip.kernel.cryptomanager.dto.CryptomanagerRequestDto;
+import io.mosip.kernel.cryptomanager.dto.CryptomanagerResponseDto;
+import io.mosip.kernel.cryptomanager.service.CryptomanagerService;
+import io.mosip.kernel.keygenerator.bouncycastle.util.KeyGeneratorUtils;
+import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.mosip.kernel.keymanagerservice.dto.UploadCertificateRequestDto;
+import io.mosip.kernel.keymanagerservice.exception.InvalidApplicationIdException;
+import io.mosip.kernel.keymanagerservice.exception.KeymanagerServiceException;
+import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
+import io.mosip.kernel.keymanagerservice.util.KeymanagerUtil;
+import io.mosip.kernel.logger.logback.util.MetricTag;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.UserOnboardDAO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.exception.PreConditionCheckException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.operator.UserOnboardService;
+import io.mosip.registration.util.common.BIRBuilder;
 
 /**
  * Implementation for {@link UserOnboardService}
@@ -146,7 +146,7 @@ public class UserOnboardServiceImpl extends BaseService implements UserOnboardSe
 		idaRequestMap.put(RegistrationConstants.VERSION, RegistrationConstants.PACKET_SYNC_VERSION);
 		idaRequestMap.put(RegistrationConstants.REQUEST_TIME,
 				DateUtils.formatToISOString(DateUtils.getUTCCurrentDateTime()));
-		idaRequestMap.put(RegistrationConstants.ENV, io.github.tf-govstack.registration.context.ApplicationContext
+		idaRequestMap.put(RegistrationConstants.ENV, io.mosip.registration.context.ApplicationContext
 				.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE));
 		idaRequestMap.put(RegistrationConstants.DOMAIN_URI, getDomainUriValue());
 		idaRequestMap.put(RegistrationConstants.TRANSACTION_ID, RegistrationConstants.TRANSACTION_ID_VALUE);
@@ -269,7 +269,7 @@ public class UserOnboardServiceImpl extends BaseService implements UserOnboardSe
 		data.put(RegistrationConstants.ON_BOARD_BIO_VALUE, responseMap.getEncryptedData());
 		data.put(RegistrationConstants.TRANSACTION_Id, RegistrationConstants.TRANSACTION_ID_VALUE);
 		data.put(RegistrationConstants.PURPOSE, RegistrationConstants.PURPOSE_AUTH);
-		data.put(RegistrationConstants.ENV, io.github.tf-govstack.registration.context.ApplicationContext
+		data.put(RegistrationConstants.ENV, io.mosip.registration.context.ApplicationContext
 				.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE));
 		data.put(RegistrationConstants.DOMAIN_URI, getDomainUriValue());
 		String dataBlockJsonString = RegistrationConstants.EMPTY;

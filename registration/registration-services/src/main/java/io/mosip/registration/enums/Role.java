@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.enums;
+package io.mosip.registration.enums;
 
 import java.util.*;
 import java.util.stream.Collectors;

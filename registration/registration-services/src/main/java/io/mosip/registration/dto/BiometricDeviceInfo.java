@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.dto;
+package io.mosip.registration.dto;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
 import lombok.Data;
 
 @Data

@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.enums;
+package io.mosip.registration.enums;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.mosip.registration.constants.RegistrationConstants;
 
 import java.util.ArrayList;
 import java.util.Collections;

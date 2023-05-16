@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import java.sql.Timestamp;
 
@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import io.github.tf-govstack.kernel.core.util.DateUtils;
+import io.mosip.kernel.core.util.DateUtils;
 /**
  * The Entity class for SyncControl.
  * @author Mahesh Kumar

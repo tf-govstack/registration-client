@@ -3,8 +3,8 @@ package registrationtest.testcases;
 import java.io.IOException;
 
 import com.sun.javafx.application.LauncherImpl;
-import io.github.tf-govstack.registration.controller.ClientApplication;
-import io.github.tf-govstack.registration.preloader.ClientPreLoader;
+import io.mosip.registration.controller.ClientApplication;
+import io.mosip.registration.preloader.ClientPreLoader;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

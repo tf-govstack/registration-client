@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.service.packet;
+package io.mosip.registration.service.packet;
 
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.exception.ConnectionException;
-import io.github.tf-govstack.registration.exception.PreConditionCheckException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.exception.ConnectionException;
+import io.mosip.registration.exception.PreConditionCheckException;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 /**
  * Service interface for Packet Upload to the server

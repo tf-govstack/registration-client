@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.service.operator;
+package io.mosip.registration.service.operator;
 
 import java.util.List;
 
-import io.github.tf-govstack.kernel.logger.logback.util.MetricTag;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.entity.UserDetail;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.kernel.logger.logback.util.MetricTag;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.entity.UserDetail;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 /**
  * The {@code UserDetailService} represents to save the user related

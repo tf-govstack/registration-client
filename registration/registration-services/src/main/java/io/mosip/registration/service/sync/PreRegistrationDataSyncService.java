@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.service.sync;
+package io.mosip.registration.service.sync;
 
 import java.sql.Timestamp;
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.entity.PreRegistrationList;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.entity.PreRegistrationList;
 
 /**
  * It interfaces with external pre-registration data sync services and download the packets based on the date range and packet id then  

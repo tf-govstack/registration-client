@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.constants;
+package io.mosip.registration.constants;
 
-import static io.github.tf-govstack.registration.constants.AuditEventType.USER_EVENT;
-import static io.github.tf-govstack.registration.constants.AuditEventType.SYSTEM_EVENT;
+import static io.mosip.registration.constants.AuditEventType.USER_EVENT;
+import static io.mosip.registration.constants.AuditEventType.SYSTEM_EVENT;
 
 /**
  * Enum for Audit Events

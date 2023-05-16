@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.service.config.impl;
+package io.mosip.registration.service.config.impl;
 
 import java.io.IOException;
 import java.sql.Timestamp;
@@ -12,29 +12,29 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.GlobalParamDAO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
-import io.github.tf-govstack.registration.entity.GlobalParam;
-import io.github.tf-govstack.registration.entity.id.GlobalParamId;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.config.GlobalParamService;
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.GlobalParamDAO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.entity.GlobalParam;
+import io.mosip.registration.entity.id.GlobalParamId;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.config.GlobalParamService;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
 
 /**
  * Class for implementing GlobalContextParam service
@@ -73,7 +73,7 @@ public class GlobalParamServiceImpl extends BaseService implements GlobalParamSe
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.GlobalParamService#getGlobalParams
+	 * @see io.mosip.registration.service.GlobalParamService#getGlobalParams
 	 */
 	public Map<String, Object> getGlobalParams() {
 		LOGGER.info("Fetching list of global params");
@@ -83,7 +83,7 @@ public class GlobalParamServiceImpl extends BaseService implements GlobalParamSe
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see io.github.tf-govstack.registration.service.GlobalParamService#getRegistrationParams
+	 * @see io.mosip.registration.service.GlobalParamService#getRegistrationParams
 	 */
 	public Map<String, Object> getRegistrationParams() {
 		LOGGER.info("Fetching list of registration params");
@@ -93,7 +93,7 @@ public class GlobalParamServiceImpl extends BaseService implements GlobalParamSe
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.config.GlobalParamService#synchConfigData(
+	 * @see io.mosip.registration.service.config.GlobalParamService#synchConfigData(
 	 * boolean)
 	 */
 	@Timed(extraTags = {"type", "configuration"})
@@ -289,7 +289,7 @@ public class GlobalParamServiceImpl extends BaseService implements GlobalParamSe
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.config.GlobalParamService#
+	 * @see io.mosip.registration.service.config.GlobalParamService#
 	 * updateSoftwareUpdateStatus(boolean)
 	 */
 	@Override
@@ -317,7 +317,7 @@ public class GlobalParamServiceImpl extends BaseService implements GlobalParamSe
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.service.config.GlobalParamService#update(java.lang.
+	 * io.mosip.registration.service.config.GlobalParamService#update(java.lang.
 	 * String, java.lang.String)
 	 */
 	@Override

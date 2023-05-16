@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.dto;
+package io.mosip.registration.dto;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.biometric.FaceDetailsDTO;
-import io.github.tf-govstack.registration.dto.biometric.FingerprintDetailsDTO;
-import io.github.tf-govstack.registration.dto.biometric.IrisDetailsDTO;
+import io.mosip.registration.dto.biometric.FaceDetailsDTO;
+import io.mosip.registration.dto.biometric.FingerprintDetailsDTO;
+import io.mosip.registration.dto.biometric.IrisDetailsDTO;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.enums;
+package io.mosip.registration.enums;
 
-import io.github.tf-govstack.registration.constants.AuditEvent;
+import io.mosip.registration.constants.AuditEvent;
 
 public enum FlowType {
 

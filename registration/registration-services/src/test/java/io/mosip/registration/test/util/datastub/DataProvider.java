@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.util.datastub;
+package io.mosip.registration.test.util.datastub;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,24 +10,24 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import io.github.tf-govstack.commons.packet.dto.packet.AuditDto;
-import io.github.tf-govstack.commons.packet.dto.packet.BiometricsException;
-import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dto.OSIDataDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationMetaDataDTO;
-import io.github.tf-govstack.registration.dto.biometric.BiometricDTO;
-import io.github.tf-govstack.registration.dto.biometric.BiometricExceptionDTO;
-import io.github.tf-govstack.registration.dto.biometric.BiometricInfoDTO;
-import io.github.tf-govstack.registration.dto.biometric.FaceDetailsDTO;
-import io.github.tf-govstack.registration.dto.biometric.FingerprintDetailsDTO;
-import io.github.tf-govstack.registration.dto.biometric.IrisDetailsDTO;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.enums.FlowType;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
+import io.mosip.commons.packet.dto.packet.AuditDto;
+import io.mosip.commons.packet.dto.packet.BiometricsException;
+import io.mosip.commons.packet.dto.packet.SimpleDto;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dto.OSIDataDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.RegistrationMetaDataDTO;
+import io.mosip.registration.dto.biometric.BiometricDTO;
+import io.mosip.registration.dto.biometric.BiometricExceptionDTO;
+import io.mosip.registration.dto.biometric.BiometricInfoDTO;
+import io.mosip.registration.dto.biometric.FaceDetailsDTO;
+import io.mosip.registration.dto.biometric.FingerprintDetailsDTO;
+import io.mosip.registration.dto.biometric.IrisDetailsDTO;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.dto.packetmanager.DocumentDto;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.enums.FlowType;
+import io.mosip.registration.exception.RegBaseCheckedException;
 
 public class DataProvider {
 

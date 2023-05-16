@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.dto.biometric;
+package io.mosip.registration.dto.biometric;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.BaseDTO;
+import io.mosip.registration.dto.BaseDTO;
 
 /**
  * This class contains the information on captured Finger prints.

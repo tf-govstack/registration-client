@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.entity.Location;
+import io.mosip.registration.entity.Location;
 
 /**
  * This class is used to fetch all the locations present in the {@link Location} table.

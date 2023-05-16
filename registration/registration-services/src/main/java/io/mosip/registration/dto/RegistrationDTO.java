@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dto;
+package io.mosip.registration.dto;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -12,17 +12,17 @@ import java.util.stream.Collectors;
 
 import org.json.JSONObject;
 
-import io.github.tf-govstack.commons.packet.constants.Biometric;
-import io.github.tf-govstack.commons.packet.dto.packet.AuditDto;
-import io.github.tf-govstack.commons.packet.dto.packet.BiometricsException;
-import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
-import io.github.tf-govstack.kernel.core.cbeffutil.jaxbclasses.SingleType;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
-import io.github.tf-govstack.registration.enums.FlowType;
-import io.github.tf-govstack.registration.enums.Modality;
+import io.mosip.commons.packet.constants.Biometric;
+import io.mosip.commons.packet.dto.packet.AuditDto;
+import io.mosip.commons.packet.dto.packet.BiometricsException;
+import io.mosip.commons.packet.dto.packet.SimpleDto;
+import io.mosip.kernel.core.cbeffutil.jaxbclasses.SingleType;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.dto.packetmanager.DocumentDto;
+import io.mosip.registration.enums.FlowType;
+import io.mosip.registration.enums.Modality;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -200,7 +200,7 @@ public class RegistrationDTO {
 	public void addBiometricException(String fieldId, String uiSchemaAttribute, String bioAttribute, String reason,
 			String exceptionType, String subType) {
 		String key = String.format("%s_%s", fieldId, uiSchemaAttribute);
-		SingleType type = io.github.tf-govstack.registration.mdm.dto.Biometric.getSingleTypeBySpecConstant(uiSchemaAttribute);
+		SingleType type = io.mosip.registration.mdm.dto.Biometric.getSingleTypeBySpecConstant(uiSchemaAttribute);
 		this.biometricExceptions.put(key, new BiometricsException(type == null ? null : type.value(), bioAttribute,
 				reason, exceptionType, subType));
 		this.biometrics.remove(key);

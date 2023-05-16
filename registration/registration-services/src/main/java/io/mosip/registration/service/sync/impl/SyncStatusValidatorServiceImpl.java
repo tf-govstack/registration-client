@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.service.sync.impl;
+package io.mosip.registration.service.sync.impl;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.io.File;
 import java.time.Duration;
@@ -17,34 +17,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.registration.api.geoposition.GeoPositionFacade;
-import io.github.tf-govstack.registration.api.geoposition.dto.GeoPosition;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.AuditEvent;
-import io.github.tf-govstack.registration.constants.AuditReferenceIdTypes;
-import io.github.tf-govstack.registration.constants.Components;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dao.GlobalParamDAO;
-import io.github.tf-govstack.registration.dao.RegistrationCenterDAO;
-import io.github.tf-govstack.registration.dao.SyncJobConfigDAO;
-import io.github.tf-govstack.registration.dao.SyncJobControlDAO;
-import io.github.tf-govstack.registration.dao.SyncJobControlDAO.SyncJobInfo;
-import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.entity.GlobalParam;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.entity.SyncControl;
-import io.github.tf-govstack.registration.entity.SyncJobDef;
-import io.github.tf-govstack.registration.entity.id.GlobalParamId;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.sync.SyncStatusValidatorService;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.registration.api.geoposition.GeoPositionFacade;
+import io.mosip.registration.api.geoposition.dto.GeoPosition;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.AuditEvent;
+import io.mosip.registration.constants.AuditReferenceIdTypes;
+import io.mosip.registration.constants.Components;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dao.GlobalParamDAO;
+import io.mosip.registration.dao.RegistrationCenterDAO;
+import io.mosip.registration.dao.SyncJobConfigDAO;
+import io.mosip.registration.dao.SyncJobControlDAO;
+import io.mosip.registration.dao.SyncJobControlDAO.SyncJobInfo;
+import io.mosip.registration.dto.ErrorResponseDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.entity.GlobalParam;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.entity.SyncControl;
+import io.mosip.registration.entity.SyncJobDef;
+import io.mosip.registration.entity.id.GlobalParamId;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.sync.SyncStatusValidatorService;
 
 /**
  * It does the pre check before doing registration to ensure that the
@@ -91,7 +91,7 @@ public class SyncStatusValidatorServiceImpl extends BaseService implements SyncS
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.github.tf-govstack.registration.service.SyncStatusValidatorService#validateSyncStatus()
+	 * io.mosip.registration.service.SyncStatusValidatorService#validateSyncStatus()
 	 */
 	public ResponseDTO validateSyncStatus() {
 		LOGGER.info(LoggerConstants.OPT_TO_REG_LOGGER_SESSION_ID, APPLICATION_NAME, APPLICATION_ID,
@@ -462,7 +462,7 @@ public class SyncStatusValidatorServiceImpl extends BaseService implements SyncS
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.sync.SyncStatusValidatorService#
+	 * @see io.mosip.registration.service.sync.SyncStatusValidatorService#
 	 * isToBeForceUpdate()
 	 */
 	@Override

@@ -1,10 +1,10 @@
-package io.github.tf-govstack.registration.metrics;
+package io.mosip.registration.metrics;
 
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tag;
 import io.micrometer.core.instrument.binder.MeterBinder;
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
+import io.mosip.registration.dao.RegistrationDAO;
 import org.springframework.context.ApplicationContext;
 import org.springframework.dao.DataAccessException;
 

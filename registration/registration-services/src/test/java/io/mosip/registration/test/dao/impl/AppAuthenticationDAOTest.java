@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.dao.impl;
+package io.mosip.registration.test.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -17,14 +17,14 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.AppAuthenticationDetails;
-import io.github.tf-govstack.registration.dao.AppRolePriorityDetails;
-import io.github.tf-govstack.registration.dao.impl.AppAuthenticationDAOImpl;
-import io.github.tf-govstack.registration.entity.id.AppRolePriorityId;
-import io.github.tf-govstack.registration.enums.Role;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.repositories.AppAuthenticationRepository;
-import io.github.tf-govstack.registration.repositories.AppRolePriorityRepository;
+import io.mosip.registration.dao.AppAuthenticationDetails;
+import io.mosip.registration.dao.AppRolePriorityDetails;
+import io.mosip.registration.dao.impl.AppAuthenticationDAOImpl;
+import io.mosip.registration.entity.id.AppRolePriorityId;
+import io.mosip.registration.enums.Role;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.repositories.AppAuthenticationRepository;
+import io.mosip.registration.repositories.AppRolePriorityRepository;
 
 public class AppAuthenticationDAOTest {
 

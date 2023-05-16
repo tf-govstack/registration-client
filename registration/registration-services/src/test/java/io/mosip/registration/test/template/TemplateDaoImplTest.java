@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.template;
+package io.mosip.registration.test.template;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -16,9 +16,9 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.impl.TemplateDaoImpl;
-import io.github.tf-govstack.registration.entity.Template;
-import io.github.tf-govstack.registration.repositories.TemplateRepository;
+import io.mosip.registration.dao.impl.TemplateDaoImpl;
+import io.mosip.registration.entity.Template;
+import io.mosip.registration.repositories.TemplateRepository;
 
 public class TemplateDaoImplTest {
 

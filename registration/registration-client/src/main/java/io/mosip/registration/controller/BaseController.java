@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.controller;
+package io.mosip.registration.controller;
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_ID;
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.APPLICATION_NAME;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_ID;
+import static io.mosip.registration.constants.RegistrationConstants.APPLICATION_NAME;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -30,60 +30,60 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.biometrics.commons.CbeffValidator;
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricFunction;
-import io.github.tf-govstack.kernel.biometrics.constant.BiometricType;
-import io.github.tf-govstack.kernel.biometrics.constant.ProcessedLevelType;
-import io.github.tf-govstack.kernel.biometrics.entities.BIR;
-import io.github.tf-govstack.kernel.biosdk.provider.factory.BioAPIFactory;
-import io.github.tf-govstack.kernel.core.bioapi.exception.BiometricException;
-import io.github.tf-govstack.kernel.core.cbeffutil.jaxbclasses.SingleType;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.audit.AuditManagerService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.constants.RegistrationUIConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.controller.device.BiometricsController;
-import io.github.tf-govstack.registration.controller.device.ScanPopUpViewController;
-import io.github.tf-govstack.registration.controller.eodapproval.RegistrationApprovalController;
-import io.github.tf-govstack.registration.controller.reg.AlertController;
-import io.github.tf-govstack.registration.controller.reg.DocumentScanController;
-import io.github.tf-govstack.registration.controller.reg.HeaderController;
-import io.github.tf-govstack.registration.controller.reg.HomeController;
-import io.github.tf-govstack.registration.controller.reg.PacketHandlerController;
-import io.github.tf-govstack.registration.controller.reg.RegistrationPreviewController;
-import io.github.tf-govstack.registration.controller.reg.UserOnboardParentController;
-import io.github.tf-govstack.registration.dto.AuthenticationValidatorDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.mastersync.GenericDto;
-import io.github.tf-govstack.registration.dto.packetmanager.BiometricsDto;
-import io.github.tf-govstack.registration.dto.schema.ProcessSpecDto;
-import io.github.tf-govstack.registration.dto.schema.SchemaDto;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.entity.UserBiometric;
-import io.github.tf-govstack.registration.exception.PreConditionCheckException;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RemapException;
-import io.github.tf-govstack.registration.mdm.dto.MDMRequestDto;
-import io.github.tf-govstack.registration.scheduler.SchedulerUtil;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
-import io.github.tf-govstack.registration.service.bio.BioService;
-import io.github.tf-govstack.registration.service.config.GlobalParamService;
-import io.github.tf-govstack.registration.service.operator.UserOnboardService;
-import io.github.tf-govstack.registration.service.remap.CenterMachineReMapService;
-import io.github.tf-govstack.registration.service.security.AuthenticationService;
-import io.github.tf-govstack.registration.service.sync.SyncStatusValidatorService;
-import io.github.tf-govstack.registration.util.common.BIRBuilder;
-import io.github.tf-govstack.registration.util.common.PageFlow;
-import io.github.tf-govstack.registration.util.restclient.AuthTokenUtilService;
-import io.github.tf-govstack.registration.util.restclient.ServiceDelegateUtil;
+import io.mosip.kernel.biometrics.commons.CbeffValidator;
+import io.mosip.kernel.biometrics.constant.BiometricFunction;
+import io.mosip.kernel.biometrics.constant.BiometricType;
+import io.mosip.kernel.biometrics.constant.ProcessedLevelType;
+import io.mosip.kernel.biometrics.entities.BIR;
+import io.mosip.kernel.biosdk.provider.factory.BioAPIFactory;
+import io.mosip.kernel.core.bioapi.exception.BiometricException;
+import io.mosip.kernel.core.cbeffutil.jaxbclasses.SingleType;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.audit.AuditManagerService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.constants.RegistrationUIConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.controller.device.BiometricsController;
+import io.mosip.registration.controller.device.ScanPopUpViewController;
+import io.mosip.registration.controller.eodapproval.RegistrationApprovalController;
+import io.mosip.registration.controller.reg.AlertController;
+import io.mosip.registration.controller.reg.DocumentScanController;
+import io.mosip.registration.controller.reg.HeaderController;
+import io.mosip.registration.controller.reg.HomeController;
+import io.mosip.registration.controller.reg.PacketHandlerController;
+import io.mosip.registration.controller.reg.RegistrationPreviewController;
+import io.mosip.registration.controller.reg.UserOnboardParentController;
+import io.mosip.registration.dto.AuthenticationValidatorDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.mastersync.GenericDto;
+import io.mosip.registration.dto.packetmanager.BiometricsDto;
+import io.mosip.registration.dto.schema.ProcessSpecDto;
+import io.mosip.registration.dto.schema.SchemaDto;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.entity.UserBiometric;
+import io.mosip.registration.exception.PreConditionCheckException;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RemapException;
+import io.mosip.registration.mdm.dto.MDMRequestDto;
+import io.mosip.registration.scheduler.SchedulerUtil;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.IdentitySchemaService;
+import io.mosip.registration.service.bio.BioService;
+import io.mosip.registration.service.config.GlobalParamService;
+import io.mosip.registration.service.operator.UserOnboardService;
+import io.mosip.registration.service.remap.CenterMachineReMapService;
+import io.mosip.registration.service.security.AuthenticationService;
+import io.mosip.registration.service.sync.SyncStatusValidatorService;
+import io.mosip.registration.util.common.BIRBuilder;
+import io.mosip.registration.util.common.PageFlow;
+import io.mosip.registration.util.restclient.AuthTokenUtilService;
+import io.mosip.registration.util.restclient.ServiceDelegateUtil;
 import javafx.animation.PauseTransition;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
@@ -1395,21 +1395,21 @@ public class BaseController {
 		List<String> attributes = (value != null) ? Arrays.asList(((String) value).split(","))
 				: new ArrayList<String>();
 		HashMap<String, List<List<String>>> subMap = new HashMap<String, List<List<String>>>();
-		subMap.put(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_LEFT.name(),
-				Arrays.asList(ListUtils.intersection(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_LEFT.getAttributes(), attributes),
-						ListUtils.subtract(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_LEFT.getAttributes(), attributes)));
-		subMap.put(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_RIGHT.name(),
-				Arrays.asList(ListUtils.intersection(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_RIGHT.getAttributes(), attributes),
-						ListUtils.subtract(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_RIGHT.getAttributes(), attributes)));
-		subMap.put(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_THUMBS.name(),
-				Arrays.asList(ListUtils.intersection(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_THUMBS.getAttributes(), attributes),
-						ListUtils.subtract(io.github.tf-govstack.registration.enums.Modality.FINGERPRINT_SLAB_THUMBS.getAttributes(), attributes)));
-		subMap.put(io.github.tf-govstack.registration.enums.Modality.IRIS_DOUBLE.name(),
-				Arrays.asList(ListUtils.intersection(io.github.tf-govstack.registration.enums.Modality.IRIS_DOUBLE.getAttributes(), attributes),
-						ListUtils.subtract(io.github.tf-govstack.registration.enums.Modality.IRIS_DOUBLE.getAttributes(), attributes)));
-		subMap.put(io.github.tf-govstack.registration.enums.Modality.FACE.name(),
-				Arrays.asList(ListUtils.intersection(io.github.tf-govstack.registration.enums.Modality.FACE.getAttributes(), attributes),
-						ListUtils.subtract(io.github.tf-govstack.registration.enums.Modality.FACE.getAttributes(), attributes)));
+		subMap.put(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_LEFT.name(),
+				Arrays.asList(ListUtils.intersection(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_LEFT.getAttributes(), attributes),
+						ListUtils.subtract(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_LEFT.getAttributes(), attributes)));
+		subMap.put(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_RIGHT.name(),
+				Arrays.asList(ListUtils.intersection(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_RIGHT.getAttributes(), attributes),
+						ListUtils.subtract(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_RIGHT.getAttributes(), attributes)));
+		subMap.put(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_THUMBS.name(),
+				Arrays.asList(ListUtils.intersection(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_THUMBS.getAttributes(), attributes),
+						ListUtils.subtract(io.mosip.registration.enums.Modality.FINGERPRINT_SLAB_THUMBS.getAttributes(), attributes)));
+		subMap.put(io.mosip.registration.enums.Modality.IRIS_DOUBLE.name(),
+				Arrays.asList(ListUtils.intersection(io.mosip.registration.enums.Modality.IRIS_DOUBLE.getAttributes(), attributes),
+						ListUtils.subtract(io.mosip.registration.enums.Modality.IRIS_DOUBLE.getAttributes(), attributes)));
+		subMap.put(io.mosip.registration.enums.Modality.FACE.name(),
+				Arrays.asList(ListUtils.intersection(io.mosip.registration.enums.Modality.FACE.getAttributes(), attributes),
+						ListUtils.subtract(io.mosip.registration.enums.Modality.FACE.getAttributes(), attributes)));
 
 		for (Entry<String, String> entry : labels.entrySet()) {
 			mapToProcess.put(entry, subMap);
@@ -1661,16 +1661,16 @@ public class BaseController {
 	 */
 	protected boolean captureAndValidateFP(String userId, boolean isPacketAuth, boolean isReviewer)
 			throws RegBaseCheckedException, IOException {
-		String authSlab = io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.AUTH_FINGERPRINT_SLAB);
+		String authSlab = io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.AUTH_FINGERPRINT_SLAB);
 		if(authSlab == null) { authSlab = RegistrationConstants.FINGERPRINT_SLAB_LEFT; }
 
 		MDMRequestDto mdmRequestDto = new MDMRequestDto(authSlab, null,
 				"Registration",
-				io.github.tf-govstack.registration.context.ApplicationContext
+				io.mosip.registration.context.ApplicationContext
 						.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
-				io.github.tf-govstack.registration.context.ApplicationContext
+				io.mosip.registration.context.ApplicationContext
 						.getIntValueFromApplicationMap(RegistrationConstants.CAPTURE_TIME_OUT),
-				1, io.github.tf-govstack.registration.context.ApplicationContext.getIntValueFromApplicationMap(
+				1, io.mosip.registration.context.ApplicationContext.getIntValueFromApplicationMap(
 				RegistrationConstants.FINGERPRINT_AUTHENTICATION_THRESHOLD));
 		
 		List<BiometricsDto> biometrics = bioService.captureModalityForAuth(mdmRequestDto);
@@ -1690,11 +1690,11 @@ public class BaseController {
 	 */
 	protected boolean captureAndValidateIris(String userId, boolean isPacketAuth, boolean isReviewer) throws RegBaseCheckedException, IOException {
 		MDMRequestDto mdmRequestDto = new MDMRequestDto(RegistrationConstants.IRIS_DOUBLE, null, "Registration",
-				io.github.tf-govstack.registration.context.ApplicationContext
+				io.mosip.registration.context.ApplicationContext
 						.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
-				io.github.tf-govstack.registration.context.ApplicationContext
+				io.mosip.registration.context.ApplicationContext
 						.getIntValueFromApplicationMap(RegistrationConstants.CAPTURE_TIME_OUT),
-				2, io.github.tf-govstack.registration.context.ApplicationContext
+				2, io.mosip.registration.context.ApplicationContext
 				.getIntValueFromApplicationMap(RegistrationConstants.IRIS_AUTHENTICATION_THRESHOLD));
 		List<BiometricsDto> biometrics = bioService.captureModalityForAuth(mdmRequestDto);
 
@@ -1715,11 +1715,11 @@ public class BaseController {
 	 */
 	protected boolean captureAndValidateFace(String userId, boolean isPacketAuth, boolean isReviewer) throws RegBaseCheckedException, IOException {
 		MDMRequestDto mdmRequestDto = new MDMRequestDto(RegistrationConstants.FACE_FULLFACE, null, "Registration",
-				io.github.tf-govstack.registration.context.ApplicationContext
+				io.mosip.registration.context.ApplicationContext
 						.getStringValueFromApplicationMap(RegistrationConstants.SERVER_ACTIVE_PROFILE),
-				io.github.tf-govstack.registration.context.ApplicationContext
+				io.mosip.registration.context.ApplicationContext
 						.getIntValueFromApplicationMap(RegistrationConstants.CAPTURE_TIME_OUT),
-				1, io.github.tf-govstack.registration.context.ApplicationContext
+				1, io.mosip.registration.context.ApplicationContext
 				.getIntValueFromApplicationMap(RegistrationConstants.FACE_AUTHENTICATION_THRESHOLD));
 
 		List<BiometricsDto> biometrics = bioService.captureModalityForAuth(mdmRequestDto);

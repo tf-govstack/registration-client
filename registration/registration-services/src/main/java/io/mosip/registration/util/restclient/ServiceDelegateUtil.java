@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.util.restclient;
+package io.mosip.registration.util.restclient;
 
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 import io.micrometer.core.annotation.Timed;
-import io.github.tf-govstack.registration.exception.ConnectionException;
+import io.mosip.registration.exception.ConnectionException;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -18,14 +18,14 @@ import org.springframework.util.Assert;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.update.SoftwareUpdateHandler;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.update.SoftwareUpdateHandler;
 
 /**
  * This is a helper class .it invokes with different classes to get the response
@@ -51,7 +51,7 @@ public class ServiceDelegateUtil {
 
 
 	public String getHostName() {
-		return io.github.tf-govstack.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.MOSIP_HOSTNAME);
+		return io.mosip.registration.context.ApplicationContext.getStringValueFromApplicationMap(RegistrationConstants.MOSIP_HOSTNAME);
 	}
 
 	public String prepareURLByHostName(String url) {

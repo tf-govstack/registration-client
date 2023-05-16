@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.service.packet;
+package io.mosip.registration.service.packet;
 
-import io.github.tf-govstack.registration.dto.ErrorResponseDTO;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.dto.SuccessResponseDTO;
+import io.mosip.registration.dto.ErrorResponseDTO;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.dto.SuccessResponseDTO;
 
 /**
  * Service interface to perform the virus scan in the configured locations

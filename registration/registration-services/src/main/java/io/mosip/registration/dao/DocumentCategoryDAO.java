@@ -1,9 +1,9 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 import java.util.List;
 
-import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
-import io.github.tf-govstack.registration.entity.DocumentCategory;
+import io.mosip.registration.dto.packetmanager.DocumentDto;
+import io.mosip.registration.entity.DocumentCategory;
 
 /**
  * This class is used to fetch all the Document category related data.

@@ -7,8 +7,8 @@ import java.util.LinkedHashMap;
 import java.util.Set;
 
 import com.sun.javafx.application.LauncherImpl;
-import io.github.tf-govstack.registration.controller.ClientApplication;
-import io.github.tf-govstack.registration.preloader.ClientPreLoader;
+import io.mosip.registration.controller.ClientApplication;
+import io.mosip.registration.preloader.ClientPreLoader;
 import org.apache.commons.io.IOUtils;
 import org.testfx.api.FxRobot;
 import com.aventstack.extentreports.Status;

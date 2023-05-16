@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.validator;
+package io.mosip.registration.test.validator;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,19 +23,19 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
-import io.github.tf-govstack.kernel.signature.service.SignatureService;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.context.SessionContext;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.schema.ConditionalBioAttributes;
-import io.github.tf-govstack.registration.dto.schema.RequiredOnExpr;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.repositories.FileSignatureRepository;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
-import io.github.tf-govstack.registration.validator.RequiredFieldValidator;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
+import io.mosip.kernel.signature.service.SignatureService;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.context.SessionContext;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.schema.ConditionalBioAttributes;
+import io.mosip.registration.dto.schema.RequiredOnExpr;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.repositories.FileSignatureRepository;
+import io.mosip.registration.service.IdentitySchemaService;
+import io.mosip.registration.validator.RequiredFieldValidator;
 
 /**
  * 
@@ -66,7 +66,7 @@ public class RequiredFieldValidatorTest {
 	private RequiredFieldValidator requiredFieldValidator;
 
 	@Mock
-	io.github.tf-govstack.registration.context.ApplicationContext context;
+	io.mosip.registration.context.ApplicationContext context;
 
 	private static final String SCRIPT_NAME = "applicanttype.mvel";
 

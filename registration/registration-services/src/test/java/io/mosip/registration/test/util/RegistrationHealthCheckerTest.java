@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.util;
+package io.mosip.registration.test.util;
 
 import static org.junit.Assert.assertTrue;
 
@@ -9,7 +9,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import io.github.tf-govstack.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
+import io.mosip.registration.util.healthcheck.RegistrationAppHealthCheckUtil;
 
 public class RegistrationHealthCheckerTest {
 

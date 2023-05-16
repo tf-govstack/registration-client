@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.config;
+package io.mosip.registration.test.config;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,8 +12,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.kernel.logger.logback.impl.LoggerImpl;
-import io.github.tf-govstack.registration.config.AppConfig;
+import io.mosip.kernel.logger.logback.impl.LoggerImpl;
+import io.mosip.registration.config.AppConfig;
 
 public class AppConfigTest {
 

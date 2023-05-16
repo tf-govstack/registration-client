@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.jobs.impl;
+package io.mosip.registration.jobs.impl;
 
 import java.sql.Timestamp;
 
@@ -8,15 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.DateUtils;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.LoggerConstants;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.dto.ResponseDTO;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.jobs.BaseJob;
-import io.github.tf-govstack.registration.service.packet.PacketUploadService;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.DateUtils;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.LoggerConstants;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.dto.ResponseDTO;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.jobs.BaseJob;
+import io.mosip.registration.service.packet.PacketUploadService;
 
 /**
  * The {@code RegistrationPacketSyncJob} is a job to upload the synched packets
@@ -90,7 +90,7 @@ public class RegistrationPacketUploadJob extends BaseJob {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.jobs.BaseJob#executeJob(java.lang.String,
+	 * @see io.mosip.registration.jobs.BaseJob#executeJob(java.lang.String,
 	 * java.lang.String)
 	 */
 	@Override

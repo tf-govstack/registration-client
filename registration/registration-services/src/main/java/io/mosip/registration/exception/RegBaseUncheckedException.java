@@ -1,7 +1,7 @@
-package io.github.tf-govstack.registration.exception;
+package io.mosip.registration.exception;
 
 
-import io.github.tf-govstack.kernel.core.exception.BaseUncheckedException;
+import io.mosip.kernel.core.exception.BaseUncheckedException;
 
 /**
  * Class for handling the REG unchecked exception

@@ -1,11 +1,11 @@
-package io.github.tf-govstack.registration.entity;
+package io.mosip.registration.entity;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import io.github.tf-govstack.registration.entity.id.AppAuthenticationMethodId;
+import io.mosip.registration.entity.id.AppAuthenticationMethodId;
 import lombok.Getter;
 import lombok.Setter;
 

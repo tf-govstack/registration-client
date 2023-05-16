@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.entity.id;
+package io.mosip.registration.entity.id;
 
 import java.io.Serializable;
 

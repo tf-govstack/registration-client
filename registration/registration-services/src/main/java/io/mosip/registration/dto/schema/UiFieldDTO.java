@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dto.schema;
+package io.mosip.registration.dto.schema;
 
 import java.util.HashMap;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
+import io.mosip.registration.constants.RegistrationConstants;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

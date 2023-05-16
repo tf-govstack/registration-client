@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dao;
+package io.mosip.registration.dao;
 
 /**
  * Interface for RegistrationScreenAuthorization

@@ -1,12 +1,12 @@
-package io.github.tf-govstack.registration.repositories;
+package io.mosip.registration.repositories;
 
 import java.util.List;
 import java.util.Set;
 
-import io.github.tf-govstack.kernel.core.dataaccess.spi.repository.BaseRepository;
-import io.github.tf-govstack.registration.dao.ScreenAuthorizationDetails;
-import io.github.tf-govstack.registration.entity.ScreenAuthorization;
-import io.github.tf-govstack.registration.entity.id.ScreenAuthorizationId;
+import io.mosip.kernel.core.dataaccess.spi.repository.BaseRepository;
+import io.mosip.registration.dao.ScreenAuthorizationDetails;
+import io.mosip.registration.entity.ScreenAuthorization;
+import io.mosip.registration.entity.id.ScreenAuthorizationId;
 
 /**
  * The repository interface for {@link ScreenAuthorization} entity

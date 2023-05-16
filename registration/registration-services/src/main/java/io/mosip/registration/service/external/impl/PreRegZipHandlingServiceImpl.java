@@ -1,8 +1,8 @@
-package io.github.tf-govstack.registration.service.external.impl;
+package io.mosip.registration.service.external.impl;
 
 
-import static io.github.tf-govstack.registration.constants.RegistrationConstants.ZIP_FILE_EXTENSION;
-import static io.github.tf-govstack.registration.exception.RegistrationExceptionConstants.*;
+import static io.mosip.registration.constants.RegistrationConstants.ZIP_FILE_EXTENSION;
+import static io.mosip.registration.exception.RegistrationExceptionConstants.*;
 import static java.io.File.separator;
 
 import java.io.*;
@@ -29,30 +29,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import io.github.tf-govstack.commons.packet.dto.packet.SimpleDto;
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.crypto.spi.CryptoCoreSpec;
-import io.github.tf-govstack.kernel.core.exception.ExceptionUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.kernel.core.util.StringUtils;
-import io.github.tf-govstack.kernel.keygenerator.bouncycastle.KeyGenerator;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.context.ApplicationContext;
-import io.github.tf-govstack.registration.dao.DocumentTypeDAO;
-import io.github.tf-govstack.registration.dto.PreRegistrationDTO;
-import io.github.tf-govstack.registration.dto.RegistrationDTO;
-import io.github.tf-govstack.registration.dto.packetmanager.DocumentDto;
-import io.github.tf-govstack.registration.dto.schema.UiFieldDTO;
-import io.github.tf-govstack.registration.entity.DocumentType;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegBaseUncheckedException;
-import io.github.tf-govstack.registration.service.BaseService;
-import io.github.tf-govstack.registration.service.IdentitySchemaService;
-import io.github.tf-govstack.registration.service.external.PreRegZipHandlingService;
+import io.mosip.commons.packet.dto.packet.SimpleDto;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.crypto.spi.CryptoCoreSpec;
+import io.mosip.kernel.core.exception.ExceptionUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.kernel.core.util.StringUtils;
+import io.mosip.kernel.keygenerator.bouncycastle.KeyGenerator;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.context.ApplicationContext;
+import io.mosip.registration.dao.DocumentTypeDAO;
+import io.mosip.registration.dto.PreRegistrationDTO;
+import io.mosip.registration.dto.RegistrationDTO;
+import io.mosip.registration.dto.packetmanager.DocumentDto;
+import io.mosip.registration.dto.schema.UiFieldDTO;
+import io.mosip.registration.entity.DocumentType;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegBaseUncheckedException;
+import io.mosip.registration.service.BaseService;
+import io.mosip.registration.service.IdentitySchemaService;
+import io.mosip.registration.service.external.PreRegZipHandlingService;
 
 /**
  * This implementation class to handle the pre-registration data
@@ -95,7 +95,7 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.external.PreRegZipHandlingService#
+	 * @see io.mosip.registration.service.external.PreRegZipHandlingService#
 	 * extractPreRegZipFile(byte[])
 	 */
 	@Override
@@ -304,7 +304,7 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.external.PreRegZipHandlingService#
+	 * @see io.mosip.registration.service.external.PreRegZipHandlingService#
 	 * encryptAndSavePreRegPacket(java.lang.String, byte[])
 	 */
 	@Override
@@ -335,7 +335,7 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.external.PreRegZipHandlingService#
+	 * @see io.mosip.registration.service.external.PreRegZipHandlingService#
 	 * storePreRegPacketToDisk(java.lang.String, byte[])
 	 */
 	@Override
@@ -353,7 +353,7 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 			LOGGER.info( "Pre Registration Encrypted packet saved");
 
 			return filePath;
-		} catch (io.github.tf-govstack.kernel.core.exception.IOException exception) {
+		} catch (io.mosip.kernel.core.exception.IOException exception) {
 			LOGGER.error(exception.getMessage(), exception);
 			throw new RegBaseCheckedException(REG_IO_EXCEPTION.getErrorCode(),
 					REG_IO_EXCEPTION.getErrorMessage() + ExceptionUtils.getStackTrace(exception));
@@ -367,7 +367,7 @@ public class PreRegZipHandlingServiceImpl extends BaseService implements PreRegZ
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see io.github.tf-govstack.registration.service.external.PreRegZipHandlingService#
+	 * @see io.mosip.registration.service.external.PreRegZipHandlingService#
 	 * decryptPreRegPacket(java.lang.String, byte[])
 	 */
 	@Override

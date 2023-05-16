@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.dto;
+package io.mosip.registration.dto;
 
 import java.util.List;
 import java.util.Set;

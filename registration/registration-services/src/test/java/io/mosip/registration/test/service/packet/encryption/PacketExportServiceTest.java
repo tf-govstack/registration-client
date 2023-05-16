@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.test.service.packet.encryption;
+package io.mosip.registration.test.service.packet.encryption;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,11 +13,11 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import io.github.tf-govstack.registration.dao.RegistrationDAO;
-import io.github.tf-govstack.registration.dto.PacketStatusDTO;
-import io.github.tf-govstack.registration.entity.Registration;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.service.packet.impl.PacketExportServiceImpl;
+import io.mosip.registration.dao.RegistrationDAO;
+import io.mosip.registration.dto.PacketStatusDTO;
+import io.mosip.registration.entity.Registration;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.service.packet.impl.PacketExportServiceImpl;
 
 public class PacketExportServiceTest {
 	

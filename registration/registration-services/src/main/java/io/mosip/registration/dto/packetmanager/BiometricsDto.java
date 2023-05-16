@@ -1,6 +1,6 @@
-package io.github.tf-govstack.registration.dto.packetmanager;
+package io.mosip.registration.dto.packetmanager;
 
-import io.github.tf-govstack.commons.packet.constants.Biometric;
+import io.mosip.commons.packet.constants.Biometric;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

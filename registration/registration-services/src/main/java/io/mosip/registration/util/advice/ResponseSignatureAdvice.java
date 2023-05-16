@@ -1,4 +1,4 @@
-package io.github.tf-govstack.registration.util.advice;
+package io.mosip.registration.util.advice;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -20,25 +20,25 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.github.tf-govstack.kernel.clientcrypto.service.impl.ClientCryptoFacade;
-import io.github.tf-govstack.kernel.clientcrypto.util.ClientCryptoUtils;
-import io.github.tf-govstack.kernel.core.logger.spi.Logger;
-import io.github.tf-govstack.kernel.core.util.CryptoUtil;
-import io.github.tf-govstack.kernel.core.util.FileUtils;
-import io.github.tf-govstack.kernel.core.util.HMACUtils2;
-import io.github.tf-govstack.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
-import io.github.tf-govstack.kernel.keymanagerservice.service.KeymanagerService;
-import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyRequestDto;
-import io.github.tf-govstack.kernel.signature.dto.JWTSignatureVerifyResponseDto;
-import io.github.tf-govstack.kernel.signature.service.SignatureService;
-import io.github.tf-govstack.registration.config.AppConfig;
-import io.github.tf-govstack.registration.constants.RegistrationConstants;
-import io.github.tf-govstack.registration.entity.FileSignature;
-import io.github.tf-govstack.registration.exception.RegBaseCheckedException;
-import io.github.tf-govstack.registration.exception.RegistrationExceptionConstants;
-import io.github.tf-govstack.registration.repositories.FileSignatureRepository;
-import io.github.tf-govstack.registration.service.sync.PublicKeySync;
-import io.github.tf-govstack.registration.util.restclient.RequestHTTPDTO;
+import io.mosip.kernel.clientcrypto.service.impl.ClientCryptoFacade;
+import io.mosip.kernel.clientcrypto.util.ClientCryptoUtils;
+import io.mosip.kernel.core.logger.spi.Logger;
+import io.mosip.kernel.core.util.CryptoUtil;
+import io.mosip.kernel.core.util.FileUtils;
+import io.mosip.kernel.core.util.HMACUtils2;
+import io.mosip.kernel.keymanagerservice.dto.KeyPairGenerateResponseDto;
+import io.mosip.kernel.keymanagerservice.service.KeymanagerService;
+import io.mosip.kernel.signature.dto.JWTSignatureVerifyRequestDto;
+import io.mosip.kernel.signature.dto.JWTSignatureVerifyResponseDto;
+import io.mosip.kernel.signature.service.SignatureService;
+import io.mosip.registration.config.AppConfig;
+import io.mosip.registration.constants.RegistrationConstants;
+import io.mosip.registration.entity.FileSignature;
+import io.mosip.registration.exception.RegBaseCheckedException;
+import io.mosip.registration.exception.RegistrationExceptionConstants;
+import io.mosip.registration.repositories.FileSignatureRepository;
+import io.mosip.registration.service.sync.PublicKeySync;
+import io.mosip.registration.util.restclient.RequestHTTPDTO;
 
 /**
  * All the responses of the rest call services which are invoking from the
@@ -88,7 +88,7 @@ public class ResponseSignatureAdvice {
 	 * <p>
 	 * It is an after returning method in which for each and everytime after
 	 * successfully invoking the
-	 * "io.github.tf-govstack.registration.util.restclient.RestClientUtil.invoke()" method, this
+	 * "io.mosip.registration.util.restclient.RestClientUtil.invoke()" method, this
 	 * method will be called.
 	 * </p>
 	 * 
@@ -109,7 +109,7 @@ public class ResponseSignatureAdvice {
 	 *                                 checked exceptions
 	 */
 	@SuppressWarnings("unchecked")
-	@AfterReturning(pointcut = "execution(* io.github.tf-govstack.registration.util.restclient.RestClientUtil.invokeURL(..))", returning = "result")
+	@AfterReturning(pointcut = "execution(* io.mosip.registration.util.restclient.RestClientUtil.invokeURL(..))", returning = "result")
 	public synchronized Map<String, Object> responseSignatureValidation(JoinPoint joinPoint, Object result)
 			throws RegBaseCheckedException {
 		LOGGER.info("Response signature advice triggered...");
@@ -158,7 +158,7 @@ public class ResponseSignatureAdvice {
 	}
 
 
-	@AfterReturning(pointcut = "execution(* io.github.tf-govstack.registration.util.restclient.RestClientUtil.downloadFile(..))")
+	@AfterReturning(pointcut = "execution(* io.mosip.registration.util.restclient.RestClientUtil.downloadFile(..))")
 	public synchronized void fileSignatureValidation(JoinPoint joinPoint) throws RegBaseCheckedException {
 		LOGGER.info("File download response signature advice triggered...");
 		Object[] requestArgument = joinPoint.getArgs();

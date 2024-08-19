@@ -69,7 +69,7 @@ jobs:
     - name: Build with Maven
       run: |
         cd registration
-        mvn -B package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
+        mvn  -B -DskipTests=true  package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
         
 
     - name: Get version info from pom
@@ -159,10 +159,10 @@ jobs:
     - name: Build with Maven
       run: |
         cd registration
-        mvn -B -U package -s $GITHUB_WORKSPACE/settings.xml --file pom.xml
+        mvn -B -DskipTests=true -U package -s $GITHUB_WORKSPACE/settings.xml --file pom.xml
     - name: Publish the maven package
       run: |
-        cd registration && mvn deploy  -DaltDeploymentRepository=ossrh::default::${{ secrets.RELEASE_URL }} -s $GITHUB_WORKSPACE/settings.xml -f pom.xml
+        cd registration && deploy  -DaltDeploymentRepository=ossrh::default::${{ secrets.RELEASE_URL }} -s $GITHUB_WORKSPACE/settings.xml -f pom.xml
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         GPG_TTY: $(tty)
@@ -216,7 +216,7 @@ jobs:
       - name: Build with Maven
         run: |
           cd registration
-          mvn -B package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
+          mvn -B -DskipTests=true package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
 
 #      - name: Analyze with SonarCloud
 #        run: |

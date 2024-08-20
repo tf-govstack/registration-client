@@ -118,11 +118,11 @@ public class DocumentScanController extends BaseController {
 			} catch (Exception e){};
 
 			Optional<ScanDevice> result = null;
-			if(subType.equals(RegistrationConstants.PROOF_OF_SIGNATURE)) {
+			/*if(subType.equals(RegistrationConstants.PROOF_OF_SIGNATURE)) {
 				result = signatureFacade.getConnectedDevices().stream().filter(d -> d.getId().equals(selectedScanDeviceName)).findFirst();
-			} else {
+			} else {*/
 				result = docScannerFacade.getConnectedDevices().stream().filter(d -> d.getId().equals(selectedScanDeviceName)).findFirst();
-			}
+			//}
 
 			if(result == null || !result.isPresent()) {
 				LOGGER.error("No scan devices found");

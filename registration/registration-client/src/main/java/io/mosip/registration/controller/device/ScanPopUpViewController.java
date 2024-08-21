@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
 import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.api.docscanner.DocScannerFacade;
+
 import io.mosip.registration.api.docscanner.DocScannerUtil;
 import io.mosip.registration.config.AppConfig;
 import io.mosip.registration.constants.RegistrationConstants;
@@ -111,8 +111,8 @@ public class ScanPopUpViewController extends BaseController implements Initializ
 	private Streamer streamer;
 	@Autowired
 	private DocumentScanController documentScanController;
-	@Autowired
-	private DocScannerFacade docScannerFacade;
+	//@Autowired
+	//private DocScannerFacade docScannerFacade;
 
 	@Value("${mosip.doc.stage.width:1200}")
 	private int width;
@@ -470,7 +470,7 @@ public class ScanPopUpViewController extends BaseController implements Initializ
 			if(streamer_thread != null)
 				streamer_thread.interrupt();
 		} finally {
-			docScannerFacade.stopDevice(this.docScanDevice);
+			//docScannerFacade.stopDevice(this.docScanDevice);
 		}
 	}
 
@@ -653,7 +653,7 @@ public class ScanPopUpViewController extends BaseController implements Initializ
 				while (isWebCamStream()) {
 					try {
 						if (!isStreamPaused()) {
-							getScanImage().setImage(DocScannerUtil.getImage(docScannerFacade.scanDocument(docScanDevice, getValueFromApplicationContext(RegistrationConstants.IMAGING_DEVICE_TYPE))));
+							//getScanImage().setImage(DocScannerUtil.getImage(docScannerFacade.scanDocument(docScanDevice, getValueFromApplicationContext(RegistrationConstants.IMAGING_DEVICE_TYPE))));
 						}
 					} catch (Throwable t) {
 						LOGGER.error("Error while streaming the captured photo", t);

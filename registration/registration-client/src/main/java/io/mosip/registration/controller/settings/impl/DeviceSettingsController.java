@@ -1,5 +1,6 @@
 package io.mosip.registration.controller.settings.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -13,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import io.mosip.kernel.core.cbeffutil.jaxbclasses.SingleType;
 import io.mosip.kernel.core.exception.ExceptionUtils;
 import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.api.docscanner.DocScannerFacade;
 import io.mosip.registration.config.AppConfig;
 import io.mosip.registration.constants.RegistrationConstants;
 import io.mosip.registration.constants.RegistrationUIConstants;
@@ -83,8 +83,8 @@ public class DeviceSettingsController extends BaseController implements Settings
 	@Autowired
 	private MosipDeviceSpecificationFactory mosipDeviceSpecificationFactory;
 
-	@Autowired
-	private DocScannerFacade docScannerFacade;
+	//@Autowired
+	//private DocScannerFacade docScannerFacade;
 
 	@Autowired
 	private DocumentScanController documentScanController;
@@ -270,7 +270,7 @@ public class DeviceSettingsController extends BaseController implements Settings
 			});
 			Map<String, List<MdmBioDevice>> biometricDevices = MosipDeviceSpecificationFactory.getAvailableDeviceInfo();
 			columnsCount = biometricDevices.size();
-			List<ScanDevice> scannerDevices = docScannerFacade.getConnectedDevices();
+			List<ScanDevice> scannerDevices=new ArrayList<>();// docScannerFacade.getConnectedDevices();
 			if (!scannerDevices.isEmpty()) {
 				++columnsCount;
 			}

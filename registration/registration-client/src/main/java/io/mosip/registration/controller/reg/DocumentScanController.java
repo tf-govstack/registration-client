@@ -19,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import io.mosip.kernel.core.logger.spi.Logger;
-import io.mosip.registration.api.docscanner.DocScannerFacade;
+
 import io.mosip.registration.api.docscanner.DocScannerUtil;
 import io.mosip.registration.config.AppConfig;
 import io.mosip.registration.constants.RegistrationConstants;
@@ -92,8 +92,8 @@ public class DocumentScanController extends BaseController {
 	@FXML
 	private Label biometricExceptionReq;
 
-	@Autowired
-	private DocScannerFacade docScannerFacade;
+	//@Autowired
+//private DocScannerFacade docScannerFacade;
 
 	@Autowired
 	private SignatureFacade signatureFacade;
@@ -121,7 +121,7 @@ public class DocumentScanController extends BaseController {
 			/*if(subType.equals(RegistrationConstants.PROOF_OF_SIGNATURE)) {
 				result = signatureFacade.getConnectedDevices().stream().filter(d -> d.getId().equals(selectedScanDeviceName)).findFirst();
 			} else {*/
-				result = docScannerFacade.getConnectedDevices().stream().filter(d -> d.getId().equals(selectedScanDeviceName)).findFirst();
+			//	result = docScannerFacade.getConnectedDevices().stream().filter(d -> d.getId().equals(selectedScanDeviceName)).findFirst();
 			//}
 
 			if(result == null || !result.isPresent()) {
@@ -139,14 +139,14 @@ public class DocumentScanController extends BaseController {
 			if(subType.equals(RegistrationConstants.PROOF_OF_SIGNATURE)) {
 				signatureFacade.scanDocument(scanDevice, DeviceType.SIGNATURE_PAD.toString());
 			} else {
-				bufferedImage = docScannerFacade.scanDocument(scanDevice, getValueFromApplicationContext(RegistrationConstants.IMAGING_DEVICE_TYPE));
+				//bufferedImage = docScannerFacade.scanDocument(scanDevice, getValueFromApplicationContext(RegistrationConstants.IMAGING_DEVICE_TYPE));
 				if (bufferedImage == null) {
 					LOGGER.error("captured buffered image was null");
 					generateAlert(RegistrationConstants.ERROR, RegistrationUIConstants.getMessageLanguageSpecific(RegistrationUIConstants.SCAN_DOCUMENT_ERROR));
 					return;
 				}
 
-				scannedPages.add(bufferedImage);
+				//scannedPages.add(bufferedImage);
 				scanPopUpViewController.getImageGroup().getChildren().clear();
 				scanPopUpViewController.getImageGroup().getChildren().add(new ImageView(DocScannerUtil.getImage(bufferedImage)));
 				scanPopUpViewController.getScanImage().setVisible(true);
@@ -180,10 +180,10 @@ public class DocumentScanController extends BaseController {
 	}
 
 	public byte[] captureAndConvertBufferedImage() throws Exception {
-		List<ScanDevice> devices = docScannerFacade.getConnectedCameraDevices();
+		List<ScanDevice> devices; //= docScannerFacade.getConnectedCameraDevices();
 
 		byte[] byteArray = new byte[0];
-		if(!devices.isEmpty()) {
+		/*if(!devices.isEmpty()) {
 			BufferedImage bufferedImage = docScannerFacade.scanDocument(devices.get(0), getValueFromApplicationContext(RegistrationConstants.IMAGING_DEVICE_TYPE));
 			if (bufferedImage != null) {
 				byteArray = DocScannerUtil.getImageBytesFromBufferedImage(bufferedImage);
@@ -192,7 +192,8 @@ public class DocumentScanController extends BaseController {
 			SessionContext.setAutoLogout(true);
 			return byteArray;
 		}
-		throw new Exception("No Camera Devices connected");
+		throw new Exception("No Camera Devices connected");*/
+		return byteArray;
 	}
 
 
@@ -201,11 +202,11 @@ public class DocumentScanController extends BaseController {
 	 */
 	private void initializeAndShowScanPopup(boolean isPreviewOnly, String subType) {
 		List<ScanDevice> devices = null;
-		if(subType.equals(RegistrationConstants.PROOF_OF_SIGNATURE)) {
+	/*	if(subType.equals(RegistrationConstants.PROOF_OF_SIGNATURE)) {
 			devices = signatureFacade.getConnectedDevices();
 		} else {
 			devices = docScannerFacade.getConnectedDevices();
-		}
+		}*/
 
 		LOGGER.info("Connected devices : {}", devices);
 
